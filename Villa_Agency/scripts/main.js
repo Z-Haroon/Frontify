@@ -43,7 +43,22 @@
     });
   }
 
-  document.querySelector(".left-arrow").addEventListener("click", nextSlide);
+  const prevSlide = () => {
+    if (slideCount > 0) {
+      slideCount--;
+    } else {
+      slideCount = heroBannersEl.length - 1;
+    }
+    heroBannersEl.forEach((curEl) => {
+      curEl.style.transform = `translateX(-${slideCount * 100}%)`;
+    });
+  }
 
+  document.querySelector(".left-arrow").addEventListener("click", nextSlide);
+  document.querySelector(".right-arrow").addEventListener("click", prevSlide);
+
+  setInterval(() => {
+    nextSlide();
+  }, 6000)
 })();
 

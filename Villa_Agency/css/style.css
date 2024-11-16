@@ -1,3 +1,10 @@
+/* Root Element */
+:root {
+  --body-bg: #f0f0f0;
+  --body-txt: #000;
+}
+
+/* Reset All Default Settings */
 *,
 *::after,
 *::before {
@@ -35,4 +42,71 @@ a {
   color: inherit;
 }
 
-  
+img,
+picture,
+video {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--body-bg);
+  color: var(--body-txt);
+  line-height: 1.7;
+}
+
+
+/* Loading */
+
+.loading {
+  position: fixed;
+  z-index: 999999;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #1d1d1d;
+  display: flex;
+  align-items: center;
+  top: 0;
+  justify-content: center;
+  gap: 10px;
+}
+.loading.completed {
+  transition: .5s linear;
+  height: 0;
+}
+.dot {
+  height: 20px;
+  width: 20px;
+  background: #E8532B;
+  border-radius: 50%;
+  animation: allDots 1s linear infinite alternate;
+  z-index: 1000;
+}
+.dot:nth-child(1) {
+  animation: singleDots 1s linear infinite alternate;
+  z-index: 10;
+}
+
+@keyframes allDots {
+  0% {
+    transform: translateX(0px);
+  } 100% {
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes singleDots {
+  0% {
+    transform: translateX(0px);
+  } 100% {
+    transform: translateX(30px);
+  }
+}

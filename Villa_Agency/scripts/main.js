@@ -1,14 +1,17 @@
 (() => {
 
+  // References
   const loadingScreenEl = document.querySelector(".loading");
   const headerEl = document.getElementById("header");
   const upperHeaderEl = document.querySelector(".upper-header--container");
   const upperHeaderDividerEl = document.querySelector(".upper-header--divider");
 
+  // Loading Screen Remover
   const loadingCompleted = () => {
     loadingScreenEl.classList.add("completed");
   };
 
+  // Scroll Function
   const hasScrolled = () => {
     let scrollThreshold = 60;
     let isScrolled = window.scrollY > scrollThreshold;
@@ -18,7 +21,29 @@
     upperHeaderEl.classList.toggle("scroll", isScrolled);
   };
 
+  // Window Event Listeners
   window.addEventListener("load", loadingCompleted);
   window.addEventListener("scroll", hasScrolled);
+
+  //  Hero Banner Section
+  let slideCount = 0;
+  const heroBannersEl = document.querySelectorAll(".hero-banner");
+  heroBannersEl.forEach((curBan, index) => {
+    curBan.style.left = `${index * 100}%`;
+  });
+
+  const nextSlide = () => {
+    if (slideCount < heroBannersEl.length - 1) {
+      slideCount++;
+    } else {
+      slideCount = 0;
+    }
+    heroBannersEl.forEach((curEl) => {
+      curEl.style.transform = `translateX(-${slideCount * 100}%)`;
+    });
+  }
+
+  document.querySelector(".left-arrow").addEventListener("click", nextSlide);
+
 })();
 

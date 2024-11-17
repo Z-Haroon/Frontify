@@ -59,6 +59,22 @@
 
   setInterval(() => {
     nextSlide();
-  }, 6000)
+  }, 6000);
+
+// Feature Section DropDown
+let featureContainers = document.querySelectorAll(".feature-more--details");
+
+featureContainers.forEach((container) => {
+  let headings = container.querySelectorAll(".heading");
+  let paragraphs = container.querySelectorAll(".details");
+
+  headings.forEach((heading, index) => {
+    heading.addEventListener("click", () => {
+      paragraphs[index].classList.toggle("active");
+      heading.classList.toggle("active");
+    });
+  });
+});
+
 })();
 

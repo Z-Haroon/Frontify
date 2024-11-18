@@ -847,3 +847,14 @@ body {
   background: transparent;
   color: var(--black);
 }
+.footer {
+  text-align: center;
+  background-color: #364127; /* Tumhare website ke colors se match karne ke liye */
+  color: white;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 0;
+}

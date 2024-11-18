@@ -9,6 +9,9 @@
   const loadingCompleted = () => {
     loadingScreenEl.classList.add("completed");
   };
+  window.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+  });
 
   // Scroll Function
   const hasScrolled = () => {

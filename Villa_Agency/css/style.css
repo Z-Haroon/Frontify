@@ -586,7 +586,7 @@ body {
   transform: translate(50%, -50%);
 }
 .best-deal--section {
-  margin: 0 auto 40rem;
+  margin: 0 auto;
   width: 1050px;
 }
 .upper-best--deal {
@@ -736,4 +736,32 @@ body {
 }
 .arrow-btns--container.active {
   opacity: 1;
+}
+/* Property Section */
+.properties-section {
+  margin: 12rem auto 40rem;
+}
+.title-section {
+  width: 100%;
+  text-align: center;
+}
+.title-section h4 {
+  padding: .1rem .7rem;
+  width: fit-content;
+  color: var(--header-icon);
+  border-left: 4px solid var(--header-icon);
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin: 0 auto 1.5rem;
+  text-transform: uppercase;
+}
+.title-section h2 {
+  font-size: 3.8rem;
+  width: 450px;
+  margin: 0 auto;
+}
+.properties-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
 }

@@ -10,6 +10,7 @@
   --light-pink: #E96166;
   --sligh-red: #ffd4c0;
 
+
   --page-max-width: 1400px;
 
   --box-shadow-1: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -740,10 +741,12 @@ body {
 /* Property Section */
 .properties-section {
   margin: 12rem auto 40rem;
+  width: 1100px; 
 }
 .title-section {
   width: 100%;
   text-align: center;
+  margin: 0 0 5rem;
 }
 .title-section h4 {
   padding: .1rem .7rem;
@@ -763,5 +766,79 @@ body {
 .properties-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5rem;
+  gap: 4rem;
+  padding: 2rem;
+}
+.property-container {
+  background: var(--white);
+  padding: 1rem;
+  box-shadow: var(--box-shadow-1);
+  border-radius: 5px;
+  transition: var(--transition);
+}
+.property-container:hover {
+  box-shadow: var(--box-shadow-2);
+  transform: scale(1.05);
+}
+.img-container img {
+  border-radius: 5px;
+}
+.type-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 1.5rem;
+  align-items: center;
+}
+.type-price .type {
+  background: var(--sligh-red);
+  padding: .5rem 1rem;
+  color: var(--black);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.type-price .price {
+  font-size: 1.6rem;
+  color: var(--header-icon);
+}
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 2rem;
+}
+.details-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 2rem;
+  margin: 0 0 4rem 0;
+  padding: 0 0 3rem;
+  border-bottom: 1px solid #ccc;
+}
+.details-container .detail {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.details-container .detail p {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.details-container .detail h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.schedule-btn {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 30px;
+  width: 100%;
+  border: 2px solid var(--black);
+  font-weight: 600;
+  transition: var(--transition);
+}
+.schedule-btn:hover {
+  background: transparent;
+  color: var(--black);
 }

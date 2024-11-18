@@ -36,15 +36,10 @@
       {space: "75 m1", floor: "2nd", parking: "1", payment: "Installments"}
     ]
     const dataContainerEl = document.querySelector(".best-details");
-    const spaceEl = dataContainerEl.querySelector(".space");
-    const floorNoEl = dataContainerEl.querySelector(".floorNo");
-    const parkingEl = dataContainerEl.querySelector(".parking");
-    const paymentTypeEl = document.querySelector(".payment");
-    spaceEl.innerText = `${data[slideCount].space}`;
-    floorNoEl.innerText = `${data[slideCount].floor}`;
-    parkingEl.innerText = `${data[slideCount].parking}`;
-    paymentTypeEl.innerText = `${data[slideCount].payment}`;
-
+    dataContainerEl.querySelector(".space").innerText = `${data[slideCount].space}`;
+    dataContainerEl.querySelector(".floorNo").innerText = `${data[slideCount].floor}`;;
+    dataContainerEl.querySelector(".parking").innerText = `${data[slideCount].parking}`;;
+    document.querySelector(".payment").innerText = `${data[slideCount].payment}`;;
   };
   //  Hero Banner Section
   const slider = (bannersEl, leftArrowEl, rightArrowEl) => {
@@ -113,4 +108,38 @@
       });
     });
   });
+
+
+  // Products Section
+
+  const homePageProperties = async () => {
+    try {
+      const response = await fetch("./assets/api/products.json");
+      if(!response.ok) {
+        throw new Error("Products Cannot Found The Product File Will Be Remove Or Replaced");
+      }
+      const productsData = await response.json();
+
+      const productTemplateEl = document.getElementById("product-template");
+      const productsContainerEl = document.querySelector(".properties-container");
+      productsData.forEach((curProd) => {
+        const productTemplate = document.importNode(productTemplateEl.content, true);
+        const {id, img, type, title, price, noOfBed, noOfBath, area, floor, parking} = curProd;
+        productTemplate.querySelector(".property-container").setAttribute("id", id);
+        productTemplate.querySelector(".prod-img").src = img;
+        productTemplate.querySelector(".prod-img").alt = title;
+        productTemplate.querySelector(".type").innerText = type;
+        productTemplate.querySelector(".price").innerText = price;
+        productTemplate.querySelector(".title").innerText = title;
+        productTemplate.querySelector(".noOfBedrooms").innerText = noOfBed;
+        productTemplate.querySelector(".noOfBathrooms").innerText = noOfBath;
+        productTemplate.querySelector(".noOfArea").innerText = area;
+        productTemplate.querySelector(".noOfFloor").innerText = floor;
+        productTemplate.querySelector(".noOfParking").innerText = parking;
+        productsContainerEl.append(productTemplate);
+      });
+    } catch (error) {
+      console.log(error)
+    }
+  }; homePageProperties();
 })();

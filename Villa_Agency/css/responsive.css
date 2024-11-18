@@ -1,0 +1,233 @@
+@media ( max-width: 1440px ) {
+  :root { 
+    --page-max-width: 1200px;
+  }
+  .upper-header--container {
+    height: 3.6rem;
+  }
+  .address-one--container i {
+    font-size: 1.8rem;
+  }
+  .upper-header--icon {
+    height: 28px;
+    width: 28px;
+    font-size: 1.4rem;
+  }
+  .address-container {
+    font-size: 1.3rem;
+  }
+  .logo {
+    font-size: 45px;
+    letter-spacing: 4px;
+  }
+  .nav-items--container {
+    font-size: 1.3rem;
+  }
+  .visit-btn {
+    padding: 0rem 1.3rem 0rem 0;
+    font-size: 1.2rem;
+  }
+  .main-header--container {
+    padding: 1.2rem 0;
+  }
+  .hero-section {
+    position: relative;
+    margin: 11rem 0 0 0;
+    height: 550px;
+  }
+  .banner-headings--container {
+    left: 10%;
+    top: 50%;
+    width: 32%;
+  }
+  .hero-banner img {
+    height: 550px;
+  }
+  .sub-heading {
+    padding: .5rem 1rem;
+    font-size: 1.6rem;
+    margin: 0 0 1.2rem 0;
+  }
+  .main-header {
+    font-size: 5.5rem;
+  }
+  .arrow-btn {
+    font-size: 3rem;
+  }
+  .feature-section {
+    margin: 6rem auto;
+    padding: 2rem 8rem;
+  }
+  .feature-image--container {
+    height: 450px;
+  }
+  .feature-image--container img {
+    height: 450px;
+  }
+  .feature-img--icon {
+    height: 80px;
+    width: 80px;
+  }
+  .feature-img--icon img {
+    height: 50px;
+    width: 50px;
+  }
+  .feature-sub--heading {
+    font-size: 1.3rem;
+  }
+  .feature-img--details_container .main-heading {
+    font-size: 3.8rem;
+  }
+  .feature-img--details_container .main-heading {
+    font-size: 4.5rem;
+    margin: 0 0 2rem;
+    width: 300px; 
+  }
+  .feature-more--details .heading {
+    font-size: 1.4rem;
+    padding: 0 0 1.2rem;
+  }
+  .questions-link--container {
+    width: 350px;
+  }
+  .img-details--container {
+    gap: 2rem;
+  }
+  .feature-img--details_container {
+    width: 350px;
+  }
+  .icon-detail--container {
+    gap: 1.7rem;
+    padding: 0rem 1rem 2rem;
+  }
+  .icon-detail--container img {
+    width: 50px;
+  }
+  .icon-detail--container h3 {
+    font-size: 1.7rem;
+  }
+  .icon-detail--container p {
+    font-size: 1.3rem;
+  }
+  .video-section--background {
+    height: 400px;
+  }
+  .video-section--background .items-container {
+    top: 25%;
+    left: 50%;
+  }
+  .items-container .sub {
+    font-size: 1.4rem;
+    margin: 1.7rem auto;
+  } 
+  .items-container .main {
+    font-size: 3.5rem;
+    margin: 0 0 3rem 0;
+  }
+  .bottom-icons h3 {
+    font-size: 3.5rem;
+  }
+  .bottom-icons p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .bottom_container-icons {
+    margin: 7rem 0 0 0;
+  }
+  .bottom_container-icons span {
+    height: 40px;
+    width: 40px;
+  }
+  .video-section {
+    width: 100%;
+    height:750px;
+  }
+  .best-deal--section {
+    width: 950px;
+  }
+  .best-sub--heading {
+    padding: .2rem 1rem;
+    font-size: 1.6rem;
+    margin: 0 0 .8rem 0;
+  }
+  .best-main--heading {
+    font-size: 3.5rem;
+    width: 350px;
+  }
+  .best-section--btn {
+    padding: .7rem 1.4rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+  .best-details--container {
+    gap: 3rem;
+    margin: 3rem 0 0 0;
+  }
+  .best-details {
+    padding: 3rem 1.2rem 3.6rem;
+    border-radius: 6px;
+  }
+  .best-details-row h4 {
+    font-size: 1.4rem;
+  }
+  .info-heading {
+    font-size: 1.6rem;
+  }
+  .info {
+    margin: 1.2rem 0;
+    font-size: 1.2rem;
+  }
+  .schedule {
+    font-size: 1.1rem;
+    margin: 3rem auto 0;
+  }
+  .properties-section {
+    margin: 9rem auto 40rem;
+    width: 1000px; 
+  }
+  .title-section {
+    margin: 0 0 4rem;
+  }
+  .title-section h4 {
+    font-size: 1.3rem;
+    margin: 0 auto 1.2rem;
+  }
+  .title-section h2 {
+    font-size: 3.4rem;
+    width: 400px;
+  }
+  .properties-container {
+    gap: 2.5rem;
+    padding: 1.5rem;
+  }
+  .property-container {
+    padding: 1.5rem;
+  }
+  .type-price {
+    margin: 1rem 0 2.7rem;
+  }
+  .type-price .type {
+    font-size: 1.1rem;
+  }
+  .type-price .price {
+    font-size: 1.4rem;
+  }
+  .title {
+    font-size: 1.6rem;
+    margin: 0 0 1.8rem;
+  }
+  .details-container {
+    margin: 0 0 5rem 0;
+  }
+  .details-container .detail p {
+    font-size: 1.1rem;
+  }
+  .details-container .detail h4 {
+    font-size: 1.3rem;
+  }
+  .schedule-btn {
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+  }
+}

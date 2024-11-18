@@ -633,3 +633,107 @@ body {
   color: var(--black);
   background: var(--white);
 }
+.best-details--container {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr 1fr;
+  gap: 5rem;
+  margin: 6rem 0 0 0;
+}
+.best-details {
+  padding: 3.3rem 1.5rem 4rem;
+  background: var(--white);
+  box-shadow: var(--box-shadow-2);
+  border-radius: 8px;
+  height: fit-content;
+}
+.best-details-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 0 0 2rem;
+  margin: 0 0 2rem;
+}
+.best-details-row:last-child {
+  padding: 0;
+  border: 0;
+}
+.best-details-row p {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #B9AEB2;
+}
+.best-details-row h4 {
+  font-size: 1.6rem;
+  color: #1E1E1E;
+}
+.info-heading {
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.info {
+  margin: 1.4rem 0;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  text-align: center;
+}
+.schedule {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: var(--black);
+  padding: 0rem 2rem 0rem 0rem;
+  color: var(--white);
+  border-radius: 30px;
+  width: fit-content;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: var(--transition);
+  margin: 4rem auto 0;
+}
+
+.icon {
+  height: 3.5rem;
+  width: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--header-icon);
+  color: var(--white);
+}
+.schedule:hover {
+  color: var(--header-icon);
+}
+.best-img--container {
+  position: relative;
+  overflow: hidden;
+}
+.best-img--container img {
+  border-radius: 5px;
+}
+.slide {
+  position: absolute;
+  transition: .5s ease;
+}
+.arrow-btns--container {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 98%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--transition);
+}
+.arrow-btns--container button {
+  font-size: 2rem;
+  padding: .5rem 1rem;
+}
+.arrow-btns--container.active {
+  opacity: 1;
+}

@@ -182,6 +182,9 @@ body {
 .address-one--container:hover {
   color: var(--header-icon);
 }
+#small-nav {
+  display: none;
+}
 .address-one--container:first-child {
   padding: 0;
   border: none;

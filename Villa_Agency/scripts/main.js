@@ -78,7 +78,7 @@
 
     setInterval(() => {
       nextSlide();
-    }, 6000);
+    }, 10000);
   };
   const heroBannersEl = document.querySelectorAll(".hero-banner");
   slider(heroBannersEl, "left-arrow", "right-arrow");

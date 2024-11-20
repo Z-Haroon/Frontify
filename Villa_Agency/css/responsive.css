@@ -1012,16 +1012,6 @@
   .properties-container {
     grid-template-columns: repeat(2, 1fr);
   }
-
-
-
-
-
-
-
-
-
-
   .properties-container {
     padding: .2rem;
   }
@@ -1074,4 +1064,8 @@
   .footer {
     font-size: 10px;
   }
+  ::-webkit-scrollbar-thumb {
+    display: none;
+  }
+   
 }

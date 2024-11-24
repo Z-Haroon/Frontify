@@ -10,6 +10,7 @@
   --body-bg: #f0f0f0;
   --body-text: #000;
   --color-light-blue: #a2c7ff;
+  --red: #ff0000;
 
   --max-width: 1400px;
 
@@ -211,7 +212,7 @@ section h2 {
 }
 
 /* 
-  * *******UPPERHEADER******* * 
+  * *******HEADER******* * 
 */
 #header {
   background: var(--color-white);
@@ -219,6 +220,7 @@ section h2 {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 999;
 }
 .upper-header {
   height: 2.4rem;
@@ -376,7 +378,7 @@ section h2 {
   display: flex;
   align-items: center;
   height: 100%;
-  gap: 2rem;
+  gap: 3rem;
 }
 .category-list li {
   font-size: 1.4rem;
@@ -386,4 +388,72 @@ section h2 {
 }
 .category-list li:hover {
   color: var(--color-purple);
+}
+
+/* 
+  * *******HERO SECTION******* * 
+*/
+
+.hero-section {
+  position: relative;
+  top: 12.3rem;
+  height: 500px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: heroBanner 10s ease-in-out infinite alternate;
+}
+
+
+@keyframes heroBanner {
+  0% {
+    background: url("../assets/banner1.webp");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+  } 50% {
+    background: url("../assets/banner2.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  } 100% {
+    background: url("../assets/banner3.webp");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.hero-section .sub-heading {
+  font-size: 2rem;
+  background: var(--red);
+  color: var(--color-white);
+  width: fit-content;
+  padding: .5rem 1rem;
+  font-weight: 400;
+}
+.hero-section .main-heading {
+  font-size: 6rem;
+  width: 500px;
+  font-weight: 400;
+  margin: 1rem 0 2rem;
+  line-height: 1.2;
+}
+.hero-section .bottom-heading {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 0 3rem;
+}
+.hero-section .shop-btn {
+  background: var(--color-purple);
+  color: var(--color-white);
+  font-size: 2rem;
+  padding: 1.5rem 6rem;
+  border-radius: 30px;
+  font-weight: 400;
+  transition: var(--transition);
+}
+.hero-section .shop-btn:hover {
+  background: var(--color-black);
 }

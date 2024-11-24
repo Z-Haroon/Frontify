@@ -1,0 +1,261 @@
+/* 
+  * *******ROOT ELEMENT******* * 
+*/
+
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-purple: #751FFF;
+  --light-gray: #BFBFBF;
+  --body-bg: #f0f0f0;
+  --body-text: #000;
+  --color-light-blue: #a2c7ff;
+
+  --max-width: 1400px;
+
+  --transition: all 300ms ease;
+}
+
+/* 
+  * *******RESET DEFAULT STYLES******* * 
+*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+dl,
+li { list-style: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  line-height: 1.2; 
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+picture,
+video {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+}
+
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+button { cursor: pointer; }
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+}
+
+body {
+  line-height: 1.7;
+  background: var(--body-bg);
+  color: var(--body-text);
+}
+
+section {
+  padding: 6rem 0;
+}
+
+section h2 {
+  text-align: center;
+}
+
+/* 
+  * *******PREBUILD CLASSES******* * 
+*/
+
+.flex {
+  display: flex;
+}
+.align-center {
+  display: flex;
+  align-items: center;
+}
+.jc-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jc-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container {
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+/* 
+  * *******LOADINGSCREEN******* * 
+*/
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* Black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+.loading.completed {
+  transition: var(--transition);
+  height: 0;
+}
+
+/* Pikachu Container */
+.pickachu-container {
+  text-align: center;
+}
+
+/* Pikachu GIF Styling */
+.pickachu-container img {
+  width: 150px;
+  height: auto;
+  animation: run 0.8s steps(10) infinite;
+}
+
+/* Text Below Pikachu */
+.pickachu-container p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  color: #fff; /* White text */
+  animation: pulse 1.5s infinite;
+}
+
+/* Progress Bar Container */
+.progress-bar {
+  width: 80%; /* Adjust width as needed */
+  height: 10px;
+  background-color: #444; /* Dark gray background for the bar */
+  border-radius: 5px;
+  margin: 15px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Progress Animation */
+.progress {
+  width: 0;
+  height: 100%;
+  background-color: #fff; /* White progress */
+  animation: progressAnim 1s linear forwards;
+}
+
+/* Keyframes for Progress Animation */
+@keyframes progressAnim {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Running Animation for Pikachu */
+@keyframes run {
+  from {
+    transform: translateX(-10px);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
+
+/* Pulse Animation for Text */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* 
+  * *******UPPERHEADER******* * 
+*/
+.upper-header {
+  background: var(--color-black);
+  height: 2rem;
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.upper-header.scroll {
+  height: 0;
+}
+.tagline {
+  gap: 1rem;
+}
+.tagline img {
+  width: 1.5rem;
+}
+.upper-header-list {
+  gap: 3rem;
+}
+.upper-header-list li a {
+  transition: var(--transition);
+  position: relative;
+}
+.upper-header-list li a::after {
+  content: "";
+  border-bottom: 1px solid var(--color-light-blue);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.upper-header-list li a:hover::after {
+  width: 100%;
+}
+.upper-header-list li a:hover {
+  color: var(--color-light-blue);
+}
+.upper-header-list li:first-child a {
+  border-bottom: 1px solid var(--color-light-blue);
+  color: var(--color-light-blue);
+}
+.upper-header-list li:first-child a::after {
+  border: 0px;
+}
+.upper-header-list li:last-child a{
+  gap: .5rem;
+}

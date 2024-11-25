@@ -29,6 +29,79 @@ const hasScrolled = () => {
   }
 };
 
+//  Best Selling Products Show
+const bestSellingProducts = (products) => {
+  const containerEl = document.querySelector(".best-selling-items__container");
+  const productTemplateEl = document.getElementById("best-selling--template");
+  let top30Products = products.slice(0, 30);
+  top30Products.forEach((curProd) => {
+    const productTemplate = document.importNode(productTemplateEl.content, true);
+    const {id, image, name, sellOut, shortDescription, longDiscription, category, actualPrice, DiscountPrice, numberOfRating} = curProd;
+    productTemplate.querySelector(".best-selling--item").setAttribute("id", id);
+    productTemplate.querySelector(".best-selling-product_image").src = image;
+    productTemplate.querySelector(".best-selling-product_image").alt = name;
+    productTemplate.querySelector(".title").textContent = name;
+    const ratingContainerEl = productTemplate.querySelector(".rating");
+    for(let i = 0; i < numberOfRating; i++) {
+      let createIcon = document.createElement("i");
+      createIcon.classList.add("fas");
+      createIcon.classList.add("fa-star");
+      ratingContainerEl.append(createIcon);
+    };
+    productTemplate.querySelector(".discount-price").textContent = `Rs. ${DiscountPrice}`;
+    productTemplate.querySelector(".original-price").textContent = `Rs. ${actualPrice}`;
+    containerEl.append(productTemplate)
+  });
+
+  const productsElem = document.querySelectorAll(".best-selling--item");
+  productsElem.forEach((prodElem, index) => {
+    prodElem.style.left = `${index * 22}%`;
+  });
+
+  let numberOfSlides = 0;
+  let productsOnScreen = 4;
+  const nextSlide = () => {
+    if(numberOfSlides < productsElem.length - productsOnScreen) {
+      numberOfSlides++;
+    } else {
+      numberOfSlides = 0;
+    }
+    productsElem.forEach(curEl => {
+      curEl.style.transform = `translateX(-${numberOfSlides * 103}%)`;
+    });
+  };
+
+  const prevSlide = () => {
+    if (numberOfSlides > 0) {
+      numberOfSlides--;
+    } else {
+      numberOfSlides = productsElem.length - productsOnScreen;
+    }
+    productsElem.forEach(curEl => {
+      curEl.style.transform = `translateX(-${numberOfSlides * 103}%)`;
+    });
+  };
+
+  const rightButtonEl = document.querySelector(".best-right");
+  const leftButtonEl = document.querySelector(".best-left")
+  rightButtonEl.addEventListener("click", nextSlide);
+  leftButtonEl.addEventListener("click", prevSlide);
+  setInterval(nextSlide, 3000);
+};
+//  Fetch All Products
+const productsFetcher = () => {
+  fetch("./assets/api/products.json").then((response) => {
+    if(!response.ok) {
+      throw new Error("Products File Has Beed Removed or Replaced Please Try Again");
+    }
+    return response.json();
+  }).then((prod) => {
+    bestSellingProducts(prod)
+  }).catch((error) => {
+    console.warn(error);
+  })
+}; productsFetcher();
+
 (() => {
   // On page load, simulate loading completion
   window.addEventListener("load", () => {

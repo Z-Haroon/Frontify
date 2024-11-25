@@ -504,6 +504,7 @@ section h2 {
   height: 50rem;
   background: var(--color-white);
   box-shadow: var(--box-shadow-2);
+  position: relative;
 }
 .best-selling--section .heading {
   font-size: 3rem;
@@ -512,10 +513,12 @@ section h2 {
   margin: 0 0 1rem;
 }
 .best-selling-items__container {
-  width: 100%;
+  width: 92%;
   height: 80%;
   padding: 0 2rem; 
+  overflow: hidden;
   position: relative;
+  margin: 2rem auto 0;
 }
 .best-selling--item {
   width: 270px;
@@ -525,10 +528,9 @@ section h2 {
   padding: 10px;
   background-color: #fff;
   text-align: center;
-  margin: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: absolute;
-  margin: 0 0 0 4rem;
+  margin: 1rem 0 0 .5rem;
 }
 
 .best-selling--item:hover {

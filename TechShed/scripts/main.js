@@ -83,10 +83,18 @@ const bestSellingProducts = (products) => {
   };
 
   const rightButtonEl = document.querySelector(".best-right");
-  const leftButtonEl = document.querySelector(".best-left")
-  rightButtonEl.addEventListener("click", nextSlide);
-  leftButtonEl.addEventListener("click", prevSlide);
-  setInterval(nextSlide, 3000);
+  const leftButtonEl = document.querySelector(".best-left");
+  let slideInterval = setInterval(nextSlide, 3000);
+  rightButtonEl.addEventListener("click", () => {
+    clearInterval(slideInterval);
+    nextSlide();
+      slideInterval = setInterval(nextSlide, 3000);
+  });
+  leftButtonEl.addEventListener("click", () => {
+    clearInterval(slideInterval);
+    prevSlide();
+      slideInterval = setInterval(nextSlide, 3000);
+  });
 };
 //  Fetch All Products
 const productsFetcher = () => {

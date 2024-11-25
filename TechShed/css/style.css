@@ -608,3 +608,71 @@ section h2 {
   font-size: 45px;
   background: none;
 }
+
+/* 
+  * *******Aside Banner Section******* * 
+*/
+
+.mini-banner--section {
+  height: 40rem;
+  margin: 4rem auto 0;
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+}
+.mini-banner--section .banner {
+  width: 49%;
+  height: 100%;
+  box-shadow: var(--box-shadow-2);
+  position: relative;
+}
+.mini-banner--section .banner1 {
+  background: url("../assets/aside-banner1.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mini-banner--section .banner2 {
+  background: url("../assets/aside-banner2.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mini-banner--section .banner .items {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.mini-banner--section .banner .items .sub-heading {
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: var(--color-white);
+}
+.mini-banner--section .banner .items .large-heading {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin: 1rem 0 1.5rem;
+  line-height: 1.1;
+  width: 65%;
+}
+.mini-banner--section .banner .items .text {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-white);
+  margin: 0 0 1rem;
+}
+.mini-banner--section .banner .items button {
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: var(--transition);
+}
+.mini-banner--section .banner .items button:hover {
+  background: transparent;
+  border-color: var(--color-white);
+  color: var(--color-white);
+}

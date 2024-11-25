@@ -11,6 +11,7 @@
   --body-text: #000;
   --color-light-blue: #a2c7ff;
   --red: #ff0000;
+  --light-graish: #ECECEC;
 
   --max-width: 1400px;
 
@@ -675,4 +676,52 @@ section h2 {
   background: transparent;
   border-color: var(--color-white);
   color: var(--color-white);
+}
+
+/* 
+  * *******Aside Banner Section******* * 
+*/
+.category-section {
+  margin: 4rem auto 0;
+  background: var(--color-white);
+  box-shadow: var(--box-shadow-2);
+  padding: 1rem;
+}
+.category-section h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 1rem 0 0;
+}
+.category-section .categories-items {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+  margin: 4rem 0;
+  gap:  2rem 0;
+}
+.category-section .img-container {
+  border-radius: 50%;
+  background: var(--light-graish);
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.category-section .category {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 1rem 0 0;
+}
+.category-section .img-container img {
+  transition: var(--transition);
+  height: 100%;
+  width: 100%;
+}
+.category-section .img-container:hover img {
+  transform: scale(1.1);
 }

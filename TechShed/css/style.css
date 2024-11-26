@@ -83,7 +83,7 @@ body {
   line-height: 1.7;
   background: var(--light-gray);
   color: var(--body-text);
-  height: 300vh;
+  height: 400vh;
 }
 
 section {
@@ -499,7 +499,7 @@ section h2 {
   * *******PRODUCTS SECTION******* * 
 */
 
-.best-selling--section {
+.best-selling--section, .sale-products--section {
   padding: 1rem 0 0 0;
   margin: 2rem auto 0;
   height: 50rem;
@@ -507,13 +507,13 @@ section h2 {
   box-shadow: var(--box-shadow-2);
   position: relative;
 }
-.best-selling--section .heading {
+.best-selling--section .heading, .sale-products--section .heading {
   font-size: 3rem;
   text-align: center;
   font-weight: 400;
   margin: 0 0 1rem;
 }
-.best-selling-items__container {
+.best-selling-items__container, .sale-products--container {
   width: 92%;
   height: 80%;
   padding: 0 2rem; 
@@ -602,7 +602,7 @@ section h2 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.best-arrow--container .best-left {
+.best-arrow--container .best-left, .sale-left {
   transform: rotate(180deg);
 }
 .best-arrow--container .arrow {
@@ -725,3 +725,7 @@ section h2 {
 .category-section .img-container:hover img {
   transform: scale(1.1);
 }
+
+/* 
+  * *******SALE PRODUCTS SECTION******* * 
+*/

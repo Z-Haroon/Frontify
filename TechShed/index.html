@@ -25,7 +25,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="loading">
+  <div class="loading completed">
     <div class="pickachu-container">
       <img src="./assets/pickachu.gif" alt="Loading Pikachu">
       <p>Loading, please wait...</p>
@@ -34,163 +34,122 @@
       </div>
     </div>
   </div>
-  <header id="header">
-    <div class="upper-header">
-      <div class="container upper-header--container">
-        <div class="tagline">
-          <img src="./assets/box.svg" alt="icon">
-          <p>Free Shipping for orders over $50</p>
+    <header id="header">
+      <div class="upperHeader-container">
+        <div class="container upperHeader-items--container">
+          <span class="tagline">
+            <img src="./assets/box.svg" alt="box icon" class="tagline-img">
+            <h4 class="tagline-text">Free Shipping for orders over Rs.500</h4>
+          </span>
+          <ul class="upperHeader-link--list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="$">Contact us</a></li>
+            <li><a href="$">Help & Support</a></li>
+            <li><a href="tel: +9231234567">Call us +9231234567</a></li>
+          </ul>
         </div>
-        <ul class="upper-header-list">
-          
-        </ul>
       </div>
-    </div>
-    <nav class="container navbar-header">
-      <div class="logo-search--container">
-        <h1 class="logo"><a href="#">TechShed</a></h1>
-        <div class="search-container">
-          <input type="text" placeholder="Search For Tech...." id="search-input">
-          <div class="search-icon--container">
-            <img src="./assets/searchicon.svg" alt="search icon">
+      <nav id="navbar">
+        <div class="container navbar-items--container">
+          <div class="logo-search--container">
+            <h1 class="logo">TechShed</h1>
+            <div class="search-container">
+              <input type="text" placeholder="Search For TechShed..." id="search-input">
+              <div class="search-icon--container">
+                <img src="./assets/searchicon.svg" alt="Search icon">
+              </div>
+            </div>
+          </div>
+          <div class="navbar-icons--container">
+            <div class="login-container">
+              <img src="./assets/user.svg" alt="user icon">
+              <a href="#">Log In</a>
+            </div>
+            <div class="navbar-icon">
+              <a href="#"><img src="./assets/wishlist.png" alt="heart icon"></a>
+              <p id="wishlistCount">0</p>
+            </div>
+            <div class="navbar-icon">
+              <a href="#"><img src="./assets/cart.png" alt="cart icon"></a>
+              <p id="cartCount">0</p>
+            </div>
           </div>
         </div>
+      </nav>
+      <div class="header-categories--section">
+        <ul class="container category-list">
+          <li><span><a href="#">Shop All</a></span></li>
+          <li><span><a href="#">Computers</a></span></li>
+          <li><span><a href="#">Tablets</a></span></li>
+          <li><span><a href="#">Drones & Cameras</a></span></li>
+          <li><span><a href="#">Audio</a></span></li>
+          <li><span><a href="#">Mobile</a></span></li>
+          <li><span><a href="#">TV & Home Cinema</a></span></li>
+          <li><span><a href="#">Wearable</a></span></li>
+          <li><span><a href="#">Sale</a></span></li>
+        </ul>
       </div>
-      <div class="header-icons">
-        <span class="login-container">
-          <img src="./assets/user.svg" alt="login icon">
-          <a href="#">Log In</a>
-        </span>
-        <span class="header-icon-container">
-          <img src="./assets/wishlist.png" alt="header-icon">
-          <p class="wishlistCount">0</p>
-        </span>
-        <span class="header-icon-container">
-          <img src="./assets/cart.png" alt="header-icon">
-          <p class="cartCount">0</p>
-        </span>
-      </div>
-    </nav>
-    <div class="category-header">
-      <ul class="category-list container">
-      </ul>
-    </div>
-  </header>
-  <!-- 
-    ? -   HERO SECTION
-  -->
-    <section class="hero-section">
-      <div class="container">
-        <h3 class="sub-heading">Best Prices</h3>
-        <h1 class="main-heading">Incredible Prices on All Your Favorite Items</h1>
-        <h4 class="bottom-heading">Get more for less on selected brands</h4>
-        <button class="shop-btn">Shop Now</button>
+    </header>
+    <section class="hero-section container">
+      <div class="hero-items--container">
+        <h3 class="hero-sub--heading">Best Prices</h3>
+        <h2 class="hero-main-heading">Incredible Prices on All Your Favorite Items</h2>
+        <h4 class="hero-botton--heading">Get more for less on selected brands</h4>
+        <button id="shopNow-btn">Shop Now</button>
       </div>
     </section>
-    <section class="container icons-section">
+    <section class="icon-section container">
       <div class="icon-container">
         <img src="./assets/delivery.png" alt="icon">
-        <p>Curb side pickup</p>
+        <h4>Curb-side pickup</h4>
       </div>
       <div class="icon-container">
         <img src="./assets/gift.svg" alt="icon">
-        <p>Free shipping on orders over $50</p>
+        <h4>Free shipping on orders over Rs.500</h4>
       </div>
       <div class="icon-container">
         <img src="./assets/percent.svg" alt="icon">
-        <p>Low prices guaranteed</p>
+        <h4>Low prices guaranteed</h4>
       </div>
       <div class="icon-container">
         <img src="./assets/clock.svg" alt="icon">
-        <p>Available to you 24/7 </p>
+        <h4>Available to you 24/7 </h4>
       </div>
     </section>
-    <section class="best-selling--section container">
-      <h3 class="heading">Top Selling Items</h3>
-      <div class="best-selling-items__container">
-        <template id="best-selling--template">
-          <div class="best-selling--item">
-            <div class="img-container">
-              <img src="https://via.placeholder.com/250x250" alt="White Buds Wireless Earbud Headphones" class="best-selling-product_image">
-            </div>
-            <h4 class="title">White Buds Wireless Earbud Headphones</h4>
-            <div class="rating">
-            </div>
-            <p class="price">
-              <span class="discount-price">Rs. 2,000</span> 
-              <span class="original-price">Rs. 2,500</span>
-            </p>
-            <button class="add-to-cart-btn">
-              <i class="fas fa-shopping-cart"></i> Add to Cart
-            </button>
-          </div> 
-        </template>     
-      </div>
-      <div class="best-arrow--container">
-        <button class="best-left arrow">➜</button>
-        <button class="best-right arrow">➜</button>
-      </div>  
-    </section>
-    <section class="container mini-banner--section">
-      <aside class="banner1 banner">
-        <div class="items">
-          <h4 class="sub-heading">Holiday Deals</h4>
-          <h3 class="large-heading">Up to 30% OFF</h3>
-          <p class="text">Selected Smartphone Brands</p>
-          <button class="shop-tn">Shop Now</button>
-        </div>
-      </aside>
-      <aside class="banner2 banner">
-        <div class="items">
-          <h4 class="sub-heading">Just In</h4>
-          <h3 class="large-heading">Take Your Sound<br /> Anywhere</h3>
-          <p class="text">Top Headphone Brands</p>
-          <button class="shop-btn">Buy Now</button>
-        </div>
-      </aside>
-    </section>
-    <section class="category-section container">
-      <h2 class="heading">Shop By Category</h2>
-      <div class="categories-items">
-        <template id="category-template">
-          <div class="category">
-            <div class="img-container" >
-              <img src="./assets/laptop.jpg" alt="" class="cate-image">
-            </div>
-            <p class="category-name">Computers</p>
+    <section class="sliding-products--section container">
+      <h2 class="title">Best Selling Items</h2>
+      <div class="sliding-container">
+        <div class="product-card">
+          <div class="product-img--container">
+            <img src="https://placehold.jp/150x150.png" alt="product image" class="product-img">
           </div>
-        </template>
+          <h3 class="product-title">Ocean Pro Headphone Touch Controller</h3>
+          <div class="rating-container">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <p class="ratingCount">( 120 )</p>
+          </div>
+          <div class="price-container">
+            <p class="actualPrice">Rs. 2400</p>
+            <p class="discountedPrice">Rs. 5500</p>
+            <p class="discountPercentage">10% OFF</p>
+          </div>
+          <div class="cart-section">
+            <input type="number" id="cartQuantity" value="1">
+            <button id="addToCartBtn">Add To Cart</button>
+            <span class="wishlistSpan"><i class="fa-regular fa-heart"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="arrow-btns--container">
+        <button class="left-btn arrow">➞</button>
+        <button class="right-btn arrow">➞</button>
       </div>
     </section>
-
-
-    <section class="sale-products--section container">
-      <h3 class="heading">On Sale</h3>
-      <div class="sale-products--container">
-        <template id="sale-products--template">
-          <div class="best-selling--item">
-            <div class="img-container">
-              <img src="https://via.placeholder.com/250x250" alt="White Buds Wireless Earbud Headphones" class="best-selling-product_image">
-            </div>
-            <h4 class="title">White Buds Wireless Earbud Headphones</h4>
-            <div class="rating">
-            </div>
-            <p class="price">
-              <span class="discount-price">Rs. 2,000</span> 
-              <span class="original-price">Rs. 2,500</span>
-            </p>
-            <button class="add-to-cart-btn">
-              <i class="fas fa-shopping-cart"></i> Add to Cart
-            </button>
-          </div> 
-        </template>     
-      </div>
-      <div class="best-arrow--container">
-        <button class="sale-left arrow">➜</button>
-        <button class="sale-right arrow">➜</button>
-      </div>  
-    </section>
-  <script src="https://kit.fontawesome.com/c4e19f2a49.js" crossorigin="anonymous"></script>
-  <script src="./scripts/main.js"></script>
+    <script src="https://kit.fontawesome.com/c4e19f2a49.js" crossorigin="anonymous"></script>
 </body>
 </html>

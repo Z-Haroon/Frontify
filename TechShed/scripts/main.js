@@ -130,6 +130,20 @@ const slidingProductsHandler = (products, startsWith, endsWith, appendCountainer
   leftArrowBtnEl.addEventListener("click", prevSlide);
 };
 
+// Rendering Categories On Home Page
+let renderCategories = (categories, templateEl, appendCountainerEl) => {
+  let categoryTemplateEl = document.getElementById(templateEl);
+  let containerEl = document.querySelector(`.${appendCountainerEl}`);
+  categories.forEach(curEl => {
+    let categoryTemplate = document.importNode(categoryTemplateEl.content, true);
+    const {id, image, name} = curEl;
+    categoryTemplate.querySelector(".category").setAttribute("id", `categoryNo${id}`);
+    categoryTemplate.querySelector(".category-img").src = image;
+    categoryTemplate.querySelector(".category-img").alt = name;
+    categoryTemplate.querySelector(".category-name").innerText = name;
+    containerEl.append(categoryTemplate);
+  });
+};
 
 (() => {
 
@@ -144,6 +158,16 @@ const slidingProductsHandler = (products, startsWith, endsWith, appendCountainer
     console.warn(error)
   });
 
+  fetch("./assets/api/categories.json").then(resp => {
+    if(!resp) {
+      throw new Error("The Api File Was Removed Or Replaced Please Check Before Try Again");
+    }
+    return resp.json();
+  }).then(categories => {
+    renderCategories(categories, "category-template", "categories-container");
+  }).catch(error => {
+    console.warn(error);
+  });
   renderUpperHeaderLinks();
   renderHeaderCategories();
   window.addEventListener("load", loadingCompleted);

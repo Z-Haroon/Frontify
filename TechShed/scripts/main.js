@@ -66,6 +66,11 @@ const slidingProductsHandler = (products, startsWith, endsWith, appendCountainer
   renderProducts.forEach(curProd => {
     let productTemplate = document.importNode(productTemplateEl.content, true);
     const {id, image, name, sellOut, shortDescription, longDescription, category, actualPrice, DiscountPrice, numberOfRating} = curProd;
+    const formatInteger = (num) => {
+      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    };
+    let originalCommaPrice = formatInteger(actualPrice);
+    let discountCommaPrice = formatInteger(DiscountPrice);
     productTemplate.querySelector(".product-card").setAttribute("id", `productNo${id}`);
     productTemplate.querySelector(".product-img").src = image;
     productTemplate.querySelector(".product-img").alt = name;
@@ -78,8 +83,8 @@ const slidingProductsHandler = (products, startsWith, endsWith, appendCountainer
       ratingContainerEl.append(createRatingStar);
     };
     productTemplate.querySelector(".ratingCount").textContent = `(${sellOut})`;
-    productTemplate.querySelector(".actualPrice").textContent = `Rs.${actualPrice}`;
-    productTemplate.querySelector(".discountedPrice").textContent = `Rs.${DiscountPrice}`;
+    productTemplate.querySelector(".actualPrice").textContent = `Rs.${originalCommaPrice}`;
+    productTemplate.querySelector(".discountedPrice").textContent = `Rs.${discountCommaPrice}`;
     productTemplate.querySelector(".discountPercentage").textContent = `${Math.round(((actualPrice - DiscountPrice) / actualPrice) * 100)}% OFF`;
     let quanitityEl = productTemplate.getElementById("cartQuantity");
     quanitityEl.addEventListener("input", () => {
@@ -95,11 +100,11 @@ const slidingProductsHandler = (products, startsWith, endsWith, appendCountainer
   });
 
   // Slider
-  let rederedProductsEl = document.querySelectorAll(".product-card");
+  let rederedProductsEl = containerEl.querySelectorAll(".product-card");
   let productsOnScreen = 5;
   let slideCount = 0;
   rederedProductsEl.forEach((curProd, index) => {
-    curProd.style.left = `${index * 20}%`
+    curProd.style.left = `${index * 20}%`;
   });
 
   // Next Slide Mover 
@@ -126,8 +131,17 @@ const slidingProductsHandler = (products, startsWith, endsWith, appendCountainer
   }
   let rightArrowBtnEl = document.querySelector(`.${rightArrowEl}`);
   let leftArrowBtnEl = document.querySelector(`.${leftArrowEl}`);
-  rightArrowBtnEl.addEventListener("click", nextSlide);
-  leftArrowBtnEl.addEventListener("click", prevSlide);
+  let interval = setInterval(nextSlide, 6000);
+  rightArrowBtnEl.addEventListener("click", () => {
+    clearInterval(interval);
+    nextSlide();
+    interval = setInterval(nextSlide, 6000);
+  });
+  leftArrowBtnEl.addEventListener("click", () => {
+    clearInterval(interval);
+    prevSlide();
+    interval = setInterval(nextSlide, 6000);
+  });
 };
 
 // Rendering Categories On Home Page
@@ -145,6 +159,66 @@ let renderCategories = (categories, templateEl, appendCountainerEl) => {
   });
 };
 
+// Rendering For Your Products
+let renderForYouProducts = (products) => {
+  let showProducts = 20;
+  let startWith = 0;
+  let containerEl = document.querySelector(".foryou-products--container");
+  let renderProductsManager = () => {
+    let renderProducts = products.slice(startWith, showProducts);
+    let productCardTemplateEl = document.getElementById("forYouProductCardTemplate");
+      renderProducts.forEach(curProd => {
+        let productTemplate = document.importNode(productCardTemplateEl.content, true);
+        const {id, image, name, sellOut, shortDescription, longDescription, category, actualPrice, DiscountPrice, numberOfRating} = curProd;
+        const formatInteger = (num) => {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        };
+        let originalCommaPrice = formatInteger(actualPrice);
+        let discountCommaPrice = formatInteger(DiscountPrice);
+        productTemplate.querySelector(".product-card").setAttribute("id", `productNo${id}`);
+        productTemplate.querySelector(".product-img").src = image;
+        productTemplate.querySelector(".product-img").alt = name;
+        productTemplate.querySelector(".product-title").textContent = name;
+        let ratingContainerEl = productTemplate.querySelector(".rating-container");
+        for(let i = 0; i < numberOfRating; i++) {
+        let createRatingStar = document.createElement("i");
+        createRatingStar.classList.add("fa-solid");
+        createRatingStar.classList.add("fa-star");
+        ratingContainerEl.append(createRatingStar);
+        };
+        productTemplate.querySelector(".ratingCount").textContent = `(${sellOut})`;
+        productTemplate.querySelector(".actualPrice").textContent = `Rs.${originalCommaPrice}`;
+        productTemplate.querySelector(".discountedPrice").textContent = `Rs.${discountCommaPrice}`;
+        productTemplate.querySelector(".discountPercentage").textContent = `${Math.round(((actualPrice - DiscountPrice) / actualPrice) * 100)}% OFF`;
+        let quanitityEl = productTemplate.getElementById("cartQuantity");
+        quanitityEl.addEventListener("input", () => {
+        if(!isNaN(parseInt(sellOut))) {
+          if(quanitityEl.value > parseInt(sellOut)) {
+            quanitityEl.value = sellOut;
+          }  else if (quanitityEl.value < 1) {
+          quanitityEl.value = 1;
+        }
+      }
+    });
+    containerEl.append(productTemplate);
+      });
+  };
+  renderProductsManager();
+  
+  let loadMoreBtnEl = document.getElementById("load-more--btn");
+  loadMoreBtnEl.addEventListener("click", () => {
+    if(showProducts <= products.length - 20) {
+      startWith += 20;
+      showProducts += 20;
+    } else {
+      loadMoreBtnEl.style.display = "none";
+    }
+    renderProductsManager();
+    console.log(showProducts, startWith)
+  });
+
+};
+
 (() => {
 
   fetch("./assets/api/products.json").then(resp => {
@@ -153,7 +227,8 @@ let renderCategories = (categories, templateEl, appendCountainerEl) => {
     }
     return resp.json();
   }).then(products => {
-    slidingProductsHandler(products, 0, 30, "best-selling--sliding", "product-card--template", "best-right--btn", "best-left--btn");
+    slidingProductsHandler(products, 0, 30, "best-selling--sliding", "product-card--template", "best-right--btn", "best-left--btn");    slidingProductsHandler(products, 30, 60, "on-sale--sliding", "product-card--template", "onSale-right--btn", "onSale-left--btn");
+    renderForYouProducts(products);
   }).catch(error => {
     console.warn(error)
   });

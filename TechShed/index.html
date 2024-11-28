@@ -143,6 +143,22 @@
         </template>
       </div>
     </section>
+    <section class="sliding-products--section container">
+      <h2 class="title">On sale</h2>
+      <div class="sliding-container on-sale--sliding">
+      </div>
+      <div class="arrow-btns--container">
+        <button class="onSale-left--btn arrow">➜</button>
+        <button class="onSale-right--btn arrow">➜</button>
+      </div>
+    </section>
+    <section class="foryou-section container">
+      <h2 class="title">Just For You</h2>   
+      <div class="foryou-products--container">
+
+      </div>  
+      <button id="load-more--btn">Load More</button>
+    </section>
     <template id="product-card--template">
       <div class="product-card">
         <div class="product-img--container">
@@ -164,6 +180,30 @@
         </div>
       </div>
     </template>
+    <template id="forYouProductCardTemplate">
+      <div class="product-card foryouProductCard">
+        <div class="product-img--container">
+          <img src="https://placehold.jp/150x150.png" alt="product image" class="product-img">
+        </div>
+        <h3 class="product-title">Ocean Pro Headphone Touch Controller</h3>
+        <div class="rating-container">
+          <p class="ratingCount">( 120 )</p>
+        </div>
+        <div class="price-container">
+          <p class="actualPrice">Rs. 2400</p>
+          <p class="discountedPrice">Rs. 5500</p>
+          <p class="discountPercentage">10% OFF</p>
+        </div>
+        <div class="cart-section">
+          <input type="number" id="cartQuantity" value="1">
+          <button id="addToCartBtn">Add To Cart</button>
+          <span class="wishlistSpan"><i class="fa-regular fa-heart"></i></span>
+        </div>
+      </div>
+    </template>
+    <footer class="mainFooter">
+      <div class="container"></div>
+    </footer>
     <script src="https://kit.fontawesome.com/c4e19f2a49.js" crossorigin="anonymous"></script>
     <script src="./scripts/main.js"></script>
 </body>

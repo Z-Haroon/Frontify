@@ -84,7 +84,6 @@ body {
   line-height: 1.7;
   background: var(--light-gray);
   color: var(--body-text);
-  height: 400vh;
 }
 
 /* 
@@ -104,11 +103,12 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--light-gray);
+  background: #fff;
   border-radius: 16px;
+  box-shadow: var(--box-shadow-2);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #9b9b9b;
+  background: #636363;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
@@ -550,7 +550,7 @@ body {
 .price-container {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: .5rem;
   justify-content: center;
   margin: .4rem 0 .8rem;
 }
@@ -565,7 +565,7 @@ body {
   font-weight: 600;
 }
 .price-container .discountPercentage {
-  padding: 3px 5px;
+  padding: 2px 4px;
   border: 1px solid #ccc;
   font-size: 1.28rem;
   font-weight: 500;
@@ -573,7 +573,7 @@ body {
 .cart-section {
   display: flex;
   align-items: center;
-  margin: 2rem 0 0;
+  margin: 3rem 0 0;
   justify-content: center;
 }
 .cart-section input {
@@ -742,4 +742,53 @@ body {
 .category .title {
   font-size: 2rem;
   font-weight: 400;
+}
+
+/* 
+  * *******FOR YOU SECTION******* * 
+*/
+
+.foryou-section {
+  background: var(--color-white);
+  margin: 2rem auto 10rem;
+  box-shadow: var(--box-shadow-2);
+  padding: 3rem 6rem;
+}
+.foryou-section h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 4rem;
+}
+.foryou-products--container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem 1rem;
+}
+#load-more--btn {
+  display: block;
+  padding: 1.5rem 3rem;
+  background: var(--color-purple);
+  color: var(--color-white);
+  margin: 3rem auto 1rem;
+  border-radius: 20px;
+  font-size: 2rem;
+  transition: var(--transition);
+}
+#load-more--btn:hover {
+  background: var(--color-black);
+}
+.foryouProductCard {
+  position: relative;
+}
+
+/* 
+  * *******FOOTER******* * 
+*/
+
+.mainFooter {
+  padding: 0 6rem;
+  background: #2C3E50;
+  height: 60rem;
 }

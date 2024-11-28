@@ -219,6 +219,11 @@ body {
 .upperHeader-container {
   height: 2.4rem;
   background: var(--color-black);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.upperHeader-container.scroll {
+  height: 0;
 }
 .upperHeader-items--container {
   display: flex;
@@ -483,6 +488,8 @@ body {
   margin: 2rem auto 0;
   box-shadow: var(--box-shadow-2);
   padding: 3rem 2rem;
+  position: relative;
+  height: 50rem;
 }
 .sliding-products--section h2 {
   text-align: center;
@@ -492,20 +499,21 @@ body {
 }
 .sliding-container {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   height: 90%;
-  width: 100%;
-  margin: 2.5rem 0 0;
+  width: 92%;
+  margin: 2.5rem 6rem 0;
   overflow: hidden;
-  padding: 0 4rem;
+  position: relative;
 }
 .product-card {
   height: 37rem;
-  width: 25rem;
+  width: 24rem;
   background: var(--color-white);
   box-shadow: var(--box-shadow-1);
   margin: 0 0 1rem;
   transition: var(--transition);
+  position: absolute;
 }
 .product-card:hover {
   box-shadow: var(--box-shadow-2);
@@ -537,7 +545,7 @@ body {
 }
 .rating-container .ratingCount {
   font-size: 1.6rem;
-  margin: 0 0 0 1rem;
+  margin: 0 1rem 0 0rem;
 }
 .price-container {
   display: flex;
@@ -598,4 +606,20 @@ body {
 }
 #addToCartBtn:hover {
   background: var(--color-black);
+}
+.arrow-btns--container {
+  position: absolute;
+  top: 50%;
+  width: 98%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.arrow-btns--container .arrow {
+  font-size: 5rem;
+  background: none;
+}
+.arrow-btns--container .arrow:first-child {
+  transform: rotate(180deg);
 }

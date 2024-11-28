@@ -25,7 +25,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="loading completed">
+  <div class="loading">
     <div class="pickachu-container">
       <img src="./assets/pickachu.gif" alt="Loading Pikachu">
       <p>Loading, please wait...</p>
@@ -42,11 +42,6 @@
             <h4 class="tagline-text">Free Shipping for orders over Rs.500</h4>
           </span>
           <ul class="upperHeader-link--list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="$">Contact us</a></li>
-            <li><a href="$">Help & Support</a></li>
-            <li><a href="tel: +9231234567">Call us +9231234567</a></li>
           </ul>
         </div>
       </div>
@@ -79,15 +74,6 @@
       </nav>
       <div class="header-categories--section">
         <ul class="container category-list">
-          <li><span><a href="#">Shop All</a></span></li>
-          <li><span><a href="#">Computers</a></span></li>
-          <li><span><a href="#">Tablets</a></span></li>
-          <li><span><a href="#">Drones & Cameras</a></span></li>
-          <li><span><a href="#">Audio</a></span></li>
-          <li><span><a href="#">Mobile</a></span></li>
-          <li><span><a href="#">TV & Home Cinema</a></span></li>
-          <li><span><a href="#">Wearable</a></span></li>
-          <li><span><a href="#">Sale</a></span></li>
         </ul>
       </div>
     </header>
@@ -119,37 +105,39 @@
     </section>
     <section class="sliding-products--section container">
       <h2 class="title">Best Selling Items</h2>
-      <div class="sliding-container">
-        <div class="product-card">
-          <div class="product-img--container">
-            <img src="https://placehold.jp/150x150.png" alt="product image" class="product-img">
-          </div>
-          <h3 class="product-title">Ocean Pro Headphone Touch Controller</h3>
-          <div class="rating-container">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <p class="ratingCount">( 120 )</p>
-          </div>
-          <div class="price-container">
-            <p class="actualPrice">Rs. 2400</p>
-            <p class="discountedPrice">Rs. 5500</p>
-            <p class="discountPercentage">10% OFF</p>
-          </div>
-          <div class="cart-section">
-            <input type="number" id="cartQuantity" value="1">
-            <button id="addToCartBtn">Add To Cart</button>
-            <span class="wishlistSpan"><i class="fa-regular fa-heart"></i></span>
-          </div>
-        </div>
+      <div class="sliding-container best-selling--sliding">
       </div>
       <div class="arrow-btns--container">
-        <button class="left-btn arrow">➞</button>
-        <button class="right-btn arrow">➞</button>
+        <button class="best-left--btn arrow">➜</button>
+        <button class="best-right--btn arrow">➜</button>
       </div>
     </section>
+    <section class="mini-banners--section container">
+      <aside class="aside-banner--1 aside-banner"></aside>
+      <aside class="aside-banner--2 aside-banner"></aside>
+    </section>
+    <template id="product-card--template">
+      <div class="product-card">
+        <div class="product-img--container">
+          <img src="https://placehold.jp/150x150.png" alt="product image" class="product-img">
+        </div>
+        <h3 class="product-title">Ocean Pro Headphone Touch Controller</h3>
+        <div class="rating-container">
+          <p class="ratingCount">( 120 )</p>
+        </div>
+        <div class="price-container">
+          <p class="actualPrice">Rs. 2400</p>
+          <p class="discountedPrice">Rs. 5500</p>
+          <p class="discountPercentage">10% OFF</p>
+        </div>
+        <div class="cart-section">
+          <input type="number" id="cartQuantity" value="1">
+          <button id="addToCartBtn">Add To Cart</button>
+          <span class="wishlistSpan"><i class="fa-regular fa-heart"></i></span>
+        </div>
+      </div>
+    </template>
     <script src="https://kit.fontawesome.com/c4e19f2a49.js" crossorigin="anonymous"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

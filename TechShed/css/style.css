@@ -750,7 +750,7 @@ body {
 
 .foryou-section {
   background: var(--color-white);
-  margin: 2rem auto 10rem;
+  margin: 2rem auto 2rem;
   box-shadow: var(--box-shadow-2);
   padding: 3rem 6rem;
 }
@@ -784,11 +784,187 @@ body {
 }
 
 /* 
+  * *******BOTTOM BANNER******* * 
+*/
+.bottom-banner--section {
+  height: 50rem;
+  background: var(--color-white);
+  box-shadow: var(--box-shadow-2);
+  display: flex;
+  margin: 0 auto 10rem;
+  overflow: hidden;
+}
+.items-section {
+  width: 30%;
+  position: relative;
+}
+.banner-section {
+  width: 80%;
+  height: 100%;
+  background: url("../assets/bottom-banner.avif");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: skew(15deg, 0) translate(10%);
+  transform-origin: left;
+}
+.bottom-banner--section .items-container {
+  position: absolute;
+  left: 6%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.items-container .sub-heading {
+  font-size: 2rem;
+  padding: .5rem 2rem;
+  background: var(--red);
+  color: var(--color-white);
+  width: fit-content;
+}
+.items-container .sub-heading-2 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 1.5rem 0 2rem;
+}
+.items-container .main-heading {
+  font-size: 8rem;
+  font-weight: 600;
+}
+.items-container .main-heading span {
+  color: var(--color-purple);
+} 
+.items-container .sub-heading-3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.para-1 {
+  font-size: 2rem;
+  margin: 2rem 0 0rem;
+  line-height: 1;
+}
+.para-2 {
+  font-size: 2rem;
+}
+.items-container .shop {
+  padding: 1.5rem 4rem;
+  margin: 2rem 0 0;
+  font-size: 1.8rem;
+  color: var(--color-white);
+  background: var(--color-purple);
+  border-radius: 20px;
+  transition: var(--transition);
+}
+.items-container .shop:hover {
+  background: var(--color-black);
+}
+
+/* 
   * *******FOOTER******* * 
 */
+#main-footer {
+  width: 100%;
+  background: #1c0049;
+  color: var(--color-white);
+  padding: 6rem 0 2rem 0rem;
+}
+.upper-footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4rem;
+}
+.footer-logo {
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0 0 5rem;
+}
+.social-media--icons__container {
+  display: flex;
+  gap: 1rem;
 
-.mainFooter {
-  padding: 0 6rem;
-  background: #2C3E50;
-  height: 60rem;
+}
+.footer-row {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.social-media--icons__container .social-icon {
+  height: 4rem;
+  width: 4rem;
+  background: var(--color-light-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-black);
+  font-size: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+.social-media--icons__container .social-icon:hover {
+  color: var(--color-white);
+  border-color: var(--color-white);
+  background: transparent;
+}
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+.list-heading {
+  margin: 0 0 1rem;
+  font-size: 3rem;
+  text-align: left;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.footer-list li {
+  margin: .5rem 0 0;
+  font-size: 1.5rem;
+  width: 100%;
+}
+.footer-list li a {
+  transition: var(--transition);
+  margin: 0 1rem;
+}
+.footer-list li a:hover {
+  color: var(--light-gray);
+}
+.footer-para {
+  margin: 1rem 2rem 0 3.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+.footer-email--container {
+  margin: 2rem 0 0;
+  background: var(--color-white);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%
+}
+#footer-email--input {
+  width: 100%;
+  padding: 0 0 0 1rem;
+}
+#footer-email--btn {
+  background: var(--color-purple);
+  color: var(--color-white);
+  height: 100%;
+  width: fit-content;
+  padding: 0 1rem;
+  transition: var(--transition);
+}
+#footer-email--btn:hover {
+  background-color: var(--color-black);
+}
+.bottom-footer {
+  width: 100%;
+  margin: 10rem 0 0;
+  color: var(--color-white);
+  text-align: center;
+  font-size: 1.4rem;
 }

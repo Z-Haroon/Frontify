@@ -174,6 +174,10 @@ let renderForYouProducts = (products) => {
       renderProducts.forEach(curProd => {
         let productTemplate = document.importNode(productCardTemplateEl.content, true);
         const {id, image, name, sellOut, shortDescription, longDescription, category, actualPrice, DiscountPrice, numberOfRating} = curProd;
+        let titleTrimer = name;
+        if (name.length > 25) {
+          titleTrimer = name.slice(0, 25) + "...";
+        }
         const formatInteger = (num) => {
         return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         };
@@ -182,7 +186,7 @@ let renderForYouProducts = (products) => {
         productTemplate.querySelector(".product-card").setAttribute("id", `productNo${id}`);
         productTemplate.querySelector(".product-img").src = image;
         productTemplate.querySelector(".product-img").alt = name;
-        productTemplate.querySelector(".product-title").textContent = name;
+        productTemplate.querySelector(".product-title").textContent = titleTrimer;
         let ratingContainerEl = productTemplate.querySelector(".rating-container");
         for(let i = 0; i < numberOfRating; i++) {
         let createRatingStar = document.createElement("i");

@@ -1,4 +1,5 @@
 // Loading Screen Remover After Load Full JavaScript
+let windowWidth = window.innerWidth;
 let loadingCompleted = () => {
   const loadingScreenEl = document.querySelector(".loading");
   setTimeout(() => {
@@ -105,10 +106,17 @@ const slidingProductsHandler = (products, startsWith, endsWith, appendCountainer
 
   // Slider
   let rederedProductsEl = containerEl.querySelectorAll(".product-card");
-  let productsOnScreen = 5;
+  let productsOnScreen = 4;
   let slideCount = 0;
   rederedProductsEl.forEach((curProd, index) => {
-    curProd.style.left = `${index * 20}%`;
+    if (windowWidth > 1400) {
+      curProd.style.left = `${index * 20}%`; 
+    } else if (windowWidth <= 1400 && windowWidth > 1250) {
+      curProd.style.left = `${index * 20.2}%`; 
+    } else if (windowWidth <= 1280 && windowWidth > 1020) {
+      curProd.style.left = `${index * 20.55}%`; 
+      productsOnScreen = 5;
+    }
   });
 
   // Next Slide Mover 

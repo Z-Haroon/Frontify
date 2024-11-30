@@ -111,10 +111,15 @@ const slidingProductsHandler = (products, startsWith, endsWith, appendCountainer
   rederedProductsEl.forEach((curProd, index) => {
     if (windowWidth > 1400) {
       curProd.style.left = `${index * 20}%`; 
+      productsOnScreen = 4;
     } else if (windowWidth <= 1400 && windowWidth > 1250) {
-      curProd.style.left = `${index * 20.2}%`; 
+      curProd.style.left = `${index * 20.2}%`;
+      productsOnScreen = 4;
     } else if (windowWidth <= 1280 && windowWidth > 1020) {
       curProd.style.left = `${index * 20.55}%`; 
+      productsOnScreen = 5;
+    } else if (windowWidth <= 1024 && windowWidth > 720) {
+      curProd.style.left = `${index * 17.7}%`;
       productsOnScreen = 5;
     }
   });

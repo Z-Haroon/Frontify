@@ -2,284 +2,70 @@
 <html lang="en">
 <head>
   <!-- 
-    ? -   All Meta Tags
+    ? -   Meta Tags
   -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="title" content="Buy High Quality Electronics On Best Price - TechShed">
-  <meta name="description" content="Our Company Focus On Quality Not On Quantity That's Why We Have 1.3m Customers All Over The US - Get Your Electronics On Best Price Shop it Now!">
-  <meta name="keywords" content="electronics, Online Store, TechShed, Best Electronics">
+  <meta name="title" content="Get Your Favourite Electronics On One Click - TechShed">
+  <meta name="description" content="Get Your Favourite electronics On cheap rate & get 50% OFF + Free Home Delivery all Over Pakistan, Enhance your life by using our high quality electronics">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="Pakistan, India, Bangladesh, Electronics, Online Store, electronics store, pakistani store, online shopping, beautiful store, tech, tech items">
   <meta name="Author" content="Z-Haroon">
-  <title>Electronics Store - Buy Electronics On Best Deal </title>
   <!-- 
-    ? -   Link to Other Files, Favicon, preload images
+    ? -   Link, Favicon, google Fonts, Icons
   -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="xml+svg">
+  <title>Get your favourite electronics on one click - TechShed</title>
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/responsive.css">
-  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/xml+svg">
   <link rel="preload" as="image" href="./assets/banner1.webp">
   <link rel="preload" as="image" href="./assets/banner2.webp">
   <link rel="preload" as="image" href="./assets/banner3.webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="loading">
-    <div class="pickachu-container">
-      <img src="./assets/pickachu.gif" alt="Loading Pikachu">
-      <p>Loading, please wait...</p>
-      <div class="progress-bar">
-        <div class="progress"></div>
-      </div>
-    </div>
-  </div>
-    <header id="header">
-      <div class="upperHeader-container">
-        <div class="container upperHeader-items--container">
-          <span class="tagline">
-            <img src="./assets/box.svg" alt="box icon" class="tagline-img">
-            <h4 class="tagline-text">Free Shipping for orders over Rs.500</h4>
-          </span>
-          <ul class="upperHeader-link--list">
-          </ul>
+  <div class="loading"> <!-- Loading Screen Start-->
+    <img src="./assets/pickachu.gif" alt="pickachu loading video" class="loading-img">
+    <div class="loading-bar"></div>
+    <p class="loading-text">Loading.......</p>
+  </div> <!-- Loading Screen End-->
+  <header id="header"> <!-- Header Start Here -->
+    <div class="upper-header">
+      <div class="container upper-header--items">
+        <div class="tagline">
+          <img src="./assets/box.svg" alt="box icon" class="tagline-img">
+          <h4 class="tagline-heading">Free Shipping for orders over $500</h4>
         </div>
+        <ul class="upper-header--nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="./html/blogs.html">Blogs</a></li>
+          <li><a href="./html/about.html">About us</a></li>
+          <li><a href="./html/contact.html">Contact us</a></li>
+          <li><a href="tel: +923012345678">Call us +923012345678</a></li>
+        </ul>
       </div>
-      <nav id="navbar">
-        <div class="container navbar-items--container">
-          <div class="logo-search--container">
-            <h1 class="logo">TechShed</h1>
+      <nav class="main-header">
+        <div class="container main-nav">
+          <div class="logo-search--section">
+            <a href="index.html"><h1>TechShed</h1></a>
             <div class="search-container">
-              <input type="text" placeholder="Search For TechShed..." id="search-input">
+              <input type="text" placeholder="Search TechShed..." id="main-search--input">
               <div class="search-icon--container">
-                <img src="./assets/searchicon.svg" alt="Search icon">
+                <img src="./assets/searchicon.svg" alt="search icon" class="main-search--icon">
               </div>
             </div>
           </div>
-          <div class="navbar-icons--container">
-            <div class="login-container">
-              <img src="./assets/user.svg" alt="user icon">
-              <a href="#">Log In</a>
-            </div>
-            <div class="navbar-icon">
-              <a href="#"><img src="./assets/wishlist.png" alt="heart icon"></a>
-              <p id="wishlistCount">0</p>
-            </div>
-            <div class="navbar-icon">
-              <a href="#"><img src="./assets/cart.png" alt="cart icon"></a>
-              <p id="cartCount">0</p>
-            </div>
+          <div class="login-container">
+            <a href="#"><img src="./assets/user.svg" alt="user avatar"> Log In</a>
+            <a href="./html/wishlist.html"><img src="./assets/wishlist.png" alt="wishlist icon"></a>
+            <a href="./html/cart.html"><img src="./assets/cart.png" alt="cart icon"><span id="cartCount">0</span></a>
           </div>
         </div>
       </nav>
-      <div class="header-categories--section">
-        <ul class="container category-list">
-        </ul>
-      </div>
-    </header>
-    <section class="hero-section container">
-      <div class="hero-items--container">
-        <h3 class="hero-sub--heading">Best Prices</h3>
-        <h2 class="hero-main-heading">Incredible Prices on All Your Favorite Items</h2>
-        <h4 class="hero-botton--heading">Get more for less on selected brands</h4>
-        <button id="shopNow-btn">Shop Now</button>
-      </div>
-    </section>
-    <section class="icon-section container">
-      <div class="icon-container">
-        <img src="./assets/delivery.png" alt="icon">
-        <h4>Curb-side <br /> pickup</h4>
-      </div>
-      <div class="icon-container">
-        <img src="./assets/gift.svg" alt="icon">
-        <h4>Free shipping on <br /> orders over Rs.500</h4>
-      </div>
-      <div class="icon-container">
-        <img src="./assets/percent.svg" alt="icon">
-        <h4>Low prices <br /> guaranteed</h4>
-      </div>
-      <div class="icon-container">
-        <img src="./assets/clock.svg" alt="icon">
-        <h4>Available to you <br /> 24/7 </h4>
-      </div>
-    </section>
-    <section class="sliding-products--section container">
-      <h2 class="title">Best Selling Items</h2>
-      <div class="sliding-container best-selling--sliding">
-      </div>
-      <div class="arrow-btns--container">
-        <button class="best-left--btn arrow">➜</button>
-        <button class="best-right--btn arrow">➜</button>
-      </div>
-    </section>
-    <section class="mini-banners--section container">
-      <aside class="aside-banner--1 aside-banner">
-        <div class="items-container">
-          <h3 class="sub-heading">Holiday Deals</h3>
-          <h2 class="main-heading">Up to 30% OFF</h2>
-          <h4 class="bottom-heading">Selected Smartphone Brands</h4>
-          <button class="shop-btn">Shop Now</button>
-        </div>
-      </aside>
-      <aside class="aside-banner--2 aside-banner">
-        <div class="items-container">
-          <h3 class="sub-heading">Just In</h3>
-          <h2 class="main-heading">Take Your Sound Anywhere</h2>
-          <h4 class="bottom-heading">Top Headphone Brands</h4>
-          <button class="shop-btn">Buy Now</button>
-        </div>
-      </aside>
-    </section>
-    <section class="category-section container">
-      <h2 class="heading">Shop By Category</h2>
-      <div class="categories-container">
-        <template id="category-template">
-          <div class="category">
-            <div class="category-img--container">
-              <img src="./assets/laptop.jpg" alt="category img" class="category-img">
-            </div>
-            <p class="title category-name">Computers</p>
-          </div>
-        </template>
-      </div>
-    </section>
-    <section class="sliding-products--section container">
-      <h2 class="title">On sale</h2>
-      <div class="sliding-container on-sale--sliding">
-      </div>
-      <div class="arrow-btns--container">
-        <button class="onSale-left--btn arrow">➜</button>
-        <button class="onSale-right--btn arrow">➜</button>
-      </div>
-    </section>
-    <section class="foryou-section container">
-      <h2 class="title">Just For You</h2>   
-      <div class="foryou-products--container">
-
-      </div>  
-      <button id="load-more--btn">Load More</button>
-    </section>
-    <section class="bottom-banner--section container">
-      <div class="items-section">
-        <div class="items-container">
-          <h4 class="sub-heading">Today's Special</h4>
-          <h3 class="sub-heading-2">Best Arial View in Town</h3>
-          <h3 class="main-heading"><span>30%</span> OFF</h3>
-          <h4 class="sub-heading-3">on professional camera drones</h4>
-          <p class="para-1">Limited quanities.</p>
-          <p class="para-2">See product detail pages for availability.</p>
-          <button class="shop">Shop Now</button>
-        </div>
-      </div>
-      <div class="banner-section"></div>
-    </section>
-    <footer id="main-footer">
-      <div class="container footer-items--container">
-        <div class="upper-footer">
-          <div class="footer-row row1">
-            <h2 class="footer-logo">TechShed</h2>
-            <div class="social-media--icons__container">
-              <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="social-icon"><i class="fa fa-youtube"></i></a>
-              <a href="#" class="social-icon"><i class="fa fa-amazon"></i></a>
-            </div>
-          </div>
-          <div class="footer-row row2">
-            <ul class="footer-list">
-              <li><h3 class="list-heading">TechShed</h3></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Conditions</a></li>
-              <li><a href="#">Our Journals</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Affiliate Programme</a></li>
-              <li><a href="#">Ultras Press</a></li>
-            </ul>
-          </div>
-          <div class="footer-row row3">
-            <ul class="footer-list">
-              <li><h3 class="list-heading">Categories</h3></li>
-              <li><a href="#">Shop All</a></li>
-              <li><a href="#">Computers</a></li>
-              <li><a href="#">Tablets</a></li>
-              <li><a href="#">Drones & Cameras</a></li>
-              <li><a href="#">Audio</a></li>
-              <li><a href="#">Mobile</a></li>
-              <li><a href="#">TV & Home Cinemas</a></li>
-              <li><a href="#">Wearable</a></li>
-              <li><a href="#">Sale</a></li>
-            </ul>
-          </div>
-          <div class="footer-row row4">
-            <ul class="footer-list">
-              <li><h3 class="list-heading">Help & Support</h3></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Contact us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Returns & Refunds</a></li>
-              <li><a href="#">Cookie Guidelines</a></li>
-              <li><a href="#">Delivery Information</a></li>
-            </ul>
-          </div>
-          <div class="footer-row row5">
-            <h3 class="list-heading">Subscribe Us</h3>
-            <p class="footer-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus nihil magni soluta optio facere tempora possimus, eum ipsum, praesentium recusandae similique neque, perspiciatis illo fuga assumenda. Sint rerum architecto omnis.</p>
-            <div class="footer-email--container">
-              <input type="text" placeholder="Email Address..." id="footer-email--input">
-              <button id="footer-email--btn">Subscribe</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="bottom-footer">
-        <p>© 2035 by TechShed. Powered and secured by Z-Haroon</p>
-      </div>
-    </footer>
-    <template id="product-card--template">
-      <div class="product-card">
-        <div class="product-img--container">
-          <img src="https://placehold.jp/150x150.png" alt="product image" class="product-img">
-        </div>
-        <h3 class="product-title">Ocean Pro Headphone Touch Controller</h3>
-        <div class="rating-container">
-          <p class="ratingCount">( 120 )</p>
-        </div>
-        <div class="price-container">
-          <p class="actualPrice">Rs. 2400</p>
-          <p class="discountedPrice">Rs. 5500</p>
-          <p class="discountPercentage">10% OFF</p>
-        </div>
-        <div class="cart-section">
-          <input type="number" id="cartQuantity" value="1">
-          <button id="addToCartBtn">Add To Cart</button>
-          <span class="wishlistSpan"><i class="fa-regular fa-heart"></i></span>
-        </div>
-      </div>
-    </template>
-    <template id="forYouProductCardTemplate">
-      <div class="product-card foryouProductCard">
-        <div class="product-img--container">
-          <img src="https://placehold.jp/150x150.png" alt="product image" class="product-img">
-        </div>
-        <h3 class="product-title">Ocean Pro Headphone Touch Controller</h3>
-        <div class="rating-container">
-          <p class="ratingCount">( 120 )</p>
-        </div>
-        <div class="price-container">
-          <p class="actualPrice">Rs. 2400</p>
-          <p class="discountedPrice">Rs. 5500</p>
-          <p class="discountPercentage">10% OFF</p>
-        </div>
-        <div class="cart-section">
-          <input type="number" id="cartQuantity" value="1">
-          <button id="addToCartBtn">Add To Cart</button>
-          <span class="wishlistSpan"><i class="fa-regular fa-heart"></i></span>
-        </div>
-      </div>
-    </template>
-    <script src="https://kit.fontawesome.com/c4e19f2a49.js" crossorigin="anonymous"></script>
-    <script src="./scripts/main.js"></script>
+    </div>
+  </header> <!-- Header End Here -->
+  <script src="./scripts/main.js"></script>
 </body>
 </html>

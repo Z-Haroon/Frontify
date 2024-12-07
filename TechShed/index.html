@@ -79,14 +79,78 @@
       </ul>
     </div>
   </header> <!-- Header End Here -->
-  <section class="hero-section container">
+  <section class="hero-section container"><!--HERO SEC Here -->
     <div class="hero-items--container">
       <h4 class="hero-sub--heading">Best Price</h4>
       <h2 class="hero-heading">Incredible Prices on All Your Favorite Items</h2>
       <p class="hero-bottom-heading">Get more for less on selected brands.</p>
       <button class="btn">Shop Now</button>
     </div>
+  </section> <!--HERO SEC End Here -->
+  <section class="container hero-icons-section"> <!--HERO ICON SEC End Here -->
+    <div class="icon-container">
+      <img src="./assets/delivery.png" alt="delivery icon">
+      <p class="icon-text">Curb-side <br />pickup</p>
+    </div>
+    <div class="icon-container">
+      <img src="./assets/gift.svg" alt="delivery icon">
+      <p class="icon-text">Free shipping on <br />orders over $50</p>
+    </div>
+    <div class="icon-container">
+      <img src="./assets/percent.svg" alt="delivery icon">
+      <p class="icon-text">Low prices <br />guaranteed</p>
+    </div>
+    <div class="icon-container">
+      <img src="./assets/clock.svg" alt="delivery icon">
+      <p class="icon-text">Available to <br />you 24/7</p>
+    </div>
+  </section> <!--HERO ICON SEC End Here -->
+  <section class="sliding-section container">
+    <h2 class="sliding-section--heading">Best Selling Items</h2>
+    <div class="sliding-container">
+    </div>
+    <div class="arrows-container">
+      <button class="arrow-btn">➔</button>
+      <button class="arrow-btn">➔</button>
+    </div>
   </section>
+  <template id="product-card--template"> <!-- Product Card Template Start Here-->
+    <div class="product-card">
+      <a href="./html/product.html" class="product-location">
+        <h4 class="sale-text">Sale</h4>
+        <div class="product-img--container">
+          <img src="https://placehold.jp/250x250.png" alt="" class="product-img">
+        </div>
+        <h2 class="product-title">Shel 50°C Class LED 4k UHD Smart TV</h2>
+        <div class="price-container">
+          <h3 class="realPrice">$85.00</h3>
+          <h3 class="discountedPrice">$65.00</h3>
+          <p class="discountPercentage">10% OFF</p>
+        </div>
+        <div class="rating-container">
+          <div class="ratings">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <span class="ratingCount-container">
+            <p class="ratingCount">4.8</p>
+            <p class="soldOut">( 6 )</p>
+          </span>
+        </div>
+        <div class="add-to--cart__container">
+          <input type="number" class="quantityInput"value="0">
+          <button class="addToCart-btn">Add To Cart</button>
+          <span class="add-to--wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </span>
+        </div>
+      </a>
+    </div>
+  </template>  <!-- Product Card Template End Here-->
   <script src="./scripts/main.js"></script>
+  <script src="https://kit.fontawesome.com/c4e19f2a49.js" crossorigin="anonymous"></script>
 </body>
 </html>

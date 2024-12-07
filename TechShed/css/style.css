@@ -238,9 +238,9 @@ body {
 }
 .price-container {
   display: flex;
-  padding: 0 1rem;
+  padding: 0 .5rem;
   font-size: 1.4rem;
-  gap: 1rem;
+  gap: .6rem;
   color: #2b2b2b;
 }
 .discountPercentage {
@@ -251,13 +251,17 @@ body {
   color: #555555;
   display: flex;
   align-items: center;
-  margin: 0 0 0 1rem;
+  white-space: nowrap;
 }
 .realPrice {
   text-decoration: line-through;
   text-decoration-thickness: 1px;
   font-size: 1.4rem;
   color: var(--color-red);
+  white-space: nowrap;
+}
+.discountedPrice {
+  white-space: nowrap;
 }
 .rating-container {
   display: flex;
@@ -328,14 +332,20 @@ body {
   position: relative;
   box-shadow: var(--box-shadow-1);
 }
-.sliding-section h2 {
+.sliding-section .sliding-section--heading {
   text-align: center;
   font-size: 3rem;
+  margin: 0 0 6rem;
 }
 .sliding-container {
   display: flex;
   margin: 2rem 0 0;
   position: relative;
+  padding: 0 6rem;
+  overflow: hidden;
+  height: 100%;
+  width: 95%;
+  margin: 0 auto;
 }
 .arrows-container {
   position: absolute;
@@ -345,7 +355,7 @@ body {
   justify-content: space-between;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
 }
 .arrow-btn {
   font-size: 4rem;
@@ -374,9 +384,15 @@ body {
 .upper-header {
   width: 100%;
   height: 2.4rem;
-  padding: .2rem;
+  padding: .2rem 0;
   background: var(--color-black);
   color: var(--color-white);
+  overflow: hidden;
+  transition: var(--transition-1);
+}
+.upper-header.scroll {
+  height: 0;
+  padding: 0;
 }
 .upper-header--items {
   display: flex;
@@ -402,6 +418,7 @@ body {
 .upper-header--nav li a {
   position: relative;
   transition: var(--transition-1);
+  cursor: pointer;
 }
 .upper-header--nav li a:hover , .upper-header--nav li:first-child a {
   color: var(--color-blue-a);
@@ -516,7 +533,12 @@ body {
 .header-categories--container {
   height: 3rem;
   width: 100%;
+  overflow: hidden;
   background: var(--color-gray);
+  transition: var(--transition-1);
+}
+.header-categories--container.scroll {
+  height: 0;
 }
 .header-categories--items {
   display: flex;
@@ -529,6 +551,7 @@ body {
   transition: var(--transition-1);
 }
 .header-categories--items li a {
+  cursor: pointer;
   transition: var(--transition-1);
 }
 .header-categories--items li a:hover {

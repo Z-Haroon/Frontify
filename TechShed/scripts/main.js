@@ -6,6 +6,7 @@ const pageLoadSucess = () => {
   }, 500);
 };
 
+// UPPER & BOTTOM HEADER HIDER
 
 (() => {
 

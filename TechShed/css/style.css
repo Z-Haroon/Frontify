@@ -9,6 +9,7 @@
   --color-purple: #751FFF;
   --color-transparent: transparent;
   --color-blue-a: #b5f4ff;
+  --color-dark-purple: #39107a;
 
 
   --box-shadow-1: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -77,7 +78,6 @@ body {
   color: var(--color-black);
   background: var(--color-gray);
   line-height: 1.7;
-  height: 100vh;
 }
 /* 
   * ********SCROLLBAR******** *
@@ -825,4 +825,114 @@ body {
   border-color: #000;
   color: var(--color-black);
   background: none;
+}
+/* 
+  * ********FOOTER START HERE******** *
+*/
+#main-footer {
+  width: 100%;
+  background: var(--color-dark-purple);
+  margin: 20rem 0 0;
+  padding: 0 0 2rem;
+}
+.upper-footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 6rem 0 0;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto 10rem;
+}
+.footer-logo {
+  font-size: 6rem;
+  color: var(--color-white);
+  font-weight: 400;
+  text-align: center;
+}
+.footer-logo--section {
+  margin: 0 14rem 0 0;
+}
+.social-icons-container {
+  margin: 4rem 0 0;
+  display: flex;
+  gap: 2rem;
+}
+.social-icon {
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-white);
+  color: var(--color-dark-purple);
+  transition: var(--transition-1);
+}
+.social-icon:hover {
+  background: none;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+.footer-row ul li {
+  color: var(--color-white);
+}
+.footer-row ul li h4 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin: 0 0 3rem;
+}
+.footer-row ul li {
+  margin: 0 0 .5rem;
+}
+.footer-row ul li a {
+  margin: 0 0 0 1rem;
+  font-size: 1.4rem;
+  transition: var(--transition-1);
+}
+.footer-row ul li a:hover {
+  color: var(--color-blue-a);
+}
+.footer-address {
+  color: var(--color-white);
+}
+.footer-address .heading {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin: 0 0 3rem;
+}
+.footer-address p {
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+.footer-address p, .footer-address a {
+  font-size: 1.8rem;
+  transition: var(--transition-1);
+}
+.footer-address a:hover {
+  color: var(--color-blue-a);
+}
+.bank-icons {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  margin: 0 0 3rem;
+}
+.bottom-footer p {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--color-white);
+  margin: 0 0 4rem;
+}
+.bank-icons img {
+  width: 5rem;
+}
+.foooter-copyright {
+  color: var(--color-white);
+  margin: 0 auto;
+  font-size: 2rem;
+  text-align: center;
+  margin: 8rem 0 0;
+  font-weight: 400;
 }

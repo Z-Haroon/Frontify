@@ -77,7 +77,7 @@ body {
   color: var(--color-black);
   background: var(--color-gray);
   line-height: 1.7;
-  height: 300vh;
+  height: 100vh;
 }
 /* 
   * ********SCROLLBAR******** *
@@ -654,4 +654,175 @@ body {
   font-size: 2rem;
   font-weight: 600;
   line-height: 1;
+}
+/* 
+  * ********Mini Promotion Banners Start Here******** *
+*/
+.mini-promotion--banners {
+  height: 35rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem auto;
+}
+.mini-promotion--banners .banner {
+  height: 100%;
+  width: 49.5%;
+  position: relative;
+  box-shadow: var(--box-shadow-1);
+  box-shadow: var(--box-shadow-1);
+}
+.mini-promotion--banners .banner1 {
+  background: url("../assets/aside-banner2.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.mini-promotion--banners .banner2 {
+  background: url("../assets/aside-banner1.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.mini-promotion--banners .banner-items--container {
+  color: var(--color-white);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0 0 5%;
+}
+.mini-promotion--banners .banner-items--container .sub-heading {
+  font-size: 2.4rem;
+  letter-spacing: .4px;
+  font-weight: 400;
+}
+.mini-promotion--banners .banner-items--container h3 {
+  font-size: 5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 1rem 0 3rem;
+  font-weight: 400;
+}
+.mini-promotion--banners .banner-items--container .bottom-heading {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 0 1rem;
+}
+.mini-promotion--banners .banner-items--container .shop-now-btn {
+  width: fit-content;
+  padding: 1.2rem 5rem;
+  font-size: 1.8rem;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  transition: var(--transition-1);
+}
+.mini-promotion--banners .banner-items--container .shop-now-btn:hover {
+  border-color: #fff;
+  color: var(--color-white);
+  background: none;
+}
+
+/* 
+  * ********Large Promotion Banner Star Here******** *
+*/
+.large-promotion--banner {
+  box-shadow: var(--box-shadow-1);
+  height: 50rem;
+  width: 100%;
+  background: var(--color-white);
+  margin: 2rem auto;
+  overflow: hidden;
+  display: flex;
+}
+.large-promotion--banner .items-container {
+  width: 25%;
+  position: relative;
+}
+.large-promotion--banner .items-container .items {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+.large-promotion--banner .banner-container {
+  width: 75%;
+  background: url("../assets/bottom-banner.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  transform: skew(15deg) translateX(8%);
+  font-weight: 400;
+}
+.large-promotion--banner .items-container .items .sub-heading {
+  font-size: 2rem;
+  background: var(--color-red);
+  color: var(--color-white);
+  padding: .3rem 1rem;
+  width: fit-content;
+  font-weight: 400;
+}
+.large-promotion--banner .items-container .items .sub-heading-2 {
+  font-size: 2.4rem;
+  color: var(--color-black);
+  margin: .5rem 0 1rem;
+  font-weight: 400;
+}
+.large-promotion--banner .items-container .items .main-heading {
+  font-size: 7rem;
+}
+.large-promotion--banner .items-container .items .main-heading span {
+  color: var(--color-purple);
+}
+.large-promotion--banner .items-container .items .bottom-heading {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin: 0rem 0 3rem;
+}
+.large-promotion--banner .items-container .items .bottom-paragraph-1 {
+  font-size: 1.8rem;
+}
+.large-promotion--banner .items-container .items .bottom-paragraph-2 {
+  font-size: 2rem;
+  white-space: nowrap;
+  line-height: 1;
+}
+/* 
+  * ********Just For You Products Section******** *
+*/
+.for-you-section {
+  width: 100%;
+  background: var(--color-white);
+  box-shadow: var(--box-shadow-1);
+  padding: 4rem 4rem;
+}
+.for-you-section .heading {
+  text-align: center;
+  font-size: 3rem;
+  font-family: cursive;
+  margin: 0 0 6rem;
+}
+.for-you-section .foryou-products--container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem .5rem;
+}
+#foryou-loadmore--btn {
+  display: block;
+  margin: 6rem auto 0;
+  padding: 1.5rem 6rem;
+  background: var(--color-purple);
+  font-size: 2rem;
+  color: var(--color-white);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: var(--transition-1);
+}
+#foryou-loadmore--btn:hover {
+  border-color: #000;
+  color: var(--color-black);
+  background: none;
 }

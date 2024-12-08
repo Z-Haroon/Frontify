@@ -90,7 +90,7 @@ let renderProduct = (appendContainer, id, image, name, sellOut, shortDiscription
     ratingStarContainerEl.append(createStar);
   }
   productTemplate.querySelector(".ratingCount").textContent = numberOfRating;
-  productTemplate.querySelector(".soldOut").innerText = `( ${sellOut}) `;
+  productTemplate.querySelector(".soldOut").innerText = `( ${sellOut} ) `;
   let quantityInputEl = productTemplate.querySelector(".quantityInput");
   quantityInputEl.addEventListener("input", () => {
     if(quantityInputEl.value < 1) {
@@ -151,6 +151,34 @@ const productSlider = (products, startWith, endWith, appendContainer, leftBtn, r
   });
 };
 /* * ********Sliding Products Section Manager End Here******** * */
+/* * ********Just For You Products Start Here******** * */
+const forYouSection = (products) => {
+  let startWith = 0;
+  let endsWith = 30;
+  let renderProductsOnSection = (startWith, endsWith) => {
+    let renderProducts = products.slice(startWith, endsWith);
+    renderProducts.forEach(curProd => {
+      const {id, image, name, sellOut, shortDescription, longDescription, category, actualPrice, DiscountPrice, numberOfRating} = curProd;
+      renderProduct("foryou-products--container", id, image, name, sellOut, shortDescription, longDescription, category, actualPrice, DiscountPrice, numberOfRating)
+    });
+  }
+  const loadMoreProducts = () => {
+    startWith += 30;
+    endsWith += 30;
+  renderProductsOnSection(startWith, endsWith);
+  };
+  renderProductsOnSection(startWith, endsWith);
+  let loadmoreBtn = document.getElementById("foryou-loadmore--btn");
+  loadmoreBtn.addEventListener("click", () => {
+    if(endsWith < products.length) {
+      loadMoreProducts();
+    }
+    if(endsWith >= products.length) {
+      loadmoreBtn.style.display = "none";
+    }
+  }); 
+};
+/* * ********Just For You Products End Here******** * */
 (() => {
   headerManager();
   window.addEventListener("load", loadingScreen);
@@ -161,6 +189,8 @@ const productSlider = (products, startWith, endWith, appendContainer, leftBtn, r
     return response.json();
   }).then(products => {
     productSlider(products, 0, 30, "best-selling--container", "best-left--arrow", "best-right--arrow");
+    productSlider(products, 30, 60, "new-arrival--container", "new-arrival--left", "new-arrival--right");
+    forYouSection(products);
   }).catch(error => {
     console.warn(error);
   })

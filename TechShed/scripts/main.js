@@ -11,7 +11,7 @@ let headerLinkArr = {
     {linkName: "Blogs", linkPath: "./html/blogs.html"},
     {linkName: "About us", linkPath: "./html/about.html"},
     {linkName: "Contact us", linkPath: "./html/contact.html"},
-    {linkName: "Call us", linkPath: "tel: +923012345678"},
+    {linkName: "Call us +92 3012345678", linkPath: "tel: +923012345678"},
   ],
   headerCategories: [
     {linkName: "Shop All", linkPath: "#"},
@@ -112,14 +112,25 @@ const productSlider = (products, startWith, endWith, appendContainer, leftBtn, r
   let containerEl = document.querySelector(`.${appendContainer}`)
   let allProductsEl = containerEl.querySelectorAll(".product-card");
   let position = 0;
+  let percentage = 16.7;
   allProductsEl.forEach(curProd => {
     curProd.style.position = "absolute";
-    curProd.style.left = `${position * 16.7}%`;
+    if (window.innerWidth > 1400) {
+      percentage = 18;
+    } else if (window.innerWidth <= 1400 && window.innerWidth >= 1080) {
+      percentage = 21.4;
+    }
+    curProd.style.left = `${position * percentage}%`;
     position++;
   });
   let slideCount = 0;
   let productOnPage = 6;
   // Next Slide
+  if (window.innerWidth > 1400) {
+    productOnPage = 6
+  } else if (window.innerWidth <= 1400 && window.innerWidth >= 1080) {
+    productOnPage  = 5;
+  }
   const nextSlide = () => {
     if(slideCount < allProductsEl.length - productOnPage) {
       slideCount++;

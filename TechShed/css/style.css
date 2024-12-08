@@ -198,7 +198,7 @@ body {
 }
 .product-card {
   height: 30rem;
-  width: 20rem;
+  width: 22rem;
   position: relative;
   background: var(--color-white);
   overflow: hidden;
@@ -400,6 +400,7 @@ body {
   justify-content: space-between;
   font-size: 13px;
   letter-spacing: .4px;
+  height: 100%;
 }
 .tagline {
   height: 100%;

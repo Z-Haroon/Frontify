@@ -319,4 +319,273 @@
   .foooter-copyright {
     font-size: 1.5rem;
   }
+  .login-container a:last-child span {
+    font-size: .9rem;
+  }
+}
+@media (max-width: 1080px) {
+  :root {
+    --max-width: 720px;
+  }
+  .upper-header {
+    height: 1.6rem;
+    padding: 0;
+  }
+  .upper-header--items {
+    font-size: 8px;
+  }
+  .upper-header--nav {
+    gap: 1.5rem;
+  }
+  .tagline .tagline-img {
+    width: 1rem;
+  }
+  .main-header {
+    height: 5rem;
+  }
+  .logo-search--section h1 {
+    font-size: 2.5rem;
+  }
+  .search-container {
+    height: 2.8rem;
+    width: 30rem;
+  }
+  .search-container input {
+    font-size: 1.1rem;
+    padding: 0 0 0 1rem;
+  }
+  .logo-search--section {
+    gap: 5rem;
+  }
+  .search-container .search-icon--container {
+    width: 5rem;
+  }
+  .search-container .search-icon--container img {
+    width: 1.3rem;
+  }
+  .login-container a {
+    font-size: 1rem;
+    gap: .4rem;
+  }
+  .login-container a img {
+    width: 1.8rem;
+  }
+  .header-categories--container {
+    height: 1.9rem;
+  }
+  .header-categories--items {
+    font-size: .8rem;
+    gap: .8rem;
+  }
+  .hero-sub--heading {
+    font-size: 1.2rem;
+    padding: .2rem 1rem;
+  }
+  .hero-heading {
+    font-size: 3.1rem;
+    width: 250px;
+    line-height: 1.1;
+    margin: .5rem 0 1rem;
+  }
+  .hero-bottom-heading {
+    font-size: 1.1rem;
+    margin: 0 0 .5rem;
+  }
+  .btn {
+    padding: .5rem 1.3rem;
+    font-size: 1.1rem;
+  }
+  .hero-icons-section {
+    height: 6rem;
+    margin: 1rem auto;
+  }
+  .icon-container {
+    width: 250px;
+  }
+  .icon-container img {
+    width: 3rem;
+  }
+  .icon-container p {
+    font-size: 1.1rem;
+  }
+  .sliding-section {
+    height: 30rem;
+    padding: 1rem 3rem;
+  }
+  .sliding-section .sliding-section--heading {
+    font-size: 1.8rem;
+    margin: 0 0 3rem;
+  }
+  .sliding-container {
+    margin: 1rem auto 0;
+  }
+  .arrow-btn {
+    font-size: 3rem;
+  }
+
+  .product-card {
+    height: 20rem;
+    width: 13rem;
+  }
+  .sale-text {
+    font-size: .8rem;
+    padding: .1rem .5rem;
+  }
+  .product-title {
+    font-size: .9rem;
+  }
+  .price-container {
+    font-size: .9rem;
+    gap: .2rem;
+  }
+  .discountPercentage {
+    font-size: .6rem;
+  }
+  .realPrice {
+    font-size: .9rem;
+  }
+  .discountedPrice {
+    white-space: nowrap;
+    font-size: 1rem;
+  }
+  .ratings i {
+    font-size: .8rem;
+  }
+  .ratingCount-container {
+    font-size: .8rem;
+  }
+  .add-to--cart__container {
+    height: 2.8rem;
+    gap: .2rem;
+  }
+  .quantityInput {
+    font-size: .8rem;
+    width: 3rem;
+    padding: .1rem;
+  }
+  .addToCart-btn {
+    font-size: .8rem;
+    padding: .1rem .5rem;
+  }
+  .add-to--wishlist {
+    font-size: .8rem;
+    width: 4rem;
+    border-radius: 3px;
+  }
+  
+  .mini-promotion--banners {
+    height: 24rem;
+    margin: 1rem auto;
+  }
+  .mini-promotion--banners .banner-items--container .sub-heading {
+    font-size: 1.2rem;
+  }
+  .mini-promotion--banners .banner-items--container h3 {
+    font-size: 2.8rem;
+  }
+  .mini-promotion--banners .banner-items--container .bottom-heading {
+    font-size: 1.1rem;
+  }
+  .mini-promotion--banners .banner-items--container .shop-now-btn {
+    padding: .2rem 2rem;
+    font-size: 1rem;
+  }
+  .large-promotion--banner {
+    height: 30rem;
+    margin: 1rem auto;
+  }
+  .large-promotion--banner .items-container .items .sub-heading {
+    font-size: 1.2rem;
+  }
+  .large-promotion--banner .items-container .items .sub-heading-2 {
+    font-size: 1.4rem;
+  }
+  .large-promotion--banner .items-container .items .main-heading {
+    font-size: 3.5rem;
+  }
+  .large-promotion--banner .items-container .items .bottom-heading {
+    font-size: 1.3rem;
+  }
+  .large-promotion--banner .items-container .items .bottom-paragraph-1 {
+    font-size: 1.2rem;
+  }
+  .large-promotion--banner .items-container .items .bottom-paragraph-2 {
+    font-size: 1.1rem;
+  }
+  .for-you-section .heading {
+    margin: 0 0 2rem;
+    font-size: 1.8rem;
+  }
+  #foryou-loadmore--btn {
+    padding: .3rem 1rem;
+    font-size: 1.1rem;
+  }
+  .for-you-section {
+    padding: 2rem 2rem;
+  }
+
+  .footer-logo {
+    font-size: 3rem;
+
+  }
+  .social-icon {
+    font-size: 1.2rem;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .social-icons-container {
+    gap: 1rem;
+  }
+  .footer-row ul li h4 {
+    font-size: 1.4rem;
+    margin: 0 0 1rem;
+  }
+  .footer-row ul li {
+    margin: 0 0 .1rem;
+  }
+  .footer-row ul li a {
+    margin: 0 0 0 .5rem;
+    font-size: .8rem;
+  }
+  .footer-address .heading {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0 0 1rem;
+  }
+  .footer-address p, .footer-address a {
+    font-size: .8rem;
+  }
+  .bank-icons img {
+    width: 3rem;
+  }
+  .bank-icons {
+    gap: 3rem;
+  }
+  .foooter-copyright {
+    font-size: 1.5rem;
+  }
+  .login-container a:last-child span {
+    font-size: .9rem;
+  }
+  .footer-logo--section {
+    margin: 0 5rem 0 0;
+  }
+
+  .bank-icons img {
+    width: 2.5rem;
+  }
+  .bank-icons {
+    gap: 2rem;
+  }
+  .foooter-copyright {
+    font-size: 1.1rem;
+  }
+  .hero-section {
+    height: 40rem;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --max-width: 98%;
+  }
 }

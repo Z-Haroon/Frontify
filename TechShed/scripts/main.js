@@ -117,7 +117,7 @@ const productSlider = (products, startWith, endWith, appendContainer, leftBtn, r
     curProd.style.position = "absolute";
     if (window.innerWidth > 1400) {
       percentage = 18;
-    } else if (window.innerWidth <= 1400 && window.innerWidth >= 1080) {
+    } else if (window.innerWidth <= 1400) {
       percentage = 21.4;
     }
     curProd.style.left = `${position * percentage}%`;
@@ -128,7 +128,7 @@ const productSlider = (products, startWith, endWith, appendContainer, leftBtn, r
   // Next Slide
   if (window.innerWidth > 1400) {
     productOnPage = 6
-  } else if (window.innerWidth <= 1400 && window.innerWidth >= 1080) {
+  } else if (window.innerWidth <= 1400) {
     productOnPage  = 5;
   }
   const nextSlide = () => {

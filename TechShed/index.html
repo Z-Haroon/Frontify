@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- 
-    ? -   All Important Meta Tags
+    ? -   All Important Tags
   -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,28 +20,87 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Looking for Tech Items at the Best Price? | TechShed - Up to 45% OFF!">
   <meta name="twitter:description" content="Find the best tech items at wholesale prices! Buy now and get up to 45% OFF on your favorite gadgets. Shop at TechShed today!">
-  <meta name="twitter:image" content="./assets/favicon.svg">
+  <meta name="twitter:image" content="https://example.com/path-to-your-image.jpg">
   <link rel="canonical" href="https://techshed.com">
-  <link rel="icon" href="assets/favicon.svg" type="xml+svg image">
-  <title>Get Your Favourite Electronics On One Click Buy Now & Get upto 30% OFF</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/x-icon">
+  <title>Get Your Favourite Tech on Best Price</title>
   <!-- 
-    ? -   All Links Google Fonts, icons, preload images
+    ? -   Favicon, link, Preload, Google Fonts
   -->
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" defer></script>
   <link rel="preload" as="image" href="./assets/banner1.webp">
   <link rel="preload" as="image" href="./assets/banner2.webp">
   <link rel="preload" as="image" href="./assets/banner3.webp">
+  <script src="https://kit.fontawesome.com/c4e19f2a49.js" crossorigin="anonymous" defer></script>
 </head>
 <body class="">
-  <div class="loading completed">
-    <img src="./assets/pickachu.gif" alt="running Pickachu">
-    <div class="loading-bar"></div>
-    <p class="loading-text">Loading....</p>
-  </div>
-  
+  <div class="loading completed"> <!-- Loading Screen Start Here-->
+    <img src="./assets/pickachu.gif" alt="running pikachu" class="pikachu">
+    <div class="progress-bar--loading"></div>
+    <p class="loading-text">Please Wait.....</p>
+  </div> <!-- Loading Screen End Here-->
+  <header id="main-header"> <!--Header Start Here-->
+    <div class="upper-header"> <!-- Upper Header Start Here-->
+      <div class="container upper-header--container">
+        <div class="tagline">
+          <img src="./assets/box.svg" alt="box icon">
+          <p class="tagline-text">Free Shipping for orders over $50</p>
+        </div>
+        <ul class="upper-header--navbar">
+          <li><a href="index.html" class=" textHover-under-link--light-blue active">Home</a></li>
+          <li><a href="./html/blogs.html" class="textHover-under-link--light-blue">Blogs</a></li>
+          <li><a href="./html/about.html" class="textHover-under-link--light-blue">About us</a></li>
+          <li><a href="./html/contact.html" class="textHover-under-link--light-blue">Contact us</a></li>
+          <li><a href="tel: +923012345678" class="textHover-under-link--light-blue">Call us +92 3012345678</a></li>
+        </ul>
+      </div>
+    </div> <!-- Upper Header End Here-->
+    <nav id="main-navbar"> <!-- Main Header Start Here-->
+      <div class="container navbar-items">
+        <div class="logo-search--container">
+          <a href="index.html"><h1 class="logo">TechShed</h1></a>
+          <div class="search-container">
+            <input type="text" id="main-search--input" placeholder="I'm Looking For...">
+            <div class="search-icon--container">
+              <img src="./assets/searchicon.svg" alt="search icon">
+            </div>
+          </div>
+        </div>
+        <div class="header-icons--container">
+          <div class="login-container">
+            <img src="./assets/user.svg" alt="user icon" class="login-icon">
+            <a href="./html/login.html">Log In</a>
+          </div>
+          <div class="logined-container">
+            <img src="./assets/user.svg" alt="user-avatar">
+            <p class="username">Haroon</p>
+          </div>
+          <div class="cart-wishlist--container">
+            <a href="./html/wishlist.html"><img src="./assets/wishlist.png" alt="wishlist icon"></a>
+            <a href="./html/cart.html"><img src="./assets/cart.png" alt="cart icon"> <span class="cartCount">0</span></a>
+            <button id="openMenuBtn"><i class="fa-solid fa-bars"></i></button>
+          </div>
+        </div>
+      </div>
+    </nav> <!-- Main Header End Here-->
+    <div class="header-categories--section"> <!-- Header Categories Start Here-->
+      <ul class="container header-category">
+        <li><a href="#">Shop All</a></li>
+        <li><a href="#">Computers</a></li>
+        <li><a href="#">Tablets</a></li>
+        <li><a href="#">Drones & Cameras</a></li>
+        <li><a href="#">Audio</a></li>
+        <li><a href="#">Mobile</a></li>
+        <li><a href="#">T.V & Home Cinemas</a></li>
+        <li><a href="#">Wearable Tech</a></li>
+        <li><a href="#">Sale</a></li>
+      </ul>
+    </div> <!-- Header Categories End Here-->
+  </header> <!-- Header End Here-->
+
 </body>
 </html>

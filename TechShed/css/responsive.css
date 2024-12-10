@@ -83,7 +83,7 @@
   /* * *********HERO SECTION START HERE********* */
   .hero-section {
     height: 45rem;
-    margin: 12rem auto 0;
+    margin: 12.5rem auto 0;
   }
   .hero-sub--heading {
     font-size: 2.1rem;
@@ -95,6 +95,20 @@
     width: 340px;
   }
   .hero-bottom--heading {
+    font-size: 1.8rem;
+  }
+  /* * *********ICON SECTION********* */
+  .icon-section {
+    height: 8rem;
+    padding: 1rem 6rem;
+  }
+  .icon-container {
+    gap: 1.2rem;
+  }
+  .icon-container img {
+    width: 4.5rem;
+  }
+  .icon-container h4 {
     font-size: 1.8rem;
   }
 }
@@ -172,6 +186,20 @@
   }
   .hero-bottom--heading {
     font-size: 1.6rem;
+  }
+  /* * *********ICON SECTION********* */
+  .icon-section {
+    height: 6rem;
+    padding: 1rem 4rem;
+  }
+  .icon-container {
+    gap: 0.8rem;
+  }
+  .icon-container img {
+    width: 3.5rem;
+  }
+  .icon-container h4 {
+    font-size: 1.5rem;
   }
 }
 
@@ -270,6 +298,20 @@
   }
   .hero-bottom--heading {
     font-size: 1.4rem;
+  }
+  /* * *********ICON SECTION********* */
+  .icon-section {
+    height: 6rem;
+    padding: 1rem 4rem;
+  }
+  .icon-container {
+    gap: 0.8rem;
+  }
+  .icon-container img {
+    width: 3rem;
+  }
+  .icon-container h4 {
+    font-size: 1.2rem;
   }
 }
 @media (max-width: 768px) {
@@ -391,6 +433,20 @@
     left: 2%;
     transform: translateY(-50%);
   }
+  /* * *********ICON SECTION********* */
+  .icon-section {
+    height: 5rem;
+    padding: .5rem 1rem;
+  }
+  .icon-container {
+    gap: 0.8rem;
+  }
+  .icon-container img {
+    width: 2.4rem;
+  }
+  .icon-container h4 {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 480px) {
   :root {
@@ -413,13 +469,12 @@
   }
   .hero-sub--heading {
     font-size: 1.2rem;
-    padding: 0.2rem .5rem;
+    padding: 0.2rem 0.5rem;
     margin: 0 auto;
   }
   .hero-main--heading {
     margin: 0.3rem 0 1rem;
     font-size: 2.7rem;
-    display: flex;
   }
   .hero-bottom--heading {
     font-size: 1.3rem;
@@ -433,5 +488,25 @@
   }
   .hero-break {
     display: none;
+  }
+  /* * *********ICON SECTION********* */
+
+  .icon-section {
+    height: 5rem;
+    padding: .5rem 1rem;
+    max-width: 100%;
+    margin: .5rem auto .5rem;
+  }
+  .icon-container {
+    gap: 0.8rem;
+  }
+  .icon-container:nth-child(2) {
+    display: none;
+  }
+  .icon-container img {
+    width: 2.4rem;
+  }
+  .icon-container h4 {
+    font-size: 1rem;
   }
 }

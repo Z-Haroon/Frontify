@@ -376,11 +376,11 @@
   .hero-sub--heading {
     font-size: 1.5rem;
     padding: 0.2rem 1rem;
-    margin: 0 auto;
   }
   .hero-main--heading {
     margin: 0.5rem 0 2rem;
     font-size: 3.1rem;
+    width: 250px;
   }
   .hero-bottom--heading {
     font-size: 1.3rem;
@@ -388,9 +388,8 @@
   .hero-items--container {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-80%, -50%);
-    text-align: center;
+    left: 2%;
+    transform: translateY(-50%);
   }
 }
 @media (max-width: 480px) {
@@ -409,7 +408,8 @@
   /* * *********HERO SECTION START HERE********* */
   .hero-section {
     height: 25rem;
-    margin: 8rem auto 0;
+    margin: 8.2rem auto 0;
+    max-width: 100%;
   }
   .hero-sub--heading {
     font-size: 1.2rem;

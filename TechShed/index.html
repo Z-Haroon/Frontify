@@ -103,15 +103,15 @@
       </ul>
     </div> <!-- Header Category End Here -->
   </header> <!--Header End Here-->
-  <section class="hero-section container">
+  <section class="hero-section container"> <!--Hero Section Start Here-->
     <div class="hero-items--container">
       <h4 class="hero-sub--heading">Best Price</h4>
       <h2 class="hero-main--heading">Incredible Prices on All Your Favorite Items</h2>
       <h3 class="hero-bottom--heading">Get more for less on selected brands.</h3>
       <a href="./html/shop.html" class="btn">Shop Now</a>
     </div>
-  </section>
-  <section class="icon-section container">
+  </section> <!--Hero Section End Here-->
+  <section class="icon-section container"> <!--Icon Section Start Here-->
     <div class="icon-container">
       <img src="./assets/delivery.png" alt="bike icon">
       <h4 class="icon-text">Curb-side <br />pickup</h4>
@@ -128,6 +128,41 @@
       <img src="./assets/clock.svg" alt="bike icon">
       <h4 class="icon-text">Available to <br /> you 24/7 </h4>
     </div>
+  </section> <!--Icon Section End Here-->
+  <section class="sliding-section container">
+    
   </section>
+  <template id="product-template">
+    <div class="swiper-slide">
+      <div class="product-card">
+        <a href="./html/product.html">
+          <div class="product-img--container">
+            <img src="https://placehold.jp/250x250.png" class="product-img">
+            <h4 class="sale-text">Sale</h4>
+          </div>
+          <h2 class="product-title">I am a Product very Beautiful beautiful</h2>
+          <div class="ratings-container">
+            <div class="ratings">
+            </div>
+            <span class="numberOfRating">0</span>
+            <span class="numberOfStock">( 25 )</span>
+          </div>
+          <div class="price-container">
+            <h5 class="actualPrice">Rs.32000</h5>
+            <h4 class="discountedPrice">Rs. 31000</h4>
+            <p class="discountPercentage">30% OFF</p>
+          </div>
+        </a>
+        <div class="addtocart-container">
+          <input type="number" class="quantity-input" value="1">
+          <button class="add-tocart--btn">Add To Cart</button>
+          <span class="add-towishlist--container">
+            <i class="fa-solid fa-heart"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="./scripts/main.js"></script>
 </body>
 </html>

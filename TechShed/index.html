@@ -37,8 +37,8 @@
   <link rel="preload" as="image" href="./assets/banner3.webp">
   <script src="https://kit.fontawesome.com/c4e19f2a49.js" crossorigin="anonymous" defer></script>
 </head>
-<body class="">
-  <div class="loading completed"> <!-- Loading Screen Start Here-->
+<body class="during-loading">
+  <div class="loading"> <!-- Loading Screen Start Here-->
     <img src="./assets/pickachu.gif" alt="running pikachu" class="pikachu">
     <div class="progress-bar--loading"></div>
     <p class="loading-text">Please Wait.....</p>
@@ -130,10 +130,18 @@
     </div>
   </section> <!--Icon Section End Here-->
   <section class="sliding-section container">
-    
+    <h2 class="heading">Top Selling Items</h2>
+    <div class="sliding-items--container">
+      <div class="sliding-container best-selling--container">
+        
+      </div>
+    </div>
+    <div class="left-right--container">
+      <button class="arrow best-left--arrow">➔</button>
+      <button class="arrow best-right--arrow">➔</button>
+    </div>
   </section>
   <template id="product-template">
-    <div class="swiper-slide">
       <div class="product-card">
         <a href="./html/product.html">
           <div class="product-img--container">
@@ -161,7 +169,6 @@
           </span>
         </div>
       </div>
-    </div>
   </template>
   <script src="./scripts/main.js"></script>
 </body>

@@ -38,88 +38,129 @@
     <script src="https://kit.fontawesome.com/c4e19f2a49.js" crossorigin="anonymous" defer></script>
   </head>
 <body>
-  <header id="header">
-    <div class="upper-header">
+  <div class="loading"> <!--Loading Screen-->
+    <img src="./assets/pickachu.gif" alt="running Pickachu">
+    <div class="progress-bar"></div>
+    <p class="loadingText">Wait...</p>
+  </div> <!--Loading Screen-->
+  <header id="header"> <!--Header Start Here-->
+    <div class="upper-header"> <!--Upper Header Start Here-->
       <div class="container">
         <div class="tagline">
           <img src="./assets/box.svg" alt="box icon">
-          <h4 class="tagline-text">Free Shipping for orders over Rs. 600</h4>
+          <h4 class="tagline-img">Free Shipping for orders over $50</h4>
         </div>
-        <ul class="upper-header--navbar">
+        <ul class="upperHeader-navbar">
           <li><a href="index.html">Home</a></li>
           <li><a href="./html/blogs.html">Blogs</a></li>
           <li><a href="./html/about.html">About us</a></li>
           <li><a href="./html/contact.html">Contact us</a></li>
-          <li><a href="+9230012345678">+9230012345678</a></li>
+          <li><a href="tel: +9230012345678">+92-3001-2345-678</a></li>
         </ul>
       </div>
-    </div>
+    </div> <!--Upper Header End Here-->
     <nav id="main-navbar">
       <div class="container">
         <div class="logo-search--container">
-          <a href="#"><h1 class="logo">TechShed</h1></a>
-          <div class="search--container">
-            <input type="text" id="search-input" placeholder="I'm Looking For...">
-            <div class="search-icon--container">
-              <i class="fa-solid fa-magnifying-glass"></i>
+          <a href="index.html"><h1 class="logo">TechShed</h1></a>
+          <div class="search-container">
+            <input type="text" placeholder="I'm Looking For..." id="search-input">
+            <div class="search-logo--container">
+              <img src="./assets/searchicon.svg" alt="search icon">
             </div>
           </div>
         </div>
-        <div class="header-icons--container">
-          <div class="wishlist-cart--container">
-            <button id="add-to--wishlist"><img src="./assets/wishlist.png" alt="wishlist link"></button>
-            <button id="add-to--cart"><img src="./assets/cart.png" alt="cart link"> <span class="cartCount">0</span></button>
+        <div class="header-icons">
+          <div class="cart-wishlist--container">
+            <a href="./html/cart.html" class="cart"><img src="./assets/cart.png" alt="cart icon"> <span class="cartCount">0</span></a>
+            <a href="./html/wishlist.html" class="wishlist"><img src="./assets/wishlist.png" alt="wishlist icon"></a>
           </div>
-          <div class="logined">
-            <a href="./html/profile.html"><img src="./assets/user.svg" alt="user avatar"> Haroon</a>
+          <div class="user-info--container">
+            <a href="./html/login.html" class="login"><img src="./assets/user.svg" alt="user icon"> Log In</a>
+            <a href="./html/profile.html" class="userProfile"><img src="./assets/user.svg" alt="user avatar"> Haroon</a>
           </div>
-          <div class="user">
-            <a href="./html/Login.html"><img src="./assets/user.svg" alt="user icon"> Log In</a>
-          </div>
-        </div>
-        <div class="menu-container">
-          <button id="menu-btn">
-            <i class="fa-solid fa-bars"></i>
-          </button>
+          <div class="menu-containaer"><i class="fa-solid fa-bars"></i></div>
         </div>
       </div>
     </nav>
-    <div class="header-categories--section">
-
+    <div class="header-category--container">
+      <ul class="container header-category--list"></ul>
     </div>
-  </header>
-  <section id="hero-section">
-    <div class="container">
+  </header> <!--Header End Here-->
+  <section class="container heroSection">
+    <h4 class="heroSubHeading">Best Prices</h4>
+    <h2 class="heroMainHeading">Incredible Prices on All Your Favorite Items</h2>
+    <p class="heroBottomHeading">Get more for less on selected brands</p>
+    <a href="./html/shop.html" class="btn hero-btn">Shop Now</a>
+  </section>
+  <section class="icons-section container">
+    <div class="icon-container">
+      <img src="./assets/delivery.png" alt="delivery icon">
+      <p class="txt">Curb-side Delivery</p>
+    </div>
+    <div class="icon-container">
+      <img src="./assets/gift.svg" alt="Gift icon">
+      <p class="txt">Free shipping on orders over $50</p>
+    </div>
+    <div class="icon-container">
+      <img src="./assets/percent.svg" alt="delivery icon">
+      <p class="txt">Low prices guaranteed</p>
+    </div>
+    <div class="icon-container">
+      <img src="./assets/clock.svg" alt="delivery icon">
+      <p class="txt">Avaible to you 24/7</p>
+    </div>
+  </section>
+  <section class="selling-section container">
+    <h2 class="heading">Top Selling Items</h2>
+    <div class="short-products--container top-Selling">
+    </div>
+    <button id="top-load-more" class="btn">Load More</button>
+  </section>
+  <section class="container mini-banner--section">
+    <div class="mini-banner banner2">
       <div class="items-container">
-        <h4>Best Prices</h4>
-        <h2>Incredible Prices on All Your Favorite Items</h2>
-        <p>Get more for less on selected brands</p>
-        <a href="./html/shop.html" class="btn-primary">Shop Now</a>
+        <h4 class="subHeading">Holiday Deals</h4>
+        <h2 class="mainHeading">Up to 30% OFF</h2>
+        <p class="bottomHeading">Selected Smartphone Brands</p>
+        <button class="shop-btn btn">Shop Now</button>
+      </div>
+    </div>
+    <div class="mini-banner banner1">
+      <div class="items-container">
+        <h4 class="subHeading">Holiday Deals</h4>
+        <h2 class="mainHeading">Up to 30% OFF</h2>
+        <p class="bottomHeading">Selected Smartphone Brands</p>
+        <button class="shop-btn btn">Shop Now</button>
       </div>
     </div>
   </section>
-  <section id="icon-section">
-    <div class="container icon-box--container">
-      <div class="icon-box">
-        <img src="./assets/delivery.png" alt="delivery icon">
-        <p class="txt">Curb-side pickup</p>
-      </div>
-      <div class="icon-box">
-        <img src="./assets/gift.svg" alt="delivery icon">
-        <p class="txt">Free delivery on orders over Rs.500</p>
-      </div>
-      <div class="icon-box">
-        <img src="./assets/percent.svg" alt="delivery icon">
-        <p class="txt">Low prices guaranteed</p>
-      </div>
-      <div class="icon-box">
-        <img src="./assets/clock.svg" alt="delivery icon">
-        <p class="txt">Available to you 24/7</p>
+  <template id="product-template">
+    <div class="product-card">
+      <a href="./html/product.html">
+        <div class="img-container">
+          <img src="https://via.placeholder.com/250x250" alt="product img" class="product-img">
+        </div>
+        <h2 class="product-title">Headphones Is Best Head Is Best </h2>
+        <div class="rating-container">
+          <div class="stars">
+          </div>
+          <p class="ratingCount">3</p>
+          <p class="sellOut">( 25 )</p>
+        </div>
+        <div class="price-container">
+          <h4 class="originalPrice">Rs.300,000</h4>
+          <h3 class="discountPrice">Rs.300,000</h3>
+          <p class="discountPercentage">25% OFF</p>
+        </div>
+      </a>
+      <div class="addToCart-container">
+        <input type="number" class="quantityCount" value="1">
+        <button id="add-toCart--btn">Add to cart</button>
+        <span class="wishlist-container"><i class="fa-regular fa-heart"></i></span>
       </div>
     </div>
-  </section>
-  <section class="sliding--section">
-    <h2 class="header">Top Selling</h2>
-  </section>
+  </template>
+  <script src="./scripts/main.js"></script>
 </body>
 </html>

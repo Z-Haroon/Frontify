@@ -557,7 +557,7 @@ body.completed {
   color: var(--color-white);
   background: var(--color-red);
 }
-#top-load-more {
+#top-load-more, #arrival-load-more {
   display: block;
   margin: 20px auto 0;
 }
@@ -618,3 +618,6 @@ body.completed {
   background: none;
   border-color: var(--color-white);
 }
+
+/* * ********NEW ARRIVAL******** * */
+

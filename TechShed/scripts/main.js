@@ -98,11 +98,13 @@ let renderShortProducts = (products, appendContainer, startWith, endsWith, loadM
     if(!res.ok) throw new Error("Something Went Wrond Check your File Path Then Try Again");
     return res.json();
   }).then(products => {
-    renderShortProducts(products,"top-Selling", 0, 6, "top-load-more");
+    renderShortProducts(products, "top-Selling", 0, 6, "top-load-more");
+    renderShortProducts(products, "new-arrivals--container", 10, 16, "arrival-load-more");
   }).catch(err => {
     console.error(err);
-  })
+  });
+  console.log(document.querySelector("#arrival-load-more"))
 
   window.addEventListener("load", hideLoadingScreen);
-  window.addEventListener("scroll", hideHeaderOnScroll)
+  window.addEventListener("scroll", hideHeaderOnScroll);
 })();

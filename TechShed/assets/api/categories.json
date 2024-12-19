@@ -32,7 +32,7 @@
   {
     "id": 7,
     "image": "./assets/laptop.jpg",
-    "name": "T.V & Home Cinema"
+    "name": "T.V & Home"
   },
   {
     "id": 8,
@@ -43,10 +43,5 @@
     "id": 9,
     "image": "./assets/speaker.avif",
     "name": "Speakers"
-  },
-  {
-    "id": 10,
-    "image": "./assets/headphones.png",
-    "name": "Headphones"
   }
 ]

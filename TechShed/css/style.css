@@ -4,6 +4,7 @@
   --color-white: #fff;
   --colot-transparent: transparent;
   --color-purple: #751FFF;
+  --color-dark-purple: #250b4e;
   --color-light-blue: #b2ced6;
   --color-gray: #E8E8E8;
   --color-red: #D72D2D;
@@ -313,9 +314,10 @@ body.completed {
 /* * ********HEADER CATEGORY CONTAINER******** * */
 .header-category--container {
   display: none;
+  overflow: hidden;
 }
 .header-category--container.active {
-
+  height: 0;
 }
 
 /* * ********HERO SECTION CONTAINER******** * */
@@ -557,7 +559,9 @@ body.completed {
   color: var(--color-white);
   background: var(--color-red);
 }
-#top-load-more, #arrival-load-more {
+#top-load-more, 
+#arrival-load-more,
+#foryou-load-more {
   display: block;
   margin: 20px auto 0;
 }
@@ -619,5 +623,74 @@ body.completed {
   border-color: var(--color-white);
 }
 
-/* * ********NEW ARRIVAL******** * */
+/* * ********CATEGORY SECTION******** * */
+.page-category--section {
+  height: 100%;
+  margin: 5px auto;
+  padding: 15px 5px;
+  background: var(--color-white);
+  width: 100%;
+  box-shadow: var(--box-shadow-1);
+}
+.page-category--section .heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 0 0 20px;
+}
+.page--category-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.page--category-container .category {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  margin: 1rem 0px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.page--category-container .category .category-image--container {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 3px 0 0;
+}
+.category-image--container img {
+  height: 100%;
+  width: 100%;
+  transition: var(--transition-300ms);
+}
+.category-image--container img:hover {
+  scale: 1.1;
+}
 
+
+
+
+.foryou-section {
+  margin: 0 0 40px;
+}
+
+/* * ********FOOTER******** * */
+
+#main-footer {
+  background: var(--color-dark-purple);
+  padding: 20px 0;
+}
+#main-footer .container {
+  color: var(--color-white);
+}
+.upper-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+.footer-row .footer-list--heading {
+  font-size: 14px;
+}

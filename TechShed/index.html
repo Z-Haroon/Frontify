@@ -141,6 +141,56 @@
     </div>
     <button id="arrival-load-more" class="btn">Load More</button>
   </section>
+  <section class="page-category--section">
+    <h2 class="heading">TOP CATEGORIES</h2>
+    <div class="page--category-container">
+    </div>
+  </section>
+  <section class="selling-section container foryou-section">
+    <h2 class="heading">Just For You</h2>
+    <div class="short-products--container foryou-container">
+    </div>
+    <button id="foryou-load-more" class="btn">Load More</button>
+  </section>
+  <footer id="main-footer">
+    <div class="container">
+      <div class="upper-footer">
+        <div class="footer-logo--section"></div>
+        <div class="footer-row">
+          <h4 class="footer-list--heading">TechShed</h4>
+          <ol>
+            <li><a href="#">Shop All</a></li>
+            <li><a href="#">Computers</a></li>
+            <li><a href="#">Tablets</a></li>
+            <li><a href="#">Drones & Cameras</a></li>
+            <li><a href="#">Audio</a></li>
+            <li><a href="#">Mobiles</a></li>
+            <li><a href="#">T.V & Home</a></li>
+            <li><a href="#">Wearable Tech</a></li>
+            <li><a href="#">Sale</a></li>
+          </ol>
+        </div>
+        <div class="footer-row">
+          <h4 class="footer-list--heading">Customer Support</h4>
+          <ol>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Careers</a></li>
+          </ol>
+        </div>
+        <div class="footer-row">
+          <h4 class="footer-list--heading">Policy</h4>
+          <ol>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Term's & Conditions</a></li>
+            <li><a href="#">Payment Methods</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ol>
+        </div>
+      </div><hr />
+    </div>    
+  </footer>
   <template id="product-template">
     <div class="product-card">
       <a href="./html/product.html">
@@ -165,6 +215,14 @@
         <button id="add-toCart--btn">Add to cart</button>
         <span class="wishlist-container"><i class="fa-regular fa-heart"></i></span>
       </div>
+    </div>
+  </template>
+  <template id="category-template">
+    <div class="category">
+      <a href="./html/category.html" class="category-image--container">
+        <img src="./assets/headphones.png" alt="header icon" class="category-img">
+      </a>
+      <p class="category-name">On Sale</p>
     </div>
   </template>
   <script src="./scripts/main.js"></script>

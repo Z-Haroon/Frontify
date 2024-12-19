@@ -90,7 +90,22 @@ let renderShortProducts = (products, appendContainer, startWith, endsWith, loadM
       loadProducts();
     }
   });
-}
+};
+
+// Render Cateogry Section
+const renderCategory = (categories) => {
+  let categoryContainerEl = document.querySelector(".page--category-container");
+  let templateEl = document.getElementById("category-template");
+  categories.forEach(curCat => {
+    let template = document.importNode(templateEl.content, true);
+    const {id, image, name} = curCat;
+    template.querySelector(".category").setAttribute("id", `CategoryNo${id}`);
+    template.querySelector(".category-img").src = image;
+    template.querySelector(".category-img").alt = name;
+    template.querySelector(".category-name").textContent = name;
+    categoryContainerEl.append(template);
+  });
+};
 
 (() => {
 
@@ -100,10 +115,18 @@ let renderShortProducts = (products, appendContainer, startWith, endsWith, loadM
   }).then(products => {
     renderShortProducts(products, "top-Selling", 0, 6, "top-load-more");
     renderShortProducts(products, "new-arrivals--container", 10, 16, "arrival-load-more");
+    renderShortProducts(products, "foryou-container", 0, 20, "foryou-load-more");
   }).catch(err => {
     console.error(err);
   });
-  console.log(document.querySelector("#arrival-load-more"))
+  fetch("./assets/api/categories.json").then(res => {
+    if(!res.ok) throw new Error("Something Went Wrond Check your File Path Then Try Again");
+    return res.json();
+  }).then(categories => {
+    renderCategory(categories);
+  }).catch(err => {
+    console.error(err);
+  });
 
   window.addEventListener("load", hideLoadingScreen);
   window.addEventListener("scroll", hideHeaderOnScroll);

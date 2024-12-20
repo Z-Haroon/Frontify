@@ -107,6 +107,25 @@ const renderCategory = (categories) => {
   });
 };
 
+// Category Menu Open & Close
+const mobileMenuManager = () => {
+  let mobileMenuBtnEl  = document.querySelector(".mobile-menu");
+  let menuCloseEl = document.querySelector(".close-btn");
+  let sidebarContainerEl = document.querySelector(".header-category--container");
+  mobileMenuBtnEl.addEventListener("click", () => {
+    sidebarContainerEl.classList.add("open-menu");
+  });
+  menuCloseEl.addEventListener("click", () => {
+    sidebarContainerEl.classList.remove("open-menu");
+  });
+  window.addEventListener("click", (e) => {
+    if(!e.target.classList.contains("sidebar")) {
+      sidebarContainerEl.classList.remove("open-menu");
+    }
+  });
+};
+
+
 (() => {
 
   fetch("./assets/api/products.json").then(res => {
@@ -130,4 +149,5 @@ const renderCategory = (categories) => {
 
   window.addEventListener("load", hideLoadingScreen);
   window.addEventListener("scroll", hideHeaderOnScroll);
+  mobileMenuManager();
 })();

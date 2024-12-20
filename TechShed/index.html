@@ -68,6 +68,14 @@
             <div class="search-logo--container">
               <img src="./assets/searchicon.svg" alt="search icon">
             </div>
+            <div class="search-result--container resultbar active">
+              <div class="result-inner--container resultbar">
+                <div class="title-section resultbar">
+                  <h4 class="title resultbar">Results Found</h4>
+                  <span class="resultbar resultsFounded">[ 0 ]</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="header-icons">
@@ -79,12 +87,32 @@
             <a href="./html/login.html" class="login"><img src="./assets/user.svg" alt="user icon"> Log In</a>
             <a href="./html/profile.html" class="userProfile"><img src="./assets/user.svg" alt="user avatar"> Haroon</a>
           </div>
-          <div class="menu-containaer"><i class="fa-solid fa-bars"></i></div>
+          <div class="menu-containaer"><i class="fa-solid fa-bars mobile-menu sidebar"></i></div>
         </div>
       </div>
     </nav>
-    <div class="header-category--container">
-      <ul class="container header-category--list"></ul>
+    <div class="header-category--container sidebar">
+      <div class="inner-sidebar--container sidebar">
+        <div class="close-btn--container sidebar">
+          <i class="fa fa-x close-btn"></i>
+        </div>
+        <div class="login-signin--container sidebar">
+          <a href="#" class="sidebar">Log In</a>
+          <a href="#" class="sidebar">Sign up</a>
+        </div>
+        <h3 class="cateogry-heading sidebar">Our Categories</h3>
+        <ul class="category-list sidebar">
+          <li class="sidebar"><a href="#">Shop All</a></li>
+          <li class="sidebar"><a href="#">Computers</a></li>
+          <li class="sidebar"><a href="#">Tablets</a></li>
+          <li class="sidebar"><a href="#">Drones & Cameras</a></li>
+          <li class="sidebar"><a href="#">Audio</a></li>
+          <li class="sidebar"><a href="#">Mobile</a></li>
+          <li class="sidebar"><a href="#">T.V & Home Cinemas</a></li>
+          <li class="sidebar"><a href="#">Wearable Tech</a></li>
+          <li class="sidebar"><a href="#">Sale</a></li>
+        </ul>
+      </div>
     </div>
   </header> <!--Header End Here-->
   <section class="container heroSection">
@@ -152,45 +180,6 @@
     </div>
     <button id="foryou-load-more" class="btn">Load More</button>
   </section>
-  <footer id="main-footer">
-    <div class="container">
-      <div class="upper-footer">
-        <div class="footer-logo--section"></div>
-        <div class="footer-row">
-          <h4 class="footer-list--heading">TechShed</h4>
-          <ol>
-            <li><a href="#">Shop All</a></li>
-            <li><a href="#">Computers</a></li>
-            <li><a href="#">Tablets</a></li>
-            <li><a href="#">Drones & Cameras</a></li>
-            <li><a href="#">Audio</a></li>
-            <li><a href="#">Mobiles</a></li>
-            <li><a href="#">T.V & Home</a></li>
-            <li><a href="#">Wearable Tech</a></li>
-            <li><a href="#">Sale</a></li>
-          </ol>
-        </div>
-        <div class="footer-row">
-          <h4 class="footer-list--heading">Customer Support</h4>
-          <ol>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Careers</a></li>
-          </ol>
-        </div>
-        <div class="footer-row">
-          <h4 class="footer-list--heading">Policy</h4>
-          <ol>
-            <li><a href="#">Shipping & Returns</a></li>
-            <li><a href="#">Term's & Conditions</a></li>
-            <li><a href="#">Payment Methods</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ol>
-        </div>
-      </div><hr />
-    </div>    
-  </footer>
   <template id="product-template">
     <div class="product-card">
       <a href="./html/product.html">
@@ -225,6 +214,65 @@
       <p class="category-name">On Sale</p>
     </div>
   </template>
+  <footer id="footer">
+    <div class="upper-footer container">
+      <div class="footer-row footer-address--container">
+        <h3 class="footer-heading">Store Location</h3>
+        <p>500 Terry francine Street</p>
+        <p>San Francisco CA 94158</p>
+        <a href="mailto: info@techshed.com">info@techshed.com</a>
+        <a href="tel: 12345678">12345678</a>
+      </div> 
+      <div class="footer-row footer-address--container">
+        <h3 class="footer-heading">Shop</h3>
+        <ul class="footer-list">
+          <li><a href="#">Shop All</a></li>
+          <li><a href="#">Computers</a></li>
+          <li><a href="#">Tablets</a></li>
+          <li><a href="#">Drones & Cameras</a></li>
+          <li><a href="#">Audio</a></li>
+          <li><a href="#">Mobile</a></li>
+          <li><a href="#">T.V & Home Cinema</a></li>
+          <li><a href="#">Sale</a></li>
+        </ul>
+      </div>
+      <div class="footer-row footer-address--container">
+        <h3 class="footer-heading">Support</h3>
+        <ul class="footer-list">
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-row footer-address--container">
+        <h3 class="footer-heading">Policies</h3>
+        <ul class="footer-list">
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Payment Methods</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-footer">
+      <div class="container">
+        <hr />
+        <p class="bank-statement">We accept the following paying methods</p>
+        <div class="bank-logo--container">
+          <img src="./assets/Visa.avif" alt="Bank Card">
+          <img src="./assets/brand-mastercard@3x.avif" alt="Bank Card">
+          <img src="./assets/brand-amex@3x.avif" alt="Bank Card">
+          <img src="./assets/brand-chinaunionpay@3x.avif" alt="Bank Card">
+          <img src="./assets/brand-jcb@3x.avif" alt="Bank Card">
+          <img src="./assets/Discover.avif" alt="Bank Card">
+          <img src="./assets/Diners.avif" alt="Bank Card">
+          <img src="./assets/PayPal.avif" alt="Bank Card">
+        </div>
+        <p class="copy-right--text">© 2035 by TechShed. Powered and secured by Z-Haroon</p>
+      </div>
+    </div>
+  </footer>
   <script src="./scripts/main.js"></script>
 </body>
 </html>

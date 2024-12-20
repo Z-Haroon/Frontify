@@ -601,7 +601,6 @@ body.completed {
   color: var(--color-red);
   font-size: 10px;
   font-weight: 600;
-
 }
 .discountPrice {
   font-size: 13px;

@@ -64,7 +64,7 @@ const renderProdct = (appendContainer, id, image, name, sellOut, shortDescriptio
   });
   let wishlistBtn = productTemplate.querySelector(".wishlist-container");
   wishlistBtn.addEventListener("click", () => {
-    wishlistBtn.classList.toggle("active");
+    wishlistBtn.classList.add("active");
   });
   appendContainerEl.append(productTemplate);
 };
@@ -125,6 +125,41 @@ const mobileMenuManager = () => {
   });
 };
 
+// Search Results & Manager
+const searchResultManager = (products) => {
+  let searchResultContainerEl = document.querySelector(".search-result--container");
+  let appendContainerEl = document.querySelector(".search-results");
+  let searchInputEl = document.getElementById("search-input");
+  let foundCountEl = document.querySelector(".resultsFounded");
+
+  let filterProducts = (userInput) => {
+    appendContainerEl.innerHTML = ``;
+    let founds = products.filter(curProd => {
+      if(curProd.name.toLowerCase().includes(userInput.toLowerCase())) {
+        let createDivEl = document.createElement("div");
+        createDivEl.classList.add("resultProductCard");
+        createDivEl.classList.add("resultbar");
+        createDivEl.innerHTML = `<a href="./html/results.html" class="resultbar"><h3 class="results-title sidebar">${curProd.name}</h3></a>`;
+        appendContainerEl.append(createDivEl);
+        return curProd;
+      }
+    });
+    foundCountEl.textContent = `[ ${founds.length} ]`;
+    if (founds.length < 1) {
+      appendContainerEl.innerHTML = `<p class="resultbar noproductfound">Products Not Found</p>`;
+    }
+  };
+
+  searchInputEl.addEventListener("input", () => {
+    let filteredUserInput = searchInputEl.value.trim();
+    if(filteredUserInput.length > 2) {
+      filterProducts(filteredUserInput)
+      searchResultContainerEl.classList.add("active");
+    } else {
+      searchResultContainerEl.classList.remove("active");
+    }
+  });
+};
 
 (() => {
 
@@ -135,6 +170,7 @@ const mobileMenuManager = () => {
     renderShortProducts(products, "top-Selling", 0, 6, "top-load-more");
     renderShortProducts(products, "new-arrivals--container", 10, 16, "arrival-load-more");
     renderShortProducts(products, "foryou-container", 0, 20, "foryou-load-more");
+    searchResultManager(products);
   }).catch(err => {
     console.error(err);
   });

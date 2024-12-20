@@ -22,9 +22,9 @@ const hideHeaderOnScroll = () => {
     }
   }
   let upperHeaderEl = document.querySelector(".upper-header");
-  let headerCategoriesEl = document.querySelector(".header-category--container")
+  let headerCategoriesEl = document.querySelector(".header-categories")
   hide(upperHeaderEl, 30);
-  hide(headerCategoriesEl, 80);
+  hide(headerCategoriesEl, 156);
 };
 
 // ? Render Product & Append

@@ -113,7 +113,7 @@ const renderPageCategories = (categories) => {
 };
 
 // Render Product 
-const renderProducts = (appendContainer, name, image, acutalPrice, discountPrice, shortDescription, longDescription, category, numberOfStars, numberOfSellOut) => {
+const renderProduct = (appendContainer, name, image, acutalPrice, discountPrice, shortDescription, longDescription, category, numberOfStars, numberOfSellOut) => {
   let productTemplateEl = document.getElementById("product-car-template");
   let productTemplate = document.importNode(productTemplateEl.content, true);
   // Let Fix Long Name Products Into .... it
@@ -121,7 +121,7 @@ const renderProducts = (appendContainer, name, image, acutalPrice, discountPrice
   if(name.length > 30) {
     shortName = name.slice(0, 30) + "...";
   }
-  productTemplate.querySelector(".product-card").setAttribute("id", `productNo${id}`);
+  productTemplate.querySelector(".product-card").setAttribute("id", `productNo${name}`);
   productTemplate.querySelector(".product-img").src = image;
   productTemplate.querySelector(".product-img").alt = name;
   productTemplate.querySelector(".product-name").textContent = shortName;
@@ -134,22 +134,26 @@ const renderProducts = (appendContainer, name, image, acutalPrice, discountPrice
     ratingStartContainerEl.append(createStarEl);
   }
   productTemplate.querySelector(".numberOfSellOut").textContent = `( ${numberOfSellOut} )`;
-  productTemplate.querySelector(".actualPrice").textContent = acutalPrice + ".00";
-  productTemplate.querySelector(".discountedPrice").textContent = discountPrice + ".00";
-  productTemplate.querySelector(".discountPercentage").textContent = `${Math.round(((acutalPrice - discountPrice)* 100) / acutalPrice)}% OFF`;
+  productTemplate.querySelector(".actualPrice").textContent = `${acutalPrice}.00`;
+  productTemplate.querySelector(".discountedPrice").textContent = `${discountPrice}.00`;
+  acutalPrice = parseInt(acutalPrice.replaceAll("$", ""));
+  discountPrice = parseInt(discountPrice.replaceAll("$", ""));
+  productTemplate.querySelector(".discountPercentage").textContent = `${Math.round(((acutalPrice - discountPrice) * 100) / acutalPrice)}% OFF`;
+
   // Show Add To Card Button On Hover 
-  const hoverRenderAddToCart = (container) => {
-    let containerEl = productTemplate.querySelector(container);
+  const hoverRenderAddToCart = (hoverContainer, targetContainer) => {
+    let containerEl = productTemplate.querySelector(hoverContainer);
+    let targetContainerEl = productTemplate.querySelector(targetContainer);
     containerEl.addEventListener("mouseover", () => {
-      containerEl.classList.add("active");
+      targetContainerEl.classList.add("active");
     });
     containerEl.addEventListener("mouseout", () => {
-      containerEl.classList.add("remove");
-    })
+      targetContainerEl.classList.remove("active");
+    });
   };
   // Calling Function
-  hoverRenderAddToCart(".addtocard-container");
-  hoverRenderAddToCart(".product-card");
+  hoverRenderAddToCart(".product-card", ".product-card .addtocard-container");
+  // hoverRenderAddToCart(".product-card");
 
   // Quantity Event
   let quantityEl = productTemplate.querySelector(".numberOfQuantity");
@@ -160,7 +164,22 @@ const renderProducts = (appendContainer, name, image, acutalPrice, discountPrice
       quantityEl.value = numberOfSellOut;
     }
   });
+  let containerElement = document.querySelector(appendContainer);
+  containerElement.append(productTemplate);
 };
+
+// Create Request for Append Products On Screen 
+const requestForRenderProducts = (products, appendContainer, startsWith, endsWith) => {
+  // Number OF Products for Render
+  let renderProducts = null;
+  const requestForRender = () => {
+    renderProducts = products.slice(startsWith, endsWith);
+    renderProducts.forEach(currentElement => {
+    const {name, image, actualPrice, discountPrice, shortDescription, longDescription, category, numberOfStars, numberOfSellOut} = currentElement;
+    renderProduct(appendContainer, name, image, actualPrice, discountPrice, shortDescription, longDescription, category, numberOfStars, numberOfSellOut);
+  });
+  }; requestForRender();
+}
 
 (() => {
   // Fetching Categories From API
@@ -182,6 +201,7 @@ const renderProducts = (appendContainer, name, image, acutalPrice, discountPrice
     }
     return response.json();
   }).then(products => {
+    requestForRenderProducts(products, ".selling-products--container", 0, 10);
 
   }).catch(error => {
     console.warn(error);

@@ -85,7 +85,7 @@ body {
 body.completed {
   line-height: 1.7;
   background: var(--color-off-white);
-  overflow: visible;
+  overflow-y: visible;
   height: 300vh;
 }
 html {
@@ -93,10 +93,6 @@ html {
   scroll-behavior: smooth;
   font-size: 10px;
 }
-::-webkit-scrollbar{
-  display: none;
-}
-
 /* * ********LOADING SCREEN********* * */
 .loading {
   height: 100vh;
@@ -617,10 +613,8 @@ button:hover {
   justify-content: center;
   gap: 15px;
   margin: 7px 0 10px;
-}
-.product-card .product-rating--container i {
-  font-size: 20px;
   color: var(--color-golden);
+  font-size: 20px;
 }
 .product-card .product-rating--container .numberOfSellOut {
   font-size: 15px;
@@ -652,7 +646,7 @@ button:hover {
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: 10px;
+  bottom: 7px;
   left: 0;
   height: 3.4rem;
   gap: 4px;

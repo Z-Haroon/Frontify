@@ -54,10 +54,6 @@
             <p><i class='bx bx-caret-down dropCategory' ></i></p>
             <div class="dropdown-container dropCategory">
               <ul class="dropdown-category--inner dropCategory">
-                <li>All Categories</li>
-                <li>Groceries</li>
-                <li>Drinks</li>
-                <li>Chocolates</li>
               </ul>
             </div>
           </div>
@@ -79,7 +75,7 @@
       <div class="menu-icon--container"><i class='bx bx-menu'></i></div>
     </div>
   </header> <!--? Header End Here-->
-  <section id="hero-section">
+  <section id="hero-section"> <!--? HERO SECTION START HERE-->
     <div class="container">
       <div class="hero-headings--container">
         <h1 class="hero-main--heading"><span>Organic</span> Food at your <span>Doorsteps</span></h1>
@@ -131,6 +127,62 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, nulla</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section> <!--? HERO SECTION END HERE-->
+  <section id="page-category--section">
+    <div class="container">
+      <div class="title-section">
+        <h3 class="heading">Categories</h3>
+        <button id="category-all--btn">Veiw All</button>
+      </div>
+      <div class="page-category--container">
+        <template id="page-category--template">
+          <div class="page-category">
+            <div class="img-container"><img src="./assets/category-thumb-1.jpg" alt="category avatar" class="image"></div>
+            <p class="category-name">Fruits & Veges</p>
+          </div>
+        </template>
+      </div>    
+    </div>
+  </section>
+  <section id="sale-products--section">
+    <div class="container sale-products--container">
+      <div class="title-section">
+        <h3 class="heading">Best selling products</h3>
+        <button id="category-all--btn">Veiw All</button>
+      </div>
+      <div class="selling-products--container">
+        <template id="product-car-template">
+          <div class="product-card">
+            <div class="img-container">
+              <img src="./assets/product-thumb-1.png" alt="" class="product-img">
+            </div>
+            <h4 class="product-name">Whole Wheat Sandwich Break</h4>
+            <div class="product-rating--container">
+              <div class="ratings">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+              </div>
+              <h4 class="numberOfSellOut">( 222 )</h4>
+            </div>
+            <div class="price-container">
+              <h4 class="actualPrice">$24.00</h4>
+              <h3 class="discountedPrice">$18.00</h3>
+              <p class="discountPercentage">10% OFF</p>
+            </div>
+            <div class="addtocard-container">
+              <input type="number" value="1" class="numberOfQuantity">
+              <button class="addtocard-btn">Add To Card</button>
+              <span class="wishlish-container">
+                <i class='bx bxs-heart' ></i>
+              </span>
+            </div>
+          </div>
+        </template>
       </div>
     </div>
   </section>

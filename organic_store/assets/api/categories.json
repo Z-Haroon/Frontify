@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "image": "./assets/category-thumb-2.jpg",
+    "name": "Fruits & Veges"
+  },
+  {
+    "id": 2,
+    "image": "./assets/category-thumb-8.jpg",
+    "name": "Breads & Sweets"
+  },
+  {
+    "id": 3,
+    "image": "./assets/category-thumb-3.jpg",
+    "name": "Beverages"
+  },
+  {
+    "id": 4,
+    "image": "./assets/category-thumb-4.jpg",
+    "name": "Meat Products"
+  },
+  {
+    "id": 5,
+    "image": "./assets/category-thumb-5.jpg",
+    "name": "Breads"
+  },
+  {
+    "id": 6,
+    "image": "./assets/category-thumb-6.jpg",
+    "name": "Fruits & Veges"
+  },
+  {
+    "id": 7,
+    "image": "./assets/category-thumb-7.jpg",
+    "name": "Eggs"
+  },
+  {
+    "id": 8,
+    "image": "./assets/category-thumb-8.jpg",
+    "name": "Breads & Sweets"
+  },
+  {
+    "id": 9,
+    "image": "./assets/category-thumb-4.jpg",
+    "name": "Fruits & Veges"
+  },
+  {
+    "id": 10,
+    "image": "./assets/category-thumb-3.jpg",
+    "name": "Fruits & Veges"
+  },
+  {
+    "id": 11,
+    "image": "./assets/category-thumb-5.jpg",
+    "name": "Beverages"
+  },
+  {
+    "id": 12,
+    "image": "./assets/category-thumb-7.jpg",
+    "name": "Meat Products"
+  },
+  {
+    "id": 13,
+    "image": "./assets/category-thumb-2.jpg",
+    "name": "Breads"
+  }
+]

@@ -113,7 +113,7 @@ const renderPageCategories = (categories) => {
 };
 
 // Render Product 
-const renderProduct = (appendContainer, name, image, acutalPrice, discountPrice, shortDescription, longDescription, category, numberOfStars, numberOfSellOut) => {
+const renderProduct = (id, appendContainer, name, image, acutalPrice, discountPrice, shortDescription, longDescription, category, numberOfStars, numberOfSellOut) => {
   let productTemplateEl = document.getElementById("product-car-template");
   let productTemplate = document.importNode(productTemplateEl.content, true);
   // Let Fix Long Name Products Into .... it
@@ -121,7 +121,7 @@ const renderProduct = (appendContainer, name, image, acutalPrice, discountPrice,
   if(name.length > 30) {
     shortName = name.slice(0, 30) + "...";
   }
-  productTemplate.querySelector(".product-card").setAttribute("id", `productNo${name}`);
+  productTemplate.querySelector(".product-card").setAttribute("id", `productNo${id}`);
   productTemplate.querySelector(".product-img").src = image;
   productTemplate.querySelector(".product-img").alt = name;
   productTemplate.querySelector(".product-name").textContent = shortName;
@@ -175,11 +175,36 @@ const requestForRenderProducts = (products, appendContainer, startsWith, endsWit
   const requestForRender = () => {
     renderProducts = products.slice(startsWith, endsWith);
     renderProducts.forEach(currentElement => {
-    const {name, image, actualPrice, discountPrice, shortDescription, longDescription, category, numberOfStars, numberOfSellOut} = currentElement;
-    renderProduct(appendContainer, name, image, actualPrice, discountPrice, shortDescription, longDescription, category, numberOfStars, numberOfSellOut);
+    const {id, name, image, actualPrice, discountPrice, shortDescription, longDescription, category, numberOfStars, numberOfSellOut} = currentElement;
+    renderProduct(id, appendContainer, name, image, actualPrice, discountPrice, shortDescription, longDescription, category, numberOfStars, numberOfSellOut);
   });
   }; requestForRender();
-}
+};
+
+// Shaking Effect
+const shakingEffect = (targetElement) => {
+  targetElement.style.transition = `transform 0.1s linear`;
+  let times = 0;
+  let number = 20; // Start with a positive value
+  
+  const interval = setInterval(() => {
+    targetElement.style.transform = `translateX(${number}px)`;
+    number = -number; // Alternate the direction
+    times++;
+    
+    if (times > 5) { // Stop after 5 shakes
+      clearInterval(interval);
+      targetElement.style.transform = 'translateX(0)'; // Reset position
+    }
+  }, 100); // Adjust timing as needed
+};
+
+
+// Manage Banner Subscription farm
+const manageBannerSubscribeForm = () => {
+  // References
+};
+
 
 (() => {
   // Fetching Categories From API
@@ -202,10 +227,11 @@ const requestForRenderProducts = (products, appendContainer, startsWith, endsWit
     return response.json();
   }).then(products => {
     requestForRenderProducts(products, ".selling-products--container", 0, 10);
-
+    requestForRenderProducts(products, ".new-products--container", 20, 30);
   }).catch(error => {
     console.warn(error);
   });
   window.addEventListener("load", hideloadingScreen);
   dropdownHeaderCategory();
+  manageBannerSubscribeForm();
 })();

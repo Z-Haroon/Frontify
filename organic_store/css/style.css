@@ -86,7 +86,7 @@ body.completed {
   line-height: 1.7;
   background: var(--color-off-white);
   overflow-y: visible;
-  height: 300vh;
+  height: 600vh;
 }
 html {
   font-family: "Intel", sans-serif;
@@ -562,9 +562,10 @@ button:hover {
 
 /* * ********BEST SELLING SECTION START HERE********* * */
 #sale-products--section {
-  margin: 6rem 0 0;
+  margin: 4rem 0 0;
 }
-.selling-products--container {
+.selling-products--container,
+.new-products--container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
@@ -659,7 +660,7 @@ button:hover {
   display: flex;
 }
 .product-card .addtocard-container input {
-  width: 4rem;
+  width: 5rem;
   font-size: 16px;
   height: 100%;
   background: none;
@@ -672,7 +673,7 @@ button:hover {
   background: var(--color-dark-green);
   height: 100%;
   color: var(--color-white);
-  padding: 0 30px;
+  padding: 0 10px;
   border-radius: 5px;
   transition: var(--transition-300ms);
 }
@@ -693,4 +694,165 @@ button:hover {
 }
 .product-card .addtocard-container span:hover {
   color: var(--color-red);
+}
+
+/* * ********MINI BANNERS SECTION********* * */
+#short-banners-section {
+  margin: 6rem 0 0;
+  height: 45rem;
+}
+.short-banners {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+.large-banner-container {
+  height: 100%;
+  width: 59.8%;
+  background-image: linear-gradient(rgba(0, 0, 0,  .2), rgba(0, 0, 0, .2)), url("../assets/banner-ad-1.jpg");
+  background-position: left center;
+  background-size: cover;
+  border-radius: 5px;
+  position: relative;
+}
+.large-banner-container .itens-container {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  color: var(--color-white);
+  transform: translateY(-50%);
+}
+.large-banner-container h3 {
+  font-size: 30px;
+  font-weight: 400;
+}
+.large-banner-container h5 {
+  font-weight: 400;
+  font-size: 18px;
+  margin: .5rem 0 3rem;
+}
+.large-banner-container a {
+  font-size: 14px;
+  border-bottom: 2px solid #ccc;
+  padding: 0 0 3px;
+  position: relative;
+}
+.large-banner-container a::after {
+  content: "";
+  height: 3px;
+  position: absolute;
+  bottom: -2px;
+  border-bottom: 2px solid #fff;
+  width: 0%;
+  left: 0;
+  transition: var(--transition-200ms);
+}
+.large-banner-container a:hover::after {
+  width: 100%;
+}
+.short-banners--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 39.5%;
+  height: 100%;
+}
+.short-banner {
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url("../assets/banner-ad-2.jpg");
+  width: 100%;
+  position: relative;
+}
+.short-banner .items-container {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+  color: var(--color-white);
+}
+.short-banner .items-container h3 {
+  font-size: 25px;
+  font-weight: 500;
+}
+.short-banner .items-container h5 {
+  font-size: 18px;
+  margin: 1rem 0 1.5rem;
+  font-weight: 500;
+}
+.short-banner .items-container a {
+  padding: 1rem 1.5rem;
+  background: var(--color-cemate);
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-size: 14px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  transition: var(--transition-300ms);
+}
+.short-banner .items-container a:hover {
+  background: transparent;
+  border-color: #fff;
+}
+.short-banner:nth-child(2) {
+  background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url("../assets/banner-ad-3.jpg");
+}
+
+/* * ********SUBSCRIBE BANNER********* * */
+#subscribe-banner--section {
+  margin: 4rem auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url("../assets/banner-newsletter.jpg") ;
+  height: 32rem;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+}
+#subscribe-banner--section .headings-section h2 {
+  font-size: 45px;
+  font-weight: 500;
+  width: 500px;
+  margin: 0 0 20px;
+}
+#subscribe-banner--section .headings-section p {
+  font-size: 18px;
+  font-weight: 400;
+}
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+}
+.subscribe-form input {
+  width: 40rem;
+  height: 4rem;
+  padding: 0 0 0 10px;
+  border-radius: 20px;
+  border: 3px solid var(--transparent);
+} 
+.subscribe-form p {
+  text-align: center;
+  margin: 2px 0 20px;
+  font-size: 13px;
+  color: var(--color-red);
+}
+.subscribe-form button {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  font-size: 18px;
+  padding: 1rem 0;
+  border-radius: 20px;
+  border: 1px solid var(--color-black);
+  transition: var(--transition-300ms);
+}
+.subscribe-form button:hover {
+  background: none;
+  border-color: var(--color-white);
+  color: var(--color-white);
 }

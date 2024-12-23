@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "Whole Wheat Sandwich Bread",
     "image": "./assets/product-thumb-1.png",
     "actualPrice": "$25",
@@ -11,6 +12,7 @@
     "numberOfSellOut": 222
   },
   {
+    "id": 2,
     "name": "Fresh Organic Milk",
     "image": "./assets/product-thumb-2.png",
     "actualPrice": "$10",
@@ -22,6 +24,7 @@
     "numberOfSellOut": 320
   },
   {
+    "id": 3,
     "name": "Free-Range Brown Eggs",
     "image": "./assets/product-thumb-3.png",
     "actualPrice": "$12",
@@ -33,6 +36,7 @@
     "numberOfSellOut": 180
   },
   {
+    "id": 4,
     "name": "Almond Butter Spread",
     "image": "./assets/product-thumb-4.png",
     "actualPrice": "$15",
@@ -44,6 +48,7 @@
     "numberOfSellOut": 400
   },
   {
+    "id": 5,
     "name": "Organic Peanut Butter",
     "image": "./assets/product-thumb-5.png",
     "actualPrice": "$10",
@@ -55,6 +60,7 @@
     "numberOfSellOut": 350
   },
   {
+    "id": 6,
     "name": "Greek Yogurt",
     "image": "./assets/product-thumb-6.png",
     "actualPrice": "$8",
@@ -66,6 +72,7 @@
     "numberOfSellOut": 270
   },
   {
+    "id": 7,
     "name": "Cheddar Cheese Block",
     "image": "./assets/product-thumb-7.png",
     "actualPrice": "$20",
@@ -77,6 +84,7 @@
     "numberOfSellOut": 145
   },
   {
+    "id": 8,
     "name": "Whole Grain Oatmeal",
     "image": "./assets/product-thumb-8.png",
     "actualPrice": "$7",
@@ -88,6 +96,7 @@
     "numberOfSellOut": 230
   },
   {
+    "id": 9,
     "name": "Raw Honey Jar",
     "image": "./assets/product-thumb-9.png",
     "actualPrice": "$15",
@@ -99,6 +108,7 @@
     "numberOfSellOut": 410
   },
   {
+    "id": 10,
     "name": "Chia Seeds",
     "image": "./assets/product-thumb-10.png",
     "actualPrice": "$12",
@@ -110,6 +120,7 @@
     "numberOfSellOut": 300
   },
   {
+    "id": 11,
     "name": "Organic Green Tea",
     "image": "./assets/product-thumb-11.png",
     "actualPrice": "$10",
@@ -121,6 +132,7 @@
     "numberOfSellOut": 240
   },
   {
+    "id": 12,
     "name": "Cold Brew Coffee",
     "image": "./assets/product-thumb-12.png",
     "actualPrice": "$18",
@@ -132,6 +144,7 @@
     "numberOfSellOut": 320
   },
   {
+    "id": 13,
     "name": "Fresh Basil Leaves",
     "image": "./assets/product-thumb-13.png",
     "actualPrice": "$3",
@@ -143,6 +156,7 @@
     "numberOfSellOut": 180
   },
   {
+    "id": 14,
     "name": "Extra Virgin Olive Oil",
     "image": "./assets/product-thumb-14.png",
     "actualPrice": "$25",
@@ -154,6 +168,7 @@
     "numberOfSellOut": 450
   },
   {
+    "id": 15,
     "name": "Organic Coconut Oil",
     "image": "./assets/product-thumb-15.png",
     "actualPrice": "$15",
@@ -165,6 +180,7 @@
     "numberOfSellOut": 300
   },
   {
+    "id": 16,
     "name": "Quinoa Grain",
     "image": "./assets/product-thumb-16.png",
     "actualPrice": "$12",
@@ -176,6 +192,7 @@
     "numberOfSellOut": 250
   },
   {
+    "id": 17,
     "name": "Organic Kale Chips",
     "image": "./assets/product-thumb-17.png",
     "actualPrice": "$8",
@@ -187,6 +204,7 @@
     "numberOfSellOut": 140
   },
   {
+    "id": 18,
     "name": "Dark Chocolate Bar",
     "image": "./assets/product-thumb-18.png",
     "actualPrice": "$5",
@@ -198,6 +216,7 @@
     "numberOfSellOut": 210
   },
   {
+    "id": 19,
     "name": "Gluten-Free Bread",
     "image": "./assets/product-thumb-19.png",
     "actualPrice": "$10",
@@ -209,6 +228,7 @@
     "numberOfSellOut": 180
   },
   {
+    "id": 20,
     "name": "Organic Apple Juice",
     "image": "./assets/product-thumb-20.png",
     "actualPrice": "$12",
@@ -220,6 +240,7 @@
     "numberOfSellOut": 230
   },
   {
+    "id": 21,
     "name": "Avocado Oil",
     "image": "./assets/product-thumb-21.png",
     "actualPrice": "$20",
@@ -231,6 +252,7 @@
     "numberOfSellOut": 200
   },
   {
+    "id": 22,
     "name": "Spinach Wraps",
     "image": "./assets/product-thumb-22.png",
     "actualPrice": "$8",
@@ -242,6 +264,7 @@
     "numberOfSellOut": 150
   },
   {
+    "id": 23,
     "name": "Coconut Water",
     "image": "./assets/product-thumb-23.png",
     "actualPrice": "$7",
@@ -253,6 +276,7 @@
     "numberOfSellOut": 220
   },
   {
+    "id": 24,
     "name": "Black Bean Pasta",
     "image": "./assets/product-thumb-24.png",
     "actualPrice": "$12",
@@ -264,6 +288,7 @@
     "numberOfSellOut": 190
   },
   {
+    "id": 25,
     "name": "Organic Matcha Powder",
     "image": "./assets/product-thumb-25.png",
     "actualPrice": "$15",
@@ -275,6 +300,7 @@
     "numberOfSellOut": 270
   },
   {
+    "id": 26,
     "name": "Zucchini Noodles",
     "image": "./assets/product-thumb-26.png",
     "actualPrice": "$10",
@@ -286,47 +312,51 @@
     "numberOfSellOut": 160
   },
   {
-    "name": "Maple Syrup",
+    "id": 27,
+    "name": "Sunflower Seed Butter",
     "image": "./assets/product-thumb-27.png",
     "actualPrice": "$14",
-    "discountPrice": "$12",
-    "shortDescription": "Natural sweetener",
-    "longDescription": "Pure maple syrup, great for pancakes and baking.",
-    "category": "Sweeteners",
-    "numberOfStars": 5,
-    "numberOfSellOut": 180
+    "discountPrice": "$11",
+    "shortDescription": "Nut-free alternative",
+    "longDescription": "Delicious sunflower seed butter, perfect for spreads and smoothies.",
+    "category": "Nut Butters",
+    "numberOfStars": 4,
+    "numberOfSellOut": 150
   },
   {
-    "name": "Organic Turmeric Powder",
+    "id": 28,
+    "name": "Organic Almond Milk",
     "image": "./assets/product-thumb-28.png",
-    "actualPrice": "$10",
-    "discountPrice": "$8",
-    "shortDescription": "Rich in antioxidants",
-    "longDescription": "High-quality turmeric powder for cooking and health benefits.",
-    "category": "Spices",
+    "actualPrice": "$9",
+    "discountPrice": "$7",
+    "shortDescription": "Dairy-free beverage",
+    "longDescription": "Creamy and healthy organic almond milk for a dairy-free diet.",
+    "category": "Beverages",
     "numberOfStars": 5,
-    "numberOfSellOut": 240
+    "numberOfSellOut": 220
   },
   {
-    "name": "Granola Clusters",
+    "id": 29,
+    "name": "Protein Granola Mix",
     "image": "./assets/product-thumb-29.png",
     "actualPrice": "$10",
     "discountPrice": "$8",
-    "shortDescription": "Crunchy and tasty",
-    "longDescription": "Delicious granola clusters made with natural ingredients.",
-    "category": "Snacks",
+    "shortDescription": "Healthy snack option",
+    "longDescription": "Crunchy and nutritious granola mix packed with protein.",
+    "category": "Breakfast Foods",
     "numberOfStars": 4,
-    "numberOfSellOut": 200
+    "numberOfSellOut": 180
   },
   {
-    "name": "Pumpkin Seeds",
+    "id": 30,
+    "name": "Organic Turmeric Powder",
     "image": "./assets/product-thumb-30.png",
     "actualPrice": "$8",
     "discountPrice": "$6",
-    "shortDescription": "Rich in nutrients",
-    "longDescription": "Healthy pumpkin seeds perfect for snacking or adding to dishes.",
-    "category": "Snacks",
+    "shortDescription": "Golden superfood",
+    "longDescription": "Pure organic turmeric powder, perfect for teas and cooking.",
+    "category": "Spices",
     "numberOfStars": 5,
-    "numberOfSellOut": 170
+    "numberOfSellOut": 200
   }
 ]

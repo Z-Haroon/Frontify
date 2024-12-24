@@ -1,6 +1,7 @@
 // Import Function From another files
 import { renderCategories } from "./categories.js";
 import { headerManager } from "./headerManager.js";
+import { renderProducts } from "./renderProducts.js";
 
 // ? Hide Loading Screen 
 const hideLoadingScreen = () => {
@@ -27,6 +28,8 @@ const hideLoadingScreen = () => {
     return response.json();
   }).then(products => {
     headerManager(products);
+    renderProducts(products, ".selling-products--container", 0, 10, "#selling-all--btn");
+    renderProducts(products, ".new-products--container", 10, 15, "#newArrival-all--btn");
   }).catch(error => {
     console.error(error);
   });

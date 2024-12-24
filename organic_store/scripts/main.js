@@ -169,16 +169,37 @@ const renderProduct = (id, appendContainer, name, image, acutalPrice, discountPr
 };
 
 // Create Request for Append Products On Screen 
-const requestForRenderProducts = (products, appendContainer, startsWith, endsWith) => {
+const requestForRenderProducts = (products, appendContainer, startsWith, endsWith, veiwAll) => {
   // Number OF Products for Render
-  let renderProducts = null;
+  let renderProducts = products.slice(startsWith, endsWith);
   const requestForRender = () => {
-    renderProducts = products.slice(startsWith, endsWith);
     renderProducts.forEach(currentElement => {
     const {id, name, image, actualPrice, discountPrice, shortDescription, longDescription, category, numberOfStars, numberOfSellOut} = currentElement;
     renderProduct(id, appendContainer, name, image, actualPrice, discountPrice, shortDescription, longDescription, category, numberOfStars, numberOfSellOut);
   });
   }; requestForRender();
+  // View All Butt function & Event Listener
+  let check = false;
+  const productsViewAllButton = (btn) => {
+    let containerEl = document.querySelector(appendContainer);
+    if(!check) {
+      containerEl.innerHTML = ``;
+      renderProducts = products.slice(startsWith, products.length);
+      requestForRender();
+      btn.innerText = "View Less";
+      check = true;
+    } else {
+      containerEl.innerHTML = ``;
+      btn.innerText = "View All";
+      renderProducts = products.slice(startsWith, endsWith);
+      requestForRender();
+      check = false;
+    }
+  };
+  
+  let viewAllBtn = document.querySelector(veiwAll);
+  viewAllBtn.addEventListener("click", () => productsViewAllButton(viewAllBtn));
+
 };
 
 // Shaking Effect
@@ -201,8 +222,143 @@ const shakingEffect = (targetElement) => {
 
 
 // Manage Banner Subscription farm
+let subscribedUsersData = JSON.parse(localStorage.getItem("subscribedUsers")) || [];
 const manageBannerSubscribeForm = () => {
   // References
+  let nameInputEl = document.querySelector(".subscribe-name--input");
+  let nameErrorMessageEl = document.querySelector(".subscribe-name--error");
+  let emailInputEl = document.querySelector(".subscribe-email--input");
+  let emailErrorMessageEl = document.querySelector(".subscribe-email--error");
+  // Error Message Changer
+  const errorMessage = (errorElement, errorText) => {
+    if(!errorElement && !errorText) {
+      return;
+    }
+    errorElement.style.color = `#ff0000`;
+    errorElement.innerText = errorText;
+  };
+  // Red Green Border Creater 
+  const redBorder = (Element) => {
+    Element.style.border = `2px solid #ff0000`;
+  };
+  const greenBorder = (Element) => {
+    Element.style.border = `2px solid #00ff00`;
+  };
+  // Focus And Hover
+  const focusBlur = (inputEl) => {
+    if(!inputEl) {
+      return;
+    }
+    // Focus Function
+    const focus = (inputElement) => {
+      inputElement.addEventListener("focus", () => greenBorder(inputElement), {once: true});
+    }
+    
+    let condition = true;
+
+    inputEl.addEventListener("blur", () => {
+      inputEl.value = inputEl.value.trim();
+      inputEl.value = inputEl.value.replace(/\s+/g, ' ').trim();
+      if(inputEl.value.length < 1) {
+        redBorder(inputEl);
+        shakingEffect(inputEl);
+        if(condition) {
+          condition = false;
+          focus(inputEl);
+        }
+      }
+    }); 
+    
+  };
+  focusBlur(emailInputEl);
+  focusBlur(nameInputEl);
+
+  // Conditions For Submit Buttons
+  let validName = false;
+  let validEmail = false;
+  // Let's Create Some Errors Message According to user Input
+  nameInputEl.addEventListener("input", () => {
+    if(nameInputEl.value.length == 0) {
+      redBorder(nameInputEl);
+      errorMessage(nameErrorMessageEl, "Empty Input Element Isn't Allowed");
+      validName = false;
+    } else if (/[0-9!@#$%^&*(),.?":{}|<>]/.test(nameInputEl.value)) {
+      redBorder(nameInputEl);
+      errorMessage(nameErrorMessageEl, "Numbers (1,2,3,4,5,6,7,8,9) and special character (@#$%^&*%$#@!) isn't Allowed");
+      validName = false;
+    } else if (nameInputEl.value.length < 4) {
+      redBorder(nameInputEl);
+      errorMessage(nameErrorMessageEl, "Your Name is to short please enter your original name");
+      validName = false;
+    } else {
+      greenBorder(nameInputEl);
+      errorMessage(nameErrorMessageEl, "Sucess");
+      nameErrorMessageEl.style.color = `#00ff00`;
+      validName = true;
+    }
+  });
+
+  // Let's Create Error Messages for email
+  emailInputEl.addEventListener("input", () => {
+    if(emailInputEl.value.length == 0) {
+      emailInputEl.value = emailInputEl.value.trim();
+      redBorder(emailInputEl);
+      errorMessage(emailErrorMessageEl, "Empty email Input Isn't Allowed This is Required");
+      validEmail = false;
+    } else if (!emailInputEl.value.includes("@") ) {
+      emailInputEl.value = emailInputEl.value.trim();
+      redBorder(emailInputEl);
+      errorMessage(emailErrorMessageEl, "Please Enter Valid email address Example (example@gmail.com)");
+      validEmail = false;
+    } else if (subscribedUsersData.includes(emailInputEl.value.toLowerCase())) {
+      redBorder(emailInputEl);
+      errorMessage(emailErrorMessageEl, "This Email Was Aleardy Subscribed Please try Another");
+      validEmail = false;
+    } else {
+      emailInputEl.value = emailInputEl.value.trim();
+      greenBorder(emailInputEl);
+      errorMessage(emailErrorMessageEl, "Sucess");
+      emailErrorMessageEl.style.color = `#00ff00`;
+      validEmail = true;
+    }
+  });
+
+  // Submit button 
+  let submitBtnEl = document.querySelector(".subscribe-form");
+  let submitErrorMessageEl = document.querySelector(".submit-btn--error");
+  submitBtnEl.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if(validEmail && validName) {
+      subscribedUsersData.push(emailInputEl.value.toLowerCase());
+      subscribedUsersData = [...new Set (subscribedUsersData)]
+      localStorage.setItem("subscribedUsers", JSON.stringify(subscribedUsersData));
+      nameInputEl.value = "";
+      emailInputEl.value = "";
+      nameErrorMessageEl.innerText = "";
+      emailErrorMessageEl.innerText = "";
+      greenBorder(nameInputEl);
+      greenBorder(emailInputEl);
+      errorMessage(submitErrorMessageEl, "You are subscribed Please Check Your email address");
+      submitErrorMessageEl.style.color = "#00ff00";
+      setTimeout(() => {
+        submitErrorMessageEl.innerText = "";
+      }, 10000)
+    } else if (!validEmail && validName) {
+      errorMessage(submitErrorMessageEl, "Something Went Wrong With Your Email Address");
+      shakingEffect(emailInputEl);
+      redBorder(emailInputEl);
+    } else if (validEmail && !validName) {
+      shakingEffect(nameInputEl);
+      errorMessage(submitErrorMessageEl, "Something Went Wrong With Your Full Name");
+      redBorder(nameInputEl);
+    } else if (!validEmail && !validName) {
+      shakingEffect(nameInputEl);
+      shakingEffect(emailInputEl);
+      errorMessage(submitErrorMessageEl, "Something Went Wrong With Your Email & Full Name");
+      redBorder(emailInputEl);
+      redBorder(nameInputEl);
+    }
+  });
 };
 
 
@@ -214,7 +370,7 @@ const manageBannerSubscribeForm = () => {
     }
     return res.json();
   }).then(categories => {
-    renderPageCategories(categories)
+    renderPageCategories(categories);
   }).catch(err => {
     console.error(err)
   });
@@ -226,8 +382,8 @@ const manageBannerSubscribeForm = () => {
     }
     return response.json();
   }).then(products => {
-    requestForRenderProducts(products, ".selling-products--container", 0, 10);
-    requestForRenderProducts(products, ".new-products--container", 20, 30);
+    requestForRenderProducts(products, ".selling-products--container", 0, 10, "#selling-all--btn");
+    requestForRenderProducts(products, ".new-products--container", 15, 25, "#newArrival-all--btn");
   }).catch(error => {
     console.warn(error);
   });

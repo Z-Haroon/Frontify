@@ -587,7 +587,7 @@ button:hover {
   transition: var(--transition-300ms);
 }
 .page-category--container.active {
-  height: 43rem;
+  height: auto;
 }
 .page-category {
   display: flex;
@@ -610,11 +610,12 @@ button:hover {
 }
 
 /* * ********BEST SELLING SECTION START HERE********* * */
-#sale-products--section {
+.produdcts-section {
   margin: 4rem 0 0;
 }
 .selling-products--container,
-.new-products--container {
+.new-products--container,
+.foryou-products--container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
@@ -904,4 +905,20 @@ button:hover {
   background: none;
   border-color: var(--color-white);
   color: var(--color-white);
+}
+#loadMoreBtn {
+  display: block;
+  margin: 4rem auto 0;
+  padding: 1.2rem 3rem;
+  font-size: 1.8rem;
+  color: var(--color-white);
+  background: var(--color-blue);
+  border: 1px solid var(--transparent);
+  transition: var(--transition-300ms);
+  border-radius: 10px;
+}
+#loadMoreBtn:hover {
+  background: var(--transparent);
+  border-color: var(--color-black);
+  color: var(--color-black);
 }

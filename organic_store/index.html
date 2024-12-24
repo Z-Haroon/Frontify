@@ -46,12 +46,22 @@
         <a href="#" class="logo"><img src="./assets/logo.svg" alt="Organic Store Official Logo"></a>
         <div class="search-category--container">
           <div class="search-container">
-            <input type="text" placeholder="I'm Looking For..." id="sarch-input">
+            <input type="text" placeholder="I'm Looking For..." id="sarch-input" autocomplete="off">
             <div class="search-icon--container"><i class="bx bx-search"></i></div>
+            <div class="search-result--container">
+              <div class="result-inner--container">
+                <div class="result-title--section">
+                  <h3 class="heading">Results Found</h3>
+                  <span class="countOfResult">[ 0 ]</span>
+                </div>
+                <div class="results-found--container">
+                </div>
+              </div>
+            </div>
           </div>
           <div class="dropdown-category dropCategory">
             <h3 class="dropdown-heading dropCategory">All Categories</h3>
-            <p><i class='bx bx-caret-down dropCategory' ></i></p>
+            <p class="dropCategory"><i class='bx bx-caret-down dropCategory' ></i></p>
             <div class="dropdown-container dropCategory">
               <ul class="dropdown-category--inner dropCategory">
               </ul>
@@ -209,7 +219,7 @@
       </form>
     </div>
   </section>
-  <template id="product-car-template">
+  <template id="product-card-template">
     <div class="product-card">
       <div class="img-container">
         <img src="./assets/product-thumb-1.png" alt="" class="product-img">
@@ -234,6 +244,6 @@
       </div>
     </div>
   </template>
-  <script src="./scripts/main.js"></script>
+  <script type="module" src="./scripts/main.js" ></script>
 </body>
 </html>

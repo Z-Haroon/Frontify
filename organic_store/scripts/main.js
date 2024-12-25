@@ -1,6 +1,7 @@
 // Import Function From another files
 import { renderCategories } from "./categories.js";
 import { headerManager } from "./headerManager.js";
+import { renderBlogs } from "./renderBlogs.js";
 import { renderProducts } from "./renderProducts.js";
 import { subscribeForm } from "./subscribeForm.js";
 
@@ -48,4 +49,16 @@ const hideLoadingScreen = () => {
     console.warn(error);
   });
   subscribeForm()
+
+  // Fetch Blogs 
+  fetch("./assets/api/blogs.json").then(response => {
+    if(!response.ok) {
+      throw new Error ("Please Check Your Api File");
+    }
+    return response.json();
+  }).then(blogs => {
+    renderBlogs(blogs, ".blogs-container", 0, 3);
+  }).catch(error => {
+    console.warn(error);
+  });
 })();

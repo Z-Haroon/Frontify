@@ -86,7 +86,7 @@ body.completed {
   line-height: 1.7;
   background: var(--color-off-white);
   overflow-y: visible;
-  height: 600vh;
+  height: 1000vh;
 }
 html {
   font-family: "Intel", sans-serif;
@@ -906,6 +906,8 @@ button:hover {
   border-color: var(--color-white);
   color: var(--color-white);
 }
+
+/* * ********FOR YOU SECTION********* * */
 #loadMoreBtn {
   display: block;
   margin: 4rem auto 0;
@@ -921,4 +923,106 @@ button:hover {
   background: var(--transparent);
   border-color: var(--color-black);
   color: var(--color-black);
+}
+
+/* * ********BLOGS SECTION********* * */
+#Blogs-section {
+  margin: 10rem;
+}
+.blogs-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 20PX;
+}
+.blog-container {
+  transition: var(--transition-300ms);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 8px 8px 20px;
+  border: 1px solid #ccc;
+}
+.blog-container:hover {
+  box-shadow: var(--box-shadow-1);
+  background: var(--color-white);
+}
+.blog-img--container {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.blog-date-type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 1rem 0 1.5rem;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+.blog-date,
+.blog-type {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 16px;
+}
+.date,
+.type {
+  font-size: 12px;
+  font-weight: 600;
+}
+.blog-title {
+  font-size: 30px;
+  margin: 0 0 1rem;
+  padding: 0 5px;
+}
+.blog-details {
+  font-size: 15px;
+  padding: 0 8px;
+}
+
+/* * ********DOWNLOAD APP BANNER********* * */
+#download-app--section {
+  height: 50rem;
+  margin: 5rem 0 0 0;
+}
+.app-banner {
+  height: 100%;
+  width: 100%;
+  background-color: #F2C010;
+  background-image: url("../assets/banner-onlineapp.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  padding: 5rem 0 0 0;
+  border-radius: 30px;
+  position: relative;
+}
+.app-banner .items-container {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+.app-banner .items-container .main-heading {
+  font-size: 45px;
+  color: var(--color-mid-black);
+}
+.app-banner .items-container .sub-heading {
+  font-size: 2rem;
+  text-align: center;
+  margin: .5rem 0 1.5rem;
+}
+.app-banner .items-container .download-app--btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.app-banner .items-container .download-app--btns button {
+  padding: 3rem 10rem;
+  background-image: url("../assets/img-app-store.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+.app-banner .items-container .download-app--btns .android-btn {
+  background-image: url("../assets/img-google-play.png");
 }

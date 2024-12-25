@@ -100,32 +100,38 @@ export const subscribeForm = () => {
       nameCheck = true;
     }
   });
-  // Email Input
-  emailInputEl.addEventListener("input", () => {
-    emailInputEl.value = emailInputEl.value.trim();
-    if(emailInputEl.value.length < 1) {
-      errorMessage(emailErrorMessageEl, inputErrors.emptyEmail);
-      redGreenBorder(emailInputEl, "red");
-      emailCheck = false;
-    } else if (emailInputEl.value.length < 4) {
-      errorMessage(emailErrorMessageEl, inputErrors.toShortEmail);
-      redGreenBorder(emailInputEl, "red");
-      emailCheck = false;
-    } else if (!emailInputEl.value.includes("@")) {
-      errorMessage(emailErrorMessageEl, inputErrors.wrongEmail);
-      redGreenBorder(emailInputEl, "red");
-      emailCheck = false;
-    } else if (subscribeUsersData.includes(emailInputEl.value.toLowerCase())) {
-      errorMessage(emailErrorMessageEl, "This Email Address Aleardy subscribed Please Try With Other");
-      redGreenBorder(emailInputEl, "red");
-      emailCheck = false;
-    } else {
-      errorMessage(emailErrorMessageEl, "Success");
-      emailErrorMessageEl.style.color = "#00ff00";
-      redGreenBorder(emailInputEl, "green");
-      emailCheck = true;
+  // Email Input function for multiple times apply
+  const subscribeEmailInput = (inputElement, errorCont) => {
+    if(!inputElement && !errorCont) {
+      return;
     }
-  });
+    inputElement.addEventListener("input", () => {
+      inputElement.value = inputElement.value.trim();
+      if(inputElement.value.length < 1) {
+        errorMessage(errorCont, inputErrors.emptyEmail);
+        redGreenBorder(inputElement, "red");
+        emailCheck = false;
+      } else if (inputElement.value.length < 4) {
+        errorMessage(errorCont, inputErrors.toShortEmail);
+        redGreenBorder(inputElement, "red");
+        emailCheck = false;
+      } else if (!inputElement.value.includes("@")) {
+        errorMessage(errorCont, inputErrors.wrongEmail);
+        redGreenBorder(inputElement, "red");
+        emailCheck = false;
+      } else if (subscribeUsersData.includes(inputElement.value.toLowerCase())) {
+        errorMessage(errorCont, "This Email Address Aleardy subscribed Please Try With Other");
+        redGreenBorder(inputElement, "red");
+        emailCheck = false;
+      } else {
+        errorMessage(errorCont, "Success");
+        errorCont.style.color = "#00ff00";
+        redGreenBorder(inputElement, "green");
+        emailCheck = true;
+      }
+    });
+  };
+  subscribeEmailInput(emailInputEl, emailErrorMessageEl);
 
   // Submit Form 
   formEl.addEventListener("submit", (e) => {
@@ -162,5 +168,48 @@ export const subscribeForm = () => {
     }
   });
 
+  // Footer Subscribe SEction
+  // Refrences
+  let footerFormEl = document.querySelector(".subscribeForm");
+  let footerInputEl = document.querySelector(".footer-subscribe--input");
+  let footerErrorMessageEl = document.querySelector(".footer-error-text")
+  // focus Blur Element
+  focusBlurEvent(footerInputEl);
+  subscribeEmailInput(footerInputEl, footerErrorMessageEl);
 
+  footerFormEl.addEventListener("submit", (e) => {
+    e.preventDefault();
+    footerInputEl.value = footerInputEl.value.trim();
+    if(footerInputEl.value.length < 1) {
+      errorMessage(footerErrorMessageEl, inputErrors.emptyEmail);
+      redGreenBorder(footerInputEl, "red");
+      shakingEffect(footerInputEl);
+      emailCheck = false;
+    } else if (footerInputEl.value.length < 4) {
+      errorMessage(footerErrorMessageEl, inputErrors.toShortEmail);
+      redGreenBorder(footerInputEl, "red");
+      shakingEffect(footerInputEl);
+      emailCheck = false;
+    } else if (!footerInputEl.value.includes("@")) {
+      errorMessage(footerErrorMessageEl, inputErrors.wrongEmail);
+      redGreenBorder(footerInputEl, "red");
+      shakingEffect(footerInputEl);
+      emailCheck = false;
+    } else if (subscribeUsersData.includes(footerInputEl.value.toLowerCase())) {
+      errorMessage(footerErrorMessageEl, "This Email Address Aleardy subscribed Please Try With Other");
+      redGreenBorder(footerInputEl, "red");
+      shakingEffect(footerInputEl);
+      emailCheck = false;
+    } else {
+      errorMessage(footerErrorMessageEl, "Success");
+      footerErrorMessageEl.style.color = "#00ff00";
+      redGreenBorder(footerInputEl, "green");
+      subscribeUsersData.push(footerInputEl.value.toLowerCase());
+      emailCheck = true;
+      subscribeUsersData = [... new Set(subscribeUsersData)];
+      localStorage.setItem("subscribedUsers", JSON.stringify(subscribeUsersData));
+      footerInputEl.value = "";
+      footerErrorMessageEl.innerText = "";
+    }
+  });
 };

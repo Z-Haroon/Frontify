@@ -14,6 +14,7 @@
   --color-e4-organge: #E85D2A;
   --color-mid-black: #212529;
   --color-golden: #F2C010;
+  --color-light-pink: #FCF7EB;
   --transparent: transparent;
 
 
@@ -86,7 +87,6 @@ body.completed {
   line-height: 1.7;
   background: var(--color-off-white);
   overflow-y: visible;
-  height: 1000vh;
 }
 html {
   font-family: "Intel", sans-serif;
@@ -982,7 +982,7 @@ button:hover {
 /* * ********DOWNLOAD APP BANNER********* * */
 #download-app--section {
   height: 50rem;
-  margin: 5rem 0 0 0;
+  margin: 5rem 0;
 }
 .app-banner {
   height: 100%;
@@ -1021,8 +1021,158 @@ button:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .app-banner .items-container .download-app--btns .android-btn {
   background-image: url("../assets/img-google-play.png");
+}
+
+/* * ********TAG SECTION********* * */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tag {
+  font-size: 16px;
+  padding: 3px 6px;
+  background: var(--color-light-pink);
+  color: var(--color-light-gray);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition-200ms);
+}
+.tag:hover {
+  background: #FBECBE;
+}
+
+/* * ********BOX INFORMATION SECTION********* * */
+#box-section {
+  margin: 4rem 0 0;
+}
+#box-section .boxes-container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.boxes-container .box-container {
+  border: 1px solid #ccc;
+  padding: 20px 10px;
+  border-radius: 5px;
+}
+.icon-container {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  color: var(--color-light-gray);
+}
+.box-container .heading {
+  font-size: 20px;
+  margin: 0 0 10px;
+  color: var(--color-mid-black);
+}
+.box-container .information {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-dark-gray);
+}
+
+/* * ********FOOTER********* * */
+#main-footer {
+  margin: 20rem 0 0;
+  height: 45rem;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  padding: 10rem 0 0 0;
+}
+#main-footer .container {
+  height: 100%;
+}
+.upper-footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 50px;
+  height: 100%;
+}
+.footer-logo--section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 15rem 0 0;
+}
+.social-icons--container {
+  display: flex;
+  gap: 10px;
+  margin: 25px 0 0;
+}
+.social-icon {
+  font-size: 20px;
+  border: 1px solid #ccc;
+  padding: 3px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition-300ms);
+}
+.social-icon:hover {
+  background: var(--color-cemate);
+  color: var(--color-white);
+}
+.footer-links--container {
+  text-align: center;
+}
+.footer-links--container .heading {
+  font-size: 20px;
+  color: var(--color-mid-black);
+  margin: 0 0 10px;
+}
+.footer-links--container ul {
+  margin: 0 10px 0 0;
+  font-size: 14px;
+}
+
+.footer-links--container li a{
+  color: var(--color-dark-gray);
+  transition: var(--transition-300ms);
+}
+.footer-links--container li a:hover {
+  color: var(--color-blue);
+}
+.sub-text {
+  line-height: 1.2;
+  font-size: 12px;
+  margin: 0 0 40px;
+}
+.subscribeForm {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: var(--color-white);
+  height: 4rem;
+  overflow: hidden;
+}
+.subscribeForm input {
+  padding: 0 0 0 10px;
+  background-color: var(--transparent);
+  height: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.subscribeForm button {
+  padding: 5px;
+  background: var(--color-black);
+  transition: var(--transition-300ms);
+  font-size: 15px;
+  height: 100%;
+  color: var(--color-white);
+}
+.subscribeForm button:hover {
+  background: var(--color-blue);
+}
+.bottom-footer {
+  padding: 20px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
 }

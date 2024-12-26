@@ -79,14 +79,12 @@ textarea {
 button { cursor: pointer; }
 
 body {
-  height: 100vh;
-  width: 100vw;
   overflow: hidden;
 }
 body.completed {
   line-height: 1.7;
   background: var(--color-off-white);
-  overflow-y: visible;
+  overflow: visible;
 }
 html {
   font-family: "Intel", sans-serif;
@@ -96,7 +94,7 @@ html {
 /* * ********LOADING SCREEN********* * */
 .loading {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: var(--color-black);
   position: fixed;
   top: 0;
@@ -927,12 +925,12 @@ button:hover {
 
 /* * ********BLOGS SECTION********* * */
 #Blogs-section {
-  margin: 10rem;
+  margin: 10rem 0 0 0;
 }
 .blogs-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px 20PX;
+  gap: 30px 20px;
 }
 .blog-container {
   transition: var(--transition-300ms);
@@ -1028,6 +1026,9 @@ button:hover {
 }
 
 /* * ********TAG SECTION********* * */
+#tags-section {
+  width: 100%;
+}
 .tags-container {
   display: flex;
   flex-wrap: wrap;
@@ -1080,7 +1081,6 @@ button:hover {
 /* * ********FOOTER********* * */
 #main-footer {
   margin: 20rem 0 0;
-  height: 45rem;
   width: 100%;
   border-top: 1px solid #ccc;
   padding: 10rem 0 0 0;

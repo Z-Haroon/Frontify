@@ -27,7 +27,6 @@ export const renderBlogs = (blogs, appendContainer, startWith, endWith) => {
     blogTemplate.querySelector(".blog-title").textContent = shortTitle;
     blogTemplate.querySelector(".blog-details").textContent = description;
     showBlogContainerEl.appendChild(blogTemplate);
-    console.log("wrok")
   }
 
   // request For render Blogs

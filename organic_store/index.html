@@ -26,6 +26,7 @@
   <!-- ? Links -->
   <link rel="apple-touch-icon" href="./assets/logo.png">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css ">
   <link rel="shortcut icon" href="./assets/logo.png" type="png">
   <link rel="preload" as="image" href="./assets/banner-1.jpg">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -43,7 +44,7 @@
   <header id="header"> <!--? header Start Here-->
     <div class="container header-container">
       <div class="logo-search--container">
-        <a href="#" class="logo"><img src="./assets/logo.svg" alt="Organic Store Official Logo"></a>
+        <a href="#" class="logo"><img src="./assets/logo.svg" alt="Organic Store Official Logo" class="logo"></a>
         <div class="search-category--container">
           <div class="search-container">
             <input type="text" placeholder="I'm Looking For..." id="sarch-input" autocomplete="off">
@@ -78,7 +79,7 @@
         </ul>
       </nav>
       <div class="header-icons--container">
-        <a href="./html/wishlist.html"><img src="./assets/save.png" alt="bookmark icon"></a>
+        <a href="./html/wishlist.html" class="wishlist"><img src="./assets/save.png" alt="bookmark icon"></a>
         <a href="./html/cart.html"><img src="./assets/cart.png" alt="cart icon"></a>
         <a href="./html/login.html" class="login-icon"><i class='bx bxs-user-circle' ></i></a>
       </div>
@@ -193,7 +194,7 @@
       </div>
     </div>
   </section>
-  <section class="produdcts-section">
+  <section class="produdcts-section" id="new-arrival-section">
     <div class="container sale-products--container">
       <div class="title-section">
         <h3 class="heading">New Arrivals</h3>
@@ -221,7 +222,7 @@
   </section>
   <section class="produdcts-section foryou-products--section">
     <div class="container sale-products--container">
-      <div class="title-section">
+      <div class="title-section foryou-title">
         <h3 class="heading">Best for you</h3>
       </div>
       <div class="foryou-products--container">
@@ -318,7 +319,7 @@
           <h3 class="heading">Cusotmer Service</h3>
           <ul class="customer-service"></ul>
         </div>
-        <div class="footer-links--container">
+        <div class="footer-links--container footer-Form">
           <h3 class="heading">Subscribe us</h3>
           <p class="sub-text">Subscribe to our newsletter to get updates about our grand offers.</p>
           <form class="subscribeForm">

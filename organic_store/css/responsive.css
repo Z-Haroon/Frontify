@@ -776,6 +776,7 @@
   }
   .page-category--container {
     grid-template-columns: repeat(3, 1fr);
+    height: 14.5rem;
   }
   .product-card .addtocard-container {
     display: flex;
@@ -839,5 +840,11 @@
   }
   .app-banner .items-container .download-app--btns button {
     padding: 2rem 6rem;
+  }
+}
+@media (max-width: 340px) {
+  .page-category--container {
+    grid-template-columns: repeat(3, 1fr);
+    height: 13rem;
   }
 }

@@ -33,65 +33,86 @@
 <link rel="shortcut icon" href="./assets/logo.png" type="png">
 </head>
 <body>
-  <header id="main-header"> <!-- Header Start Here -->
-    <div class="logo-search--section"> <!-- Page Logo & Search Section -->
-      <a href="index.html" class="logo-container"><img src="./assets/logo.png" alt="facebook Official Page Logo" class="logo"></a>
-      <div class="search-container">
-        <div class="search-icon--container">
-          <img src="./assets/search.png" alt="facebook main search box" class="main-search--icon">
-        </div>
-        <input type="text" placeholder="Search Facebook" id="main-search--input">
-      </div>
-      <div class="search-result--container"> <!-- Search Result Container-->
-        <div class="inner-container">
-          <div class="back-icon--container"><img src="./assets/back.png" alt="back Icon Link"></div>
-          <div class="results-container">
-            <p>No Recent Searches</p>
+  <div class="loading"><!--Loading Screen Start-->
+    <div class="logo-container"><img src="./assets/logo.png" alt="facebook Page Official Logo"></div>
+    <div class="meta-logo--section">
+      <p>From</p>
+      <img src="./assets/meta-logo.png" alt="meta official logo" class="meta-logo">
+    </div>
+  </div><!--Loading Screen End-->
+  <header id="main-header"><!--Header Start-->
+    <div class="logo-search--container"><!--Logo Search Start-->
+      <a href="#" class="logo-container"><img src="./assets/logo.png" alt="facebook official logo" class="logo"></a>
+      <div class="main-search--container"> <!--Main Search Container-->
+        <div class="icon-container"><img src="./assets/search.png" alt="main search icon link" class="main-search--icon"></div>
+        <input type="text" placeholder="Search Facebook" id="main-search--input" autocomplete="off">
+      </div> <!--Main Search End-->
+      <div class="main-search--result---js"><!--Search Result Start-->
+        <div class="main-search--inner---js">
+          <div class="main-back--button---js"><img src="./assets/back.png" alt="Arrow Icon Link"></div>
+          <div class="search-results--founded---js">
+            <p class="norecentsearches">No recent searches</p>
+            <!-- <div class="title-section">
+              <h4 class="heading">Recent</h4>
+              <div class="link-container">
+                <a href="#">Edit</a>
+              </div>
+             </div> -->
+             <!-- <div class="founded-result--js">
+              <a href="#"><img src="./assets/profile-pic.jpg" alt="user avatar" class="found-img"> <span class="founded-username">Kalsoom Khan</span></a>
+              <div class="result-delete--btn"><img src="./assets/close.png" alt="Delete btn results"></div>
+             </div> -->
           </div>
         </div>
-      </div> <!-- Search Result End Container--> 
-    </div> <!-- Search Section End Here -->
-    <nav class="navbar"> <!-- Navbar Start Here -->
-      <span class="nav-item"> <!-- Link 1 -->
-        <a href="index.html" class="nav-item--link">
-          <img src="./assets/home.png" alt="navbar home icon link" class="nav-icon">
-        </a>
-      </span>
-      <span class="nav-item"> <!-- Link 2 -->
-        <a href="index.html" class="nav-item--link">
-          <img src="./assets/friends.png" alt="navbar friend icon link" class="nav-icon">
-        </a>
-      </span>
-      <span class="nav-item"> <!-- Link 3 -->
-        <a href="index.html" class="nav-item--link">
-          <img src="./assets/video.png" alt="navbar video icon link" class="nav-icon">
-        </a>
-      </span>
-      <span class="nav-item"> <!-- Link 4 -->
-        <a href="index.html" class="nav-item--link">
-          <img src="./assets/marketplace.png" alt="navbar market icon link" class="nav-icon">
-        </a>
-      </span>
-      <span class="nav-item"> <!-- Link 5 -->
-        <a href="index.html" class="nav-item--link">
-          <img src="./assets/console.png" alt="navbar console icon link" class="nav-icon">
-        </a>
-      </span>
-    </nav> <!-- Navbar End Here -->
-    <div class="header-menus--section"> <!-- Header Icons Start Here -->
-      <div class="header-link--container"> <!-- Icon 1 -->
-        <img src="./assets/menu.png" alt="Open Menu Link" class="header-icon">
+      </div><!--Search Result End-->
+    </div><!--Logo Search End-->
+    <nav id="main-navbar"> <!-- NavBar Start Here -->
+      <div class="nav-item js-header--icon"> <!-- Icon 1 -->
+        <a href="index.html"><img src="./assets/home.png" alt="facebook home page official link"></a>
+        <h4 class="popup-message">Home</h4>
       </div>
-      <div class="header-link--container"> <!-- Icon 2 -->
-        <img src="./assets/messenger.png" alt="Open Menu Link" class="header-icon">
+      <div class="nav-item js-header--icon"> <!-- Icon 2 -->
+        <a href="index.html"><img src="./assets/friends.png" alt="facebook Friends page official link"></a>
+        <h4 class="popup-message">Friends</h4>
       </div>
-      <div class="header-link--container"> <!-- Icon 3 -->
-        <img src="./assets/bell.png" alt="Open Menu Link" class="header-icon">
+      <div class="nav-item js-header--icon"> <!-- Icon 4 -->
+        <a href="index.html"><img src="./assets/video.png" alt="facebook video page official link"></a>
+        <h4 class="popup-message">Video</h4>
       </div>
-      <div class="header-link--container"> <!-- Icon 4 -->
-        <img src="./assets/profile-pic.jpg" alt="Open Menu Link" class="header-icon">
+      <div class="nav-item js-header--icon"> <!-- Icon 4 -->
+        <a href="index.html"><img src="./assets/marketplace.png" alt="facebook marketplace page official link"></a>
+        <h4 class="popup-message">Marketplace</h4>
       </div>
-    </div> <!-- Header Icons End Here -->
-  </header> <!-- Header End Here -->
+      <div class="nav-item js-header--icon"> <!-- Icon 5 -->
+        <a href="index.html"><img src="./assets/console.png" alt="facebook gaming page official link"></a>
+        <h4 class="popup-message">Gaming</h4>
+      </div>
+    </nav> <!-- NavBar End Here -->
+    <div class="header-menus--section"> <!-- Header Icons Start Here-->
+      <div class="header-menus--item js-header--icon"> <!-- Icon 1 -->
+        <img src="./assets/menu.png" alt="menu Icon facebook menu">
+        <h4 class="popup-message">Menu</h4>
+        <div class="header-menu--section">
+          <div class="inner-container"></div>
+        </div>
+      </div>
+      <div class="header-menus--item js-header--icon"> <!-- Icon 2 -->
+        <img src="./assets/messenger.png" alt="menu Icon facebook menu">
+        <h4 class="popup-message">Messenger</h4>
+      </div>
+      <div class="header-menus--item js-header--icon"> <!-- Icon 3 -->
+        <img src="./assets/bell.png" alt="menu Icon facebook menu">
+        <h4 class="popup-message">Notifications</h4>
+      </div>
+      <div class="header-menus--item js-header--icon"> <!-- Icon 4 -->
+        <img src="./assets/profile-pic.jpg" alt="menu Icon facebook menu">
+        <h4 class="popup-message">Account</h4>
+        <span class="arrow-icon"><img src="./assets/profile-arrow.png" alt="down Arrow Icon"></span>
+      </div>
+    </div> <!-- Header Icons End Here-->
+  </header><!--Header End-->
+  <main id="home-main" class="container"> <!--Main Section Start-->
+  </main> <!--Main Section End-->
+  <script src="./scripts/main.js" type="module"></script>
 </body>
 </html>

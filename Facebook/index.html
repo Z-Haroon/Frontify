@@ -89,12 +89,9 @@
       </div>
     </nav> <!-- NavBar End Here -->
     <div class="header-menus--section"> <!-- Header Icons Start Here-->
-      <div class="header-menus--item js-header--icon"> <!-- Icon 1 -->
-        <img src="./assets/menu.png" alt="menu Icon facebook menu">
-        <h4 class="popup-message">Menu</h4>
-        <div class="header-menu--section">
-          <div class="inner-container"></div>
-        </div>
+      <div class="header-menus--item js-header--icon header-menu h-menu"> <!-- Icon 1 -->
+        <img src="./assets/menu.png" alt="menu Icon facebook menu" class="h-menu">
+        <h4 class="popup-message h-menu">Menu</h4>
       </div>
       <div class="header-menus--item js-header--icon"> <!-- Icon 2 -->
         <img src="./assets/messenger.png" alt="menu Icon facebook menu">
@@ -107,10 +104,32 @@
       <div class="header-menus--item js-header--icon"> <!-- Icon 4 -->
         <img src="./assets/profile-pic.jpg" alt="menu Icon facebook menu">
         <h4 class="popup-message">Account</h4>
-        <span class="arrow-icon"><img src="./assets/profile-arrow.png" alt="down Arrow Icon"></span>
+        <span class="arrow-icon"><img src="./assets/down-arrow.png" alt="profile icon"></span>
       </div>
+      <div class="header-menu--section h-menu"> <!-- Header Menu Start-->
+        <div class="inner-container h-menu">
+          <h4 class="heading h-menu">Menu</h4>
+          <div class="sections h-menu">
+            <div class="left-section h-menu">
+            </div>
+            <div class="right-section h-menu">
+              <h4 class="h-menu">Create</h4>
+              <div class="menu-items_1--container h-menu">
+
+              </div>
+              <div class="menu-items_2--container h-menu"></div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- Header Menu Start-->
     </div> <!-- Header Icons End Here-->
   </header><!--Header End-->
+  <template id="header-menu--item">
+    <div class="header-menu--item--js h-menu">
+      <div class="img-container h-menu"><img src="./assets/edit.png" alt="write post link" class="img h-menu"></div>
+      <h5 class="name h-menu">Post</h5>
+    </div>
+  </template>
   <main id="home-main" class="container"> <!--Main Section Start-->
   </main> <!--Main Section End-->
   <script src="./scripts/main.js" type="module"></script>

@@ -90,7 +90,7 @@
     </nav> <!-- NavBar End Here -->
     <div class="header-menus--section"> <!-- Header Icons Start Here-->
       <div class="header-menus--item js-header--icon header-menu h-menu"> <!-- Icon 1 -->
-        <img src="./assets/menu.png" alt="menu Icon facebook menu" class="h-menu">
+        <img src="./assets/menu.png" alt="menu Icon facebook menu" class="h-menu img">
         <h4 class="popup-message h-menu">Menu</h4>
       </div>
       <div class="header-menus--item js-header--icon"> <!-- Icon 2 -->
@@ -111,11 +111,26 @@
           <h4 class="heading h-menu">Menu</h4>
           <div class="sections h-menu">
             <div class="left-section h-menu">
+              <div class="menu-search--container h-menu">
+                <img src="./assets/menu-search.png" alt="search-icon" class="menu-search--icon h-menu">
+                <input type="text" id="menu-search--input" placeholder="Search menu" class="h-menu" autocomplete="off">
+              </div>
+              <div class="right-items--container__container h-menu">
+                <div class="right-items--container h-menu">
+                  <h4 class="title h-menu">Social</h4>
+                  <div class="right-item--container h-menu">
+                    <div class="img-container h-menu"><img src="" alt=""></div>
+                    <div class="details-container h-menu">
+                      <h5 class="name h-menu">Events</h5>
+                      <p class="description h-menu">Oragnise or find evenets and other things to do online and nearby.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="right-section h-menu">
               <h4 class="h-menu">Create</h4>
               <div class="menu-items_1--container h-menu">
-
               </div>
               <div class="menu-items_2--container h-menu"></div>
             </div>
@@ -124,7 +139,7 @@
       </div> <!-- Header Menu Start-->
     </div> <!-- Header Icons End Here-->
   </header><!--Header End-->
-  <template id="header-menu--item">
+  <template id="header-menu--right-item">
     <div class="header-menu--item--js h-menu">
       <div class="img-container h-menu"><img src="./assets/edit.png" alt="write post link" class="img h-menu"></div>
       <h5 class="name h-menu">Post</h5>

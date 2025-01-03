@@ -368,6 +368,9 @@ body {
 .header-menus--item:hover {
   background-color: var(--color-sE-gray);
 }
+.header-menu.active {
+  background-color: #DFE9F2;
+}
 .header-menus--item:nth-child(4) img {
   width: 100%;
   border-radius: 50%;
@@ -426,13 +429,6 @@ body {
   width: 100%;
   height: 100%;
 }
-.header-menu--section .left-section {
-  background-color: var(--color-white);
-  flex-basis: 62%;
-  height: 100%;
-  box-shadow: 4px 5px 20px rgba(14, 30, 37, 0.2);
-  border-radius: 8px;
-}
 .header-menu--section .right-section {
   flex-basis: 35%;
   background-color: var(--color-white);
@@ -481,4 +477,31 @@ body {
 }
 .header-menu--item--js .img-container img {
   width: 20px;
+}
+/* left Hand */
+.header-menu--section .left-section {
+  background-color: var(--color-white);
+  flex-basis: 63%;
+  height: 100%;
+  box-shadow: 4px 5px 20px rgba(14, 30, 37, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+}
+.menu-search--container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 36px;
+  background-color: var(--color-light-e-gray);
+  border-radius: 30px;
+  padding: 0 10px;
+}
+.menu-search--container .menu-search--icon {
+  width: 20px;
+}
+#menu-search--input {
+  padding: 7px 6px 9px;
+  height: 100%;
+  background: var(--color-trans);
+  font-size: 16px;
 }

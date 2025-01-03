@@ -1,102 +1,92 @@
-// Header Menu Create Post Section links
-const menuCreateData = {
+// Header Menu Right Hand Section Elements
+let headerMenuRightHandData = {
   listOne: [
-    {imgPath: "./assets/edit.png", name: "Post"},
-    {imgPath: "./assets/book.png", name: "Story"},
-    {imgPath: "./assets/reel.png", name: "Reel"},
-    {imgPath: "./assets/star.png", name: "Life Event"},
+    {imgPath: "./assets/edit.png", title: "Post"},
+    {imgPath: "./assets/book.png", title: "Story"},
+    {imgPath: "./assets/reel.png", title: "Reel"},
+    {imgPath: "./assets/star.png", title: "Life Event"},
   ],
-  listSecond: [
-    {imgPath: "./assets/flag.png", name: "Page"},
-    {imgPath: "./assets/megaphone.png", name: "Ad"},
-    {imgPath: "./assets/menu-group.png", name: "Group"},
-    {imgPath: "./assets/event.png", name: "Event"},
-    {imgPath: "./assets/store.png", name: "Marketplace Listing"},
-  ]
-}
+  listTwo: [
+    {imgPath: "./assets/flag.png", title: "Page"},
+    {imgPath: "./assets/megaphone.png", title: "Ad"},
+    {imgPath: "./assets/menu-group.png", title: "Group"},
+    {imgPath: "./assets/event.png", title: "Event"},
+    {imgPath: "./assets/store.png", title: "Marketplace Listing"},
+  ],
+};
 
-// Render Header Menu Post Section Elements
-const renderPostSectionElements = (loopName, appendContainer) => {
-  // Error Handling
-  if(!loopName && !appendContainer) return;
+// Render Header Menu right Hand Element
+const renderHeaderMenuRightHandElements = (appendContainer, loopName) => {
+  // Reference
+  let elementTemplate = document.querySelector("#header-menu--right-item");
+  let showElementOnThisContainerEl = document.querySelector(appendContainer);
 
-  // References
-  let showElementsContainerEl = document.querySelector(appendContainer);
-  let elementTemplate = document.getElementById("header-menu--item");
+  // Error Handling 
+  if(!showElementOnThisContainerEl || !loopName || !elementTemplate) return;
 
-  // For Each For Render
+  // Lets Show Elements 
   loopName.forEach(currentElement => {
-    // Import Elements From Template
-    let element = document.importNode(elementTemplate.content, true);
-    // Change Element Details According to array Data
-    element.querySelector(".img").src = currentElement.imgPath;
-    element.querySelector(".img").alt = currentElement.name;
-    element.querySelector(".name").textContent = currentElement.name;
-    // Show Element
-    showElementsContainerEl.appendChild(element);
+    let templateEl = document.importNode(elementTemplate.content, true);
+    
+    // Changing Template Details According To Data
+    console.log(currentElement.title)
+    templateEl.querySelector(".name").textContent = currentElement.title;
+    templateEl.querySelector(".img").src = currentElement.imgPath;
+    templateEl.querySelector(".img").alt = currentElement.title;
+    showElementOnThisContainerEl.append(templateEl);
   });
 };
 
-
-
-// Hide Menues On Window Click
-const hideMenuesOnWindowClick = (commonClass, hideThisElement) => {
-  // Error Handling
-  if(!commonClass || !hideThisElement) return ;
-
-  window.addEventListener("click", (e) => {
-    // If Target Element Not Have CommonClass It's Hide Automatically
-    if(!e.target.classList.contains(commonClass)) {
-      hideThisElement.classList.remove("active");
-    }
-  })
-}
 export const headerManager = () => {
-  // Get all header icons
-  let headerIconEl = document.querySelectorAll(".js-header--icon");
+  // Show Hidden Menus
+  const showHiddenMenuOnClick = (commonClass, hiddenContainer, iconEl) => {
+    // References 
+    let showThisContainerEl = document.querySelector(hiddenContainer);
+    let targetIconEl = document.querySelector(iconEl);
+    let imageEl = targetIconEl.querySelector(".img");
+    // Condition For Check menu opened Or close
+    let chk = false;
 
-  // Add hover functionality to each icon
-  headerIconEl.forEach(currentIcon => {
-    let popupMessageEl = currentIcon.querySelector(".popup-message");
+    // Error Handling 
+    if(!commonClass || !showThisContainerEl || !targetIconEl || !imageEl) return;
 
-    // Skip if no popup message
-    if (!popupMessageEl) return;
+    // Hide Element On Window Click
+    let hideContainerOnWindowClick = (e) => {
+      if(!e.target.classList.contains(commonClass)) {
+        showThisContainerEl.classList.remove("active");
+        targetIconEl.classList.remove("active");
+        chk = false;
+        // Change Image
+        imageEl.src = imageEl.src.replace("-active.png", ".png" );
+      };      
+    };
 
-    let myTimeOut;
+    // Calling Function On Event Listner
+    window.addEventListener("click", hideContainerOnWindowClick);
 
-    currentIcon.addEventListener("mouseover", () => {
-      // Delay showing the popup
-      myTimeOut = setTimeout(() => {
-        popupMessageEl.classList.add("show");
-      }, 400);
-    });
+    // Let's Show Hidden Container and change the img icon
+    const showMenu = () => {
+      if(!chk) {
+        showThisContainerEl.classList.add("active");
+        targetIconEl.classList.add("active");
+        imageEl.src = imageEl.src.replace(".png", "-active.png");
+        chk = true;
+      } else {
+        showThisContainerEl.classList.remove("active");
+        targetIconEl.classList.remove("active");
+        imageEl.src = imageEl.src.replace("-active.png", ".png" );
+        chk = false;
+      }
+    };
 
-    currentIcon.addEventListener("mouseout", () => {
-      // Cancel delay and hide the popup
-      clearTimeout(myTimeOut);
-      popupMessageEl.classList.remove("show");
-    });
-  });
-
-  // Show Header Menu OnClick
-  let openMenuOnClick = (element, openThisContainer, commonClass) => {
-
-    // Reference
-    let targetElement = document.querySelector(element);
-    let showThisContainerEl = document.querySelector(openThisContainer);
-    
-    // Error Handling
-    if(!targetElement || !showThisContainerEl || !commonClass) return;
-    // Event Listner
-    targetElement.addEventListener("click", (e) => {
-        showThisContainerEl.classList.toggle("active");  
-    });
-    hideMenuesOnWindowClick(commonClass, showThisContainerEl);
+    // Click Event
+    targetIconEl.addEventListener("click", showMenu);
   };
 
-  openMenuOnClick(".header-menu", ".header-menu--section", "h-menu")
-  // Calling Function For Render Elements On Header Menu
-  renderPostSectionElements(menuCreateData.listOne, ".menu-items_1--container");
-  // Second Row
-  renderPostSectionElements(menuCreateData.listSecond, ".menu-items_2--container");
+  // Calling Function
+  showHiddenMenuOnClick("h-menu", ".header-menu--section", ".header-menu");
+
+  // Render Elements
+  renderHeaderMenuRightHandElements(".menu-items_1--container", headerMenuRightHandData.listOne);
+  renderHeaderMenuRightHandElements(".menu-items_2--container", headerMenuRightHandData.listTwo);
 };
